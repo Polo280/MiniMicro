@@ -17,6 +17,36 @@ ALU ALU_Mod(
 	.flags(flags)
 );
 
+parameter // Logic operations
+			 ANDS  = 1,			// Bitwise AND
+			 ORRS  = 2,			// Bitwise OR 
+			 MVNS  = 3,			// Bitwise NOT
+			 EORS  = 4,		   // Bitwise XOR 
+			 
+			 // Arithmetic operations 
+			 ADCS  = 5,			// Add with carry
+			 ADDS	 = 6,			// Normal addition
+			 SBCS  = 7,			// Subtraction with carry
+			 SUB   = 8,			// Subtraction
+		    MULS  = 9,       // Multiplication
+
+			 // Shifts
+			 LSRS  = 10,		// Logic Shift Right 
+			 LSLS  = 11,		// Logic Shift Left 
+			 ASR = 12,        // Arithmetic right shift 
+			 
+			 // Rotates 
+			 ROR   = 13,     	// Rotate right 
+			 
+			 // Extends
+			 UXTB  = 14,  		// Unsigned extend byte 
+			 UXTH  = 15,		// Unsigned extend halfword 
+			 SXTB  = 16,		// Signed extend byte 
+			 SXTH  = 17,		// Signed extend halfword 
+			 
+			 // Other instructions 
+			 CMP   = 18;	   // Compare 
+			 
 initial 
 	begin
 		clock = 0;
@@ -24,24 +54,52 @@ initial
 		num1 = 0;
 		num2 = 0;
 		#2
-		instruction = 1;     // ANDS test
+		instruction = ANDS;     // ANDS test
 		num1 = 15;
 		num2 = 10;
 		#2 
-		instruction = 2;     // ORRS test
+		instruction = ORRS;     // ORRS test
 		num1 = 500;
 		num2 = 5;
 		#2 
-		instruction = 3;     // Bitwise not (MVNS) test
+		instruction = MVNS;     // Bitwise not (MVNS) test
 		num1 = 4294967200;
 		#2
-		instruction = 4;     // EORS test
+		instruction = EORS;     // EORS test
 		num1 = 295;
 		num2 = 426;
 		#2
-		instruction = 7;     // ADDS test
+		instruction = ADDS;     // ADDS test
 		num1 = 9;
 		num2 = 1;
+		#2 
+		instruction = SUB;      // SUB test
+		num1 = 16;
+		num2 = 4;
+		#2 
+		instruction = LSLS;     // LSLS test
+		num1 = 32'b1101;
+		num2 = 3;
+		#2 
+		instruction = LSRS;     // LSRS test
+		num1 = 32'b1101;
+		num2 = 3;
+		#2 
+		instruction = ASR;      // ASR test
+		num1 = 205;
+		num2 = 3;
+		#2 
+		instruction = UXTB;      // UXTB test
+		num1 = 490;
+		#2 
+		instruction = UXTH;      // UXTH test
+		num1 = 56623;
+		#2 
+		instruction = SXTB;      // SXTB test
+		num1 = 5950485;
+		#2 
+		instruction = SXTH;      // SXTB test
+		num1 = 5950485;
 		#2 
 		instruction = 0;
 		$Stop;
