@@ -54,38 +54,50 @@ initial
 		num1 = 0;
 		num2 = 0;
 		#2
-		instruction = ANDS;     // ANDS test
+		instruction = ANDS;      // ANDS test
 		num1 = 15;
 		num2 = 10;
 		#2 
-		instruction = ORRS;     // ORRS test
+		instruction = ORRS;      // ORRS test
 		num1 = 500;
 		num2 = 5;
 		#2 
-		instruction = MVNS;     // Bitwise not (MVNS) test
+		instruction = MVNS;      // Bitwise not (MVNS) test
 		num1 = 4294967200;
 		#2
-		instruction = EORS;     // EORS test
+		instruction = EORS;      // EORS test
 		num1 = 295;
 		num2 = 426;
 		#2
-		instruction = ADDS;     // ADDS test
+		instruction = ADDS;      // ADDS test
+		num1 = 51526;
+		num2 = 4294967200;
+		#2
+		instruction = ADCS;      // ADCS test
 		num1 = 9;
 		num2 = 1;
 		#2 
-		instruction = SUB;      // SUB test
+		instruction = SUB;       // SUB test
 		num1 = 16;
 		num2 = 4;
 		#2 
-		instruction = LSLS;     // LSLS test
+		instruction = SBCS;       // SBCS test
+		num1 = 50;
+		num2 = 4;
+		#2 
+		instruction = MULS;       // MULS test
+		num1 = 5;
+		num2 = 4;
+		#2 
+		instruction = LSLS;      // LSLS test
 		num1 = 32'b1101;
 		num2 = 3;
 		#2 
-		instruction = LSRS;     // LSRS test
+		instruction = LSRS;      // LSRS test
 		num1 = 32'b1101;
 		num2 = 3;
-		#2 
-		instruction = ASR;      // ASR test
+		#2  
+		instruction = ASR;       // ASR test
 		num1 = 205;
 		num2 = 3;
 		#2 
