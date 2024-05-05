@@ -118,7 +118,7 @@ wire [63:0] booth_res;
 
 Booth MulMod(
 	.M(num1),
-	.Q(num2),
+	.Qm(num2),
 	.result(booth_res)
 );
 
@@ -154,6 +154,15 @@ ASR AsrModule(
 	.c_out(asr_carry)
 );
 
+///// ROR /////
+wire [31:0] ror_result;
+
+ROR RorModule(
+	.num(num1),
+	.shifts(num2[4:0]),
+	.shifted(ror_result)
+);
+
 ///// Extend Module /////
 reg ext_mode;
 reg ext_sign;
@@ -164,6 +173,15 @@ UXTB UxtbModule(
 	.sign(ext_sign),
 	.num(num1),
 	.extended(ext_result)
+);
+
+///// Compare Module /////
+wire [3:0] cmp_flags;
+
+Comparator Compare(
+	.num1(num1),
+	.num2(num2),
+	.status_flag(cmp_flags)
 );
 
 ////////////////////// MAIN ALU LOGIC //////////////////////
@@ -341,6 +359,17 @@ begin
 			flags[CARRY] <= asr_carry; 
 		end
 		
+		///////////// ROR //////////////
+		ROR:begin
+			result <= ror_result;
+			
+			// Update flags 
+			flags[ZERO] <= (ror_result == 0);
+			flags[NEGATIVE] <= ror_result[31];
+			
+			// Put a carry flag
+		end
+		
 		///////////// UXTB //////////////
 		UXTB: begin
 			result <= ext_result;
@@ -364,6 +393,15 @@ begin
 			result <= ext_result;
 			// NO FLAGS
 		end
+		
+		///////////// CMP //////////////
+		CMP: begin
+			// Update flags but dont store the result of the subtraction
+			flags[ZERO] <= cmp_flags[ZERO];
+			flags[CARRY] <= 0;
+			flags[NEGATIVE] <= cmp_flags[NEGATIVE];
+			flags[OVERFLOW] <= cmp_flags[OVERFLOW];
+		end 
 		
 		/////////// Default ///////////
 		default: begin

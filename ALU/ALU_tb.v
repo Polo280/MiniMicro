@@ -100,6 +100,10 @@ initial
 		instruction = ASR;       // ASR test
 		num1 = 205;
 		num2 = 3;
+		#2  
+		instruction = ROR;       // ROR test
+		num1 = 595;
+		num2 = 5;
 		#2 
 		instruction = UXTB;      // UXTB test
 		num1 = 490;
@@ -112,6 +116,10 @@ initial
 		#2 
 		instruction = SXTH;      // SXTB test
 		num1 = 5950485;
+		#2  
+		instruction = CMP;       // CMP test
+		num1 = 22;
+		num2 = 32;
 		#2 
 		instruction = 0;
 		$Stop;
