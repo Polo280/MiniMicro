@@ -22,7 +22,7 @@ parameter // Logic operations
 			 ADDS	 = 6,			// Normal addition
 			 SBCS  = 7,			// Subtraction with carry
 			 SUB   = 8,			// Subtraction
-		    MULS  = 9,       // Multiplication
+		     MULS  = 9,       // Multiplication
 
 			 // Shifts
 			 LSRS  = 10,		// Logic Shift Right 
@@ -42,7 +42,7 @@ parameter // Logic operations
 			 CMP   = 18;	   // Compare 
 			 
 /////////////////////// FLAGS ///////////////////////
-parameter NEGATIVE = 0,
+parameter    NEGATIVE = 0,
 			 ZERO = 1,
 			 CARRY = 2,
 			 OVERFLOW = 3;
