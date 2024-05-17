@@ -4,7 +4,6 @@
     #####         | ### ### ###         |  ### ### ###         | ### ### ###         |
     OPCODE (5bits)| Destination (9bits) |  Source 1 (5bits)    | Source 2 (9bits)    | 
 
-
     ANDS = 1	  | Bitwise AND
 	ORRS = 2	  | Bitwise OR 
 	MVNS = 3	  | Bitwise NOT
@@ -35,14 +34,22 @@
 	
 	- Other instructions -
 	CMP  = 18	  | Compare 
-
-
 */
 
 
+// Register memoty can be another instance of the same  RAM module
+
 
 /* IF (instruction fetch): get the instruction at the PC */
-/* ID (instruction decode): decode the instruction,produce control signals and read register file */
+    
+
+/* ID (instruction decode): decode the instruction, produce control signals and read register file */
+    
+
 /* EX (excecute): do calculation */
+
+
 /* MEM (memory): access memory */
+
+
 /* WB (write back): write back to register */
