@@ -94,6 +94,13 @@ module miniMicro (
 	always @(posedge clk)
 	begin
 
+
+	/* Check for reset */
+	if (rst)
+	begin
+
+	end	
+
 	/* IF (instruction fetch): get the instruction at the PC */
 		//Get number from program counter
 		// fetch instruction form progmem at [idx] (given from programm counter)	
@@ -102,13 +109,14 @@ module miniMicro (
 	end
 
 	
-		
-
 	/* ID (instruction decode): decode the instruction, produce control signals and read register file */
+	assign wire_opcode = wire_instruction[OPCODE_WIDTH-1:0];
+    assign wire_rd     = wire_instruction[OPCODE_WIDTH+DEST_WIDTH-1:OPCODE_WIDTH];
+    assign wire_rs1    = wire_instruction[OPCODE_WIDTH+DEST_WIDTH+SRC1_WIDTH-1:OPCODE_WIDTH+DEST_WIDTH];
+    assign wire_rs2    = wire_instruction[31:OPCODE_WIDTH+DEST_WIDTH+SRC1_WIDTH];
 		
 
 	/* EX (excecute): do calculation */
-
 
 	/* MEM (memory): access memory */
 
