@@ -73,14 +73,24 @@ module miniMicro (
 	/*Instantiate sub modules*/
 
 	//Progam counter
-	program_counter PC(.clk(clk), .rst(rst).pc_out(progmem_addres));
+	program_counter PC(.clk(clk),
+				       .rst(rst),
+					   .pc_out(progmem_addres));
 
 
     // RAM modules (one for instruction memory, one for registers)
 
-	ram_32 progmem(.wdata(ZERO), .clk(clk), .we(ONE), .address(progmem_addres), .rdata(wire_instruction)); //Instruction Memory (read-only)
+	ram_32_read progmem(.wdata(ZERO),
+	            .clk(clk),
+				.we(ZERO), //Read only
+				.address(progmem_addres),
+				.rdata(wire_instruction)); //Instruction Memory (read-only)
 
-	//ram_32 regmem(.wdata(ONE), .clk(clk), .we(ONE), .address(progmem_addres), .rdata(instruction));   //Register Memory (read/write)
+	ram_32_write regmem(.wdata(ONE),
+					    .clk(clk),
+						.we(ONE), 					//Allow Write 
+						.address(progmem_addres),
+						.rdata(instruction));   	//Register Memory (read/write)
 
 
 
@@ -110,6 +120,8 @@ module miniMicro (
 
 	
 	/* ID (instruction decode): decode the instruction, produce control signals and read register file */
+
+	// Divide instruction into its components
 	assign wire_opcode = wire_instruction[OPCODE_WIDTH-1:0];
     assign wire_rd     = wire_instruction[OPCODE_WIDTH+DEST_WIDTH-1:OPCODE_WIDTH];
     assign wire_rs1    = wire_instruction[OPCODE_WIDTH+DEST_WIDTH+SRC1_WIDTH-1:OPCODE_WIDTH+DEST_WIDTH];
