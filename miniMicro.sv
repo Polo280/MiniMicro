@@ -80,12 +80,15 @@ module miniMicro (
 
     // RAM modules (one for instruction memory, one for registers)
 
+	//Program (instruction) Memory
 	ram_32_read progmem(.wdata(ZERO),
 	            .clk(clk),
 				.we(ZERO), //Read only
 				.address(progmem_addres),
 				.rdata(wire_instruction)); //Instruction Memory (read-only)
 
+
+    //Register Memory
 	ram_32_write regmem(.wdata(ONE),
 					    .clk(clk),
 						.we(ONE), 					//Allow Write 
