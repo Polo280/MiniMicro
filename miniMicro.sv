@@ -4,6 +4,10 @@
     #####         | ### ### ###         |  ### ### ###         | ### ### ###         |
     OPCODE (5bits)| Destination (9bits) |  Source 1 (5bits)    | Source 2 (9bits)    | 
 
+
+	RESERVED INSTRUCTIONS 00000, 11001 -> 11111
+
+	// ALU //
     ANDS = 1	  | Bitwise AND
 	ORRS = 2	  | Bitwise OR 
 	MVNS = 3	  | Bitwise NOT
@@ -34,6 +38,23 @@
 	
 	- Other instructions -
 	CMP  = 18	  | Compare 
+	NOP  = 19     | No Operation
+	// ////////////////////////////////// //
+	
+
+	(Not ALU instructions)
+	// MEMORY INSTRUCTION //
+	LOADI = 20 | Load data from RAM to register
+	STORE = 21 | Writes data from a register to RAM
+	MOV   = 22 | Move data between registers
+
+	// JUMP INSTRUCTIONS //
+	J     = 23 | Jump
+	BEQ   = 24 | Branch to a mem addr if 2 registers are equal
+	HLT   = 24 |
+
+
+
 */
 
 
@@ -49,13 +70,13 @@ module miniMicro (
 
     // Instruction Set parameters
     parameter OPCODE_WIDTH = 5;
-    parameter DEST_WIDTH = 9;
-    parameter SRC1_WIDTH = 9;
-    parameter SRC2_WIDTH = 9;
+    parameter DEST_WIDTH   = 9;
+    parameter SRC1_WIDTH   = 9;
+    parameter SRC2_WIDTH   = 9;
 
     // wires
     wire [OPCODE_WIDTH-1:0] wire_opcode;  // Opcode	
-    wire [DEST_WIDTH-1:0]   wire_rd;      // destination  
+    wire [DEST_WIDTH-1:0]   wire_dest;      // destination  
     wire [SRC1_WIDTH-1:0]   wire_rs1;     // source 1 
     wire [SRC2_WIDTH-1:0]   wire_rs2;     // source 2
 
@@ -75,7 +96,7 @@ module miniMicro (
 	//Progam counter
 	program_counter PC(.clk(clk),
 				       .rst(rst),
-					   .pc_out(progmem_addres));
+					   .pc_out(wire_progmem_addres));
 
 
     // RAM modules (one for instruction memory, one for registers)
@@ -84,7 +105,7 @@ module miniMicro (
 	ram_32_read progmem(.wdata(ZERO),
 	            .clk(clk),
 				.we(ZERO), //Read only
-				.address(progmem_addres),
+				.address(wire_progmem_addres),
 				.rdata(wire_instruction)); //Instruction Memory (read-only)
 
 
@@ -92,13 +113,18 @@ module miniMicro (
 	ram_32_write regmem(.wdata(ONE),
 					    .clk(clk),
 						.we(ONE), 					//Allow Write 
-						.address(progmem_addres),
+						.address(wire_progmem_addres),
 						.rdata(instruction));   	//Register Memory (read/write)
 
 
 
     // ALU
-	ALU alu(.clk(clk), .instruction(wire_instruction) , .num1(wire_rs1), .num2(wire_rs2), .result(wire_alu_result) , .flags(wire_alu_flags))
+	ALU alu(.clk(clk), 
+		    .instruction(wire_opcode),
+			.num1(wire_rs1),
+			.num2(wire_rs2),
+			.result(wire_alu_result),
+			.flags(wire_alu_flags))
 
 
 
@@ -106,7 +132,6 @@ module miniMicro (
 
 	always @(posedge clk)
 	begin
-
 
 	/* Check for reset */
 	if (rst)
@@ -126,9 +151,16 @@ module miniMicro (
 
 	// Divide instruction into its components
 	assign wire_opcode = wire_instruction[OPCODE_WIDTH-1:0];
-    assign wire_rd     = wire_instruction[OPCODE_WIDTH+DEST_WIDTH-1:OPCODE_WIDTH];
+    assign wire_dest     = wire_instruction[OPCODE_WIDTH+DEST_WIDTH-1:OPCODE_WIDTH];
     assign wire_rs1    = wire_instruction[OPCODE_WIDTH+DEST_WIDTH+SRC1_WIDTH-1:OPCODE_WIDTH+DEST_WIDTH];
     assign wire_rs2    = wire_instruction[31:OPCODE_WIDTH+DEST_WIDTH+SRC1_WIDTH];
+
+
+	//Check if operation is ALU or not
+	if(  (wire_opcode > 5'b00000) && (wire_opcode < 5'b11001))
+	begin
+		//operation IS ALU
+	end
 		
 
 	/* EX (excecute): do calculation */
