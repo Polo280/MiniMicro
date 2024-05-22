@@ -23,7 +23,7 @@
 *     				-write_data: Data to be written 
 *                   
 * 		- OUTPUTS:
-*                	-read_data:  Data to be returned
+*                	-return_data:  Data to be returned
 * 	
 */
 
@@ -37,7 +37,7 @@ module RAM #(parameter data_length = 32,
 	input [$clog2(mem_length)-1:0] address, 		// address bus
 	input [data_length-1:0] write_data, 			// input data
 
-	output reg [data_length-1:0] read_data 			// data output 
+	output reg [data_length-1:0] return_data 			// data output 
 );
 
 
@@ -48,16 +48,16 @@ reg [data_length-1:0] mem [0:mem_length-1];	// actual memory
 
 
 
-always @(posedge clk or posedge rst)
+always @(posedge clk or negedge rst)
 begin 
-	if (rst)
+	if (!rst)  // check for reset (active low)
 	begin
+
 		// Reset memory to all zeros
-		integer i;
-		for (i = 0; i < mem_length; i = i + 1)
+		for (int i = 0; i < mem_length; i = i + 1)
 			mem[i] <= 0;
 	end
-	
+
 	else
 	begin
 		if(we) // check write enable flag
@@ -66,7 +66,8 @@ begin
 			mem[address] <= write_data;
 		end
 		else
-			read_data <= mem[address];	
+			// if flag is low, return data
+			return_data <= mem[address];	
 	end
 end 
 
