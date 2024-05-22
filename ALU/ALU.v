@@ -1,13 +1,13 @@
 module ALU(
 	input clk,
+	input global_enable,
 	input [4:0] instruction,
 	input [31:0] num1, num2,
 	output reg [31:0] result,
 	output reg [3:0] flags    // N, Z, C, V
 );
 
-// Enable wires 
-wire[20:0] enable;
+
 
 ////////////////// INSTRUCTION SET //////////////////
 
@@ -15,14 +15,14 @@ parameter // Logic operations
 			 ANDS  = 1,			// Bitwise AND
 			 ORRS  = 2,			// Bitwise OR 
 			 MVNS  = 3,			// Bitwise NOT
-			 EORS  = 4,		   // Bitwise XOR 
+			 EORS  = 4,		    // Bitwise XOR 
 			 
 			 // Arithmetic operations 
 			 ADCS  = 5,			// Add with carry
-			 ADDS	 = 6,			// Normal addition
+			 ADDS	 = 6,		// Normal addition
 			 SBCS  = 7,			// Subtraction with carry
 			 SUB   = 8,			// Subtraction
-		     MULS  = 9,       // Multiplication
+		     MULS  = 9,         // Multiplication
 
 			 // Shifts
 			 LSRS  = 10,		// Logic Shift Right 
@@ -188,6 +188,7 @@ Comparator Compare(
 // Register to store previous flags (to handle carry)
 reg [3:0] prev_flags;
 
+
 initial begin
 	result <= 0;
 	flags <= 0;
@@ -244,6 +245,7 @@ begin
 		end
 	endcase
 end
+
 
 always @(posedge clk)
 begin

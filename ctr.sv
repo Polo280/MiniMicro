@@ -51,7 +51,7 @@
 	// JUMP INSTRUCTIONS //
 	J     = 23 | Jump
 	BEQ   = 24 | Branch to a mem addr if 2 registers are equal
-	HLT   = 24 | HALT
+	HLT   = 25 | HALT
 
 
 
