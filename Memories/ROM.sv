@@ -3,15 +3,15 @@
 * 		ROM
 * 
 *	DESCRIPTION:
-* 		This module implements a 32-bit Read-Only Memory with a parameterizable 
-* 		data width and memory depth. The ROM reads data from a specified address 
-* 		on the rising edge of the clock.
+* 		This module implements a Read-Only Memory with a parameterizable data width 
+* 		and memory depth. The ROM reads data from a specified address on the rising
+* 		edge of the clock.
 *		The initial contents of the memory are loaded from an external file.
 * 	
 * 	PARAMETERS:
-* 		- data_length: The width of the data bus (default is 32 bits).
-* 		- mem_length: The depth of the memory, i.e., the number of memory locations 
-* 		  (default is 32).
+* 		- DATA_LENGTH: The width of the data bus (default is 32 bits).
+* 		- MEM_LENGHT:  The depth of the memory, i.e., the number of memory locations 
+* 		  				default is 32).
 * 	
 *
 * 	PORTS:
@@ -30,15 +30,15 @@
 
 
 
-module ROM #(parameter data_length = 32, 
-				parameter mem_length = 32)
+module ROM #(parameter DATA_LENGTH = 32, 
+			 parameter MEM_LENGHT = 32)
 (
 	input clk,										// clock
-	input [$clog2(mem_length)-1:0] address, 		// address to read
-	output reg [data_length-1:0]   return_data 	    // data output 
+	input [$clog2(MEM_LENGHT)-1:0] address, 		// address to read
+	output reg [DATA_LENGTH-1:0]   return_data 	    // data output 
 );
 
-	reg [data_length-1:0] mem [0:mem_length-1];
+	reg [DATA_LENGTH-1:0] mem [0:MEM_LENGHT-1];
 
 	/* Initialized values from file 
 
