@@ -37,19 +37,95 @@
 */
 
 
-// Register memoty can be another instance of the same  RAM module
+module miniMicro (
+    input clk,
+    input rst
+);
+
+	//Constants
+
+	wire ZERO = 1'b0;	// 0
+	wire ONE  = 1'b1;	// 1
+
+    // Instruction Set parameters
+    parameter OPCODE_WIDTH = 5;
+    parameter DEST_WIDTH = 9;
+    parameter SRC1_WIDTH = 9;
+    parameter SRC2_WIDTH = 9;
+
+    // wires
+    wire [OPCODE_WIDTH-1:0] wire_opcode;  // Opcode	
+    wire [DEST_WIDTH-1:0]   wire_rd;      // destination  
+    wire [SRC1_WIDTH-1:0]   wire_rs1;     // source 1 
+    wire [SRC2_WIDTH-1:0]   wire_rs2;     // source 2
+
+	//progmem wires
+    wire [31:0]             wire_instruction;    // 32-bit instruction word recieved from progmem
+
+	//PC wires
+	wire [32:0]				wire_progmem_addres; // 32-bit address recieved from PC
+
+	//Alu wires
+    wire [31:0]             wire_alu_result;	    // Result from ALU operation
+	wire [3:0]				wire_alu_flags;		// negative, ZERO, carry overflow
 
 
-/* IF (instruction fetch): get the instruction at the PC */
-    
+	/*Instantiate sub modules*/
 
-/* ID (instruction decode): decode the instruction, produce control signals and read register file */
-    
-
-/* EX (excecute): do calculation */
+	//Progam counter
+	program_counter PC(.clk(clk), .rst(rst).pc_out(progmem_addres));
 
 
-/* MEM (memory): access memory */
+    // RAM modules (one for instruction memory, one for registers)
+
+	ram_32 progmem(.wdata(ZERO), .clk(clk), .we(ONE), .address(progmem_addres), .rdata(wire_instruction)); //Instruction Memory (read-only)
+
+	//ram_32 regmem(.wdata(ONE), .clk(clk), .we(ONE), .address(progmem_addres), .rdata(instruction));   //Register Memory (read/write)
 
 
-/* WB (write back): write back to register */
+
+    // ALU
+	ALU alu(.clk(clk), .instruction(wire_instruction) , .num1(wire_rs1), .num2(wire_rs2), .result(wire_alu_result) , .flags(wire_alu_flags))
+
+
+
+
+
+	always @(posedge clk)
+	begin
+
+
+	/* Check for reset */
+	if (rst)
+	begin
+
+	end	
+
+	/* IF (instruction fetch): get the instruction at the PC */
+		//Get number from program counter
+		// fetch instruction form progmem at [idx] (given from programm counter)	
+
+
+	end
+
+	
+	/* ID (instruction decode): decode the instruction, produce control signals and read register file */
+	assign wire_opcode = wire_instruction[OPCODE_WIDTH-1:0];
+    assign wire_rd     = wire_instruction[OPCODE_WIDTH+DEST_WIDTH-1:OPCODE_WIDTH];
+    assign wire_rs1    = wire_instruction[OPCODE_WIDTH+DEST_WIDTH+SRC1_WIDTH-1:OPCODE_WIDTH+DEST_WIDTH];
+    assign wire_rs2    = wire_instruction[31:OPCODE_WIDTH+DEST_WIDTH+SRC1_WIDTH];
+		
+
+	/* EX (excecute): do calculation */
+
+	/* MEM (memory): access memory */
+
+
+	/* WB (write back): write back to register */
+
+
+
+
+endmodule
+
+
