@@ -32,7 +32,7 @@ module RAM #(parameter data_length = 32,
 			 parameter mem_length = 32)
 (
 	input clk,										// clock
-	input rst										// reset
+	input rst,										// reset
 	input we, 										// read - write mode : 0 = read, 1 = write
 	input [$clog2(mem_length)-1:0] address, 		// address bus
 	input [data_length-1:0] write_data, 			// input data
