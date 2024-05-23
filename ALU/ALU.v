@@ -118,7 +118,7 @@ wire [63:0] booth_res;
 
 Booth MulMod(
 	.M(num1),
-	.Qm(num2),
+	.Q(num2),
 	.result(booth_res)
 );
 
