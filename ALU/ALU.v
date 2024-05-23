@@ -1,6 +1,5 @@
 module ALU(
 	input clk,
-	input global_enable,
 	input [4:0] instruction,
 	input [31:0] num1, num2,
 	output reg [31:0] result,

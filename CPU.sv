@@ -90,7 +90,6 @@ module CPU (
     input [8:0] destination,
     input [8:0] source_1,
     input [8:0] source_2, 
-    input is_alu_flag
 );
 
     wire [31:0] alu_result;
@@ -112,9 +111,7 @@ module CPU (
 
     always @(posedge clk )
     begin
-        //Check if current instruction is ALU
-        if(!is_alu_flag)
-        begin
+
         //If not alu, handle here (Alu automatically doesn't do anything)
         case (instruction)
             //LOADI
@@ -131,11 +128,6 @@ module CPU (
             25: 
             default: 
         endcase
-
-            
-        end
-
-
     end
 
 

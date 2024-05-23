@@ -37,7 +37,7 @@ module control_unit #()
     output [8:0] destination,
     output [8:0] source_1,
     output [8:0] source_2,
-    output is_alu_flag
+    //output is_alu_flag
 );
 
 
@@ -50,10 +50,10 @@ begin
     source_2    = instruction[8:0];
 
     //check if instruction is ALU instruction
-    if( instruction > 0 && instruction < 20)
+    /*if( instruction > 0 && instruction < 20)
         is_alu_flag = 1;
     else
-        is_alu_flag = 0;    
+        is_alu_flag = 0;*/    
 end
 
 
