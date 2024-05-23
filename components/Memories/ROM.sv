@@ -40,20 +40,20 @@ module ROM #(parameter DATA_LENGTH = 32,
 
 	reg [DATA_LENGTH-1:0] mem [0:MEM_LENGHT-1];
 
-	/* Initialized values from file 
+	/* Initialized values from file */
 
 	initial
 	begin
-		$readmemh("instructions.mem", mem); 		// intializes values into memory
+		$readmemb("instructions.txt", mem); 		// intializes values into memory
 	end
 
-	*/
+	
 	// Or initialize from code, better for testing
-	mem[0] = 00110000000011000000000000000001; // add whatever is in reg 0 and reg 1, store on reg 3
+	//mem[0][0] = 00110000000011000000000000000001; // add whatever is in reg 0 and reg 1, store on reg 3
 
 
 	always @(posedge clk)
 	begin 
-			rdata <= mem[addr];	
+			return_data <= mem[address];	
 	end 
 endmodule 
