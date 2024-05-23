@@ -1,15 +1,12 @@
 
 module program_counter (
     input clk,
-    input rst
+    input rst,
     output [31:0] pc_out
 );   
 
     reg [31:0] current_instruction;
     reg [31:0]    next_instruction;
-
-    current_instruction = 0;
-    next_instruction    = 0;
 
     always @(posedge clk) begin
         if (rst) 
