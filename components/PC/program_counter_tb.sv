@@ -1,41 +1,49 @@
-`timescale 1ns / 1ps
+module program_counter_tb;
 
-module program_counter_tb(
-    input clk,
-    input rst,
-    output [31:0] pc_out
-);
+  // Inputs
+  reg clk;
+  reg rst;
 
+  // Outputs
+  wire [31:0] pc_out;
 
-    // Instantiate the program_counter module
-    program_counter uut (
-        .clk(clk),
-        .rst(rst),
-        .pc_out(pc_out)
-    );
+  // Instantiate the program counter module
+  program_counter pc (
+    .clk(clk),
+    .rst(rst),
+    .pc_out(pc_out)
+  );
 
-    // Clock generation
-    always begin
-        #5 clk = ~clk; // Toggle clock every 5 ns (100 MHz clock period)
+  // Clock generation
+  initial begin
+    clk = 1'b0;
+    forever #5 clk = ~clk;
+  end
+
+   // Test case logic
+  initial begin
+    // Apply reset for 10 clock cycles
+    rst = 1'b1;
+    #10 rst = 1'b0;
+
+    // Check PC value after reset
+    #10 if (pc_out !== 32'h0) begin
+      $display("ERROR: PC not reset to 0 after %d clock cycles", $time);
+      $stop;
     end
 
-    initial begin
-        // Initialize Inputs
-        clk = 0;
-        rst = 0;
-
-        // Monitor the pc_out output
-        $monitor("Time = %0d, pc_out = %h", $time, pc_out);
-
-        // Reset the program counter
-        rst = 1; #10; // Assert reset for 10 ns
-        rst = 0; #10; // Deassert reset and wait for 10 ns
-
-        // Run the clock for a few cycles to see the PC increment
-        #100; // Let the clock run for 100 ns
-        
-        // End simulation
+    // Check PC increment for 20 clock cycles
+    for (int i = 0; i < 20; i = i + 1) begin  // Explicit loop bound
+      #10;
+      if (pc_out !== (32'h0 + i * 4)) begin
+        $display("ERROR: PC not incrementing by 4 after %d clock cycles", $time);
         $stop;
+      end
     end
+
+    // Success message
+    $display("Testbench passed!");
+    $finish;
+  end
 
 endmodule
