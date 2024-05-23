@@ -1,0 +1,8 @@
+
+# ignore quartus generated folders
+db/
+output_files/
+*.qpf
+*.qsf
+*.qws
+
