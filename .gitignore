@@ -6,3 +6,6 @@ output_files/
 *.qsf
 *.qws
 
+# backup files
+*.bak 
+
