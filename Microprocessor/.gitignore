@@ -1,0 +1,10 @@
+# ignore quartus generated folders
+db/
+output_files/
+incremental_db/
+*.qpf
+*.qsf
+*.qws
+
+# backup files
+*.bak
