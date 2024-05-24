@@ -31,29 +31,29 @@
 
 
 module ROM #(parameter DATA_LENGTH = 32, 
-			 parameter MEM_LENGHT = 32)
+             parameter MEM_LENGTH = 32) //32bit by 32 registers
 (
-	input clk,										// clock
-	input [$clog2(MEM_LENGHT)-1:0] address, 		// address to read
-	output reg [DATA_LENGTH-1:0]   return_data 	    // data output 
+    input clk,                                      // clock
+    input [$clog2(MEM_LENGTH)-1:0] address,         // address to read
+    output reg [DATA_LENGTH-1:0] return_data        // data output 
 );
 
-	reg [DATA_LENGTH-1:0] mem [0:MEM_LENGHT-1];
+    reg [DATA_LENGTH-1:0] mem [0:MEM_LENGTH-1];
 
-	/* Initialized values from file */
+    /* Initialize values from file */
 
-	initial
-	begin
-		$readmemb("instructions.txt", mem); 		// intializes values into memory
-	end
+    initial
+    begin
+        $readmemb("instructions.mem", mem);         // initializes values into memory
+    end
 
-	
-	// Or initialize from code, better for testing
-	//mem[0][0] = 00110000000011000000000000000001; // add whatever is in reg 0 and reg 1, store on reg 3
+    // Or initialize from code, better for testing
+    // initial begin
+    //    mem[0] = 32'b00110000000011000000000000000001; // Example binary instruction
+    // end
 
-
-	always @(posedge clk)
-	begin 
-			return_data <= mem[address];	
-	end 
-endmodule 
+    always @(posedge clk)
+    begin 
+        return_data <= mem[address];    
+    end 
+endmodule
