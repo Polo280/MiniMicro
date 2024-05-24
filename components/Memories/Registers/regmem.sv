@@ -79,6 +79,9 @@ module regmen (
             mem[A3] <= WD3;
         end
 
+
+        //TODO: wtf with R15???
+
     end
 
 
