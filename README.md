@@ -2,6 +2,8 @@
 
 A mini microcontroller implemented using FPGA tech
 
+TODO: test: PC, ROM, RAM | compile ALU
+
 
 # Instruction Set
 
