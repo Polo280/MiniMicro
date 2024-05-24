@@ -1,0 +1,21 @@
+module Control_Unit #()(
+	
+);
+
+
+////////////////////////////////////////
+////////// HANDLING VARIABLES //////////
+////////////////////////////////////////
+parameter opcode_size = 5, address_size = 6, addr_chunk = 9;
+
+reg [word_size-1:0] instruction;
+reg [opcode_size-1:0] opcode;
+reg [address_size-1:0] destination, src1, src2;
+
+// Get instruction data (DECODE)
+always @(*) begin
+	opcode = instruction[word_size-1:word_size - opcode_size];   // Get opcode (31 - 27)
+	destination = instruction[(word_size-1)-opcode_size : word_size -opcode_size -addr_chunk];  				 // Get destination (26 - 18)
+	src1 = instruction[(word_size-1)-opcode_size-addr_chunk : word_size -opcode_size - 2*addr_chunk];  	 // Get src1 (17 - 9)
+	src2 = instruction[(word_size-1)-opcode_size - 2*addr_chunk : word_size - opcode_size - 3*addr_chunk]; // Get src2 (8 - 0)
+end

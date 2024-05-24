@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Memory.sv(28): always construct contains both blocking and non-blocking assignments File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Memory.sv Line: 28
