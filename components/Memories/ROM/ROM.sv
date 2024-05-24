@@ -31,7 +31,7 @@
 
 
 module ROM #(parameter DATA_LENGTH = 32, 
-             parameter MEM_LENGTH = 32) //32bit by 32 registers
+             parameter MEM_LENGTH = 32) //32 bit by 32 registers
 (
     input clk,                                      // clock
     input [$clog2(MEM_LENGTH)-1:0] address,         // address to read
