@@ -23,13 +23,10 @@ assign instruct_clk = clk;
 assign instruct_rst = rst;
 assign instruct_we = 1'b1;  // Read mode
 
-Memory Instruction_Memory(
-	.rst(instruct_rst),
+instruction_memory Instruction_Memory(
 	.clk(instruct_clk),
-	.we(instruct_we),
-	.wdata(instruct_wdata),
-	.rdata(instruct_rdata),
-	.addr(instruct_address)
+	.return_data(instruct_rdata),
+	.address(instruct_address)
 );
 ////////////////////////////////////////
 
