@@ -68,15 +68,15 @@ module register_file (
     begin
 
         // return values of looked for addresses
-        RD1 <= mem[A1];
-        RD2 <= mem[A2];    
+        RD1 <= registers[A1];
+        RD2 <= registers[A2];    
 
-        if(we)
+        if(WE3)
         begin
 
             /*If the write enable is asserted, then the register file writes the data
               into the specified register on the rising edge of the clock.*/
-            mem[A3] <= WD3;
+            registers[A3] <= WD3;
         end
 
 
