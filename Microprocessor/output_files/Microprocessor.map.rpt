@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Microprocessor
-Thu May 23 17:30:37 2024
+Sun May 26 12:41:24 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,25 +13,14 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |Microprocessor
- 10. Parameter Settings for User Entity Instance: Memory:Instruction_Memory
- 11. Parameter Settings for User Entity Instance: Memory:Data_Memory
- 12. Parameter Settings for User Entity Instance: Control_Unit:comb_10
- 13. Parameter Settings for User Entity Instance: ALU:ALU_Unit
- 14. Parameter Settings for User Entity Instance: ALU:ALU_Unit|UXTB:UxtbModule
- 15. Parameter Settings for User Entity Instance: ALU:ALU_Unit|Comparator:Compare
- 16. Port Connectivity Checks: "ALU:ALU_Unit|Comparator:Compare|Subtractor:SUB"
- 17. Port Connectivity Checks: "ALU:ALU_Unit|Comparator:Compare"
- 18. Port Connectivity Checks: "ALU:ALU_Unit|LSLS:LShiftModule"
- 19. Port Connectivity Checks: "ALU:ALU_Unit"
- 20. Port Connectivity Checks: "Control_Unit:comb_10"
- 21. Port Connectivity Checks: "Memory:Data_Memory"
- 22. Port Connectivity Checks: "Memory:Instruction_Memory"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
- 26. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |instruction_memory
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -58,16 +47,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 23 17:30:37 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun May 26 12:41:24 2024       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Microprocessor                              ;
-; Top-level Entity Name              ; Microprocessor                              ;
+; Top-level Entity Name              ; instruction_memory                          ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 34                                          ;
+; Total logic elements               ; 5                                           ;
+;     Total combinational functions  ; 5                                           ;
+;     Dedicated logic registers      ; 4                                           ;
+; Total registers                    ; 4                                           ;
+; Total pins                         ; 38                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -83,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; Microprocessor     ; Microprocessor     ;
+; Top-level entity name                                            ; instruction_memory ; Microprocessor     ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -168,8 +157,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -179,72 +168,113 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; Microprocessor.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv ;         ;
-; Memory.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Memory.sv         ;         ;
-; Control_Unit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv   ;         ;
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv            ;         ;
-; ANDS.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ANDS.sv           ;         ;
-; ASR.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ASR.sv            ;         ;
-; Adder.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Adder.sv          ;         ;
-; BitwiseNot.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BitwiseNot.sv     ;         ;
-; BoothMul.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv       ;         ;
-; Comparator.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Comparator.sv     ;         ;
-; EORS.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/EORS.sv           ;         ;
-; EXT.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/EXT.sv            ;         ;
-; LSLS.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/LSLS.sv           ;         ;
-; LSRS.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/LSRS.sv           ;         ;
-; ORRS.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ORRS.sv           ;         ;
-; ROR.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ROR.sv            ;         ;
-; FullAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/FullAdder.sv      ;         ;
-; HalfAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/HalfAdder.sv      ;         ;
-; Subtractor.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Subtractor.sv     ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; instruction_memory.sv            ; yes             ; User SystemVerilog HDL File  ; D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv ;         ;
+; instructions.mem                 ; yes             ; Auto-Found Unspecified File  ; D:/Documentos/MiniMicro/Microprocessor/instructions.mem      ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 34    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 34    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 5                ;
+;                                             ;                  ;
+; Total combinational functions               ; 5                ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 1                ;
+;     -- 3 input functions                    ; 3                ;
+;     -- <=2 input functions                  ; 1                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 5                ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 4                ;
+;     -- Dedicated logic registers            ; 4                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 38               ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; address[3]~input ;
+; Maximum fan-out                             ; 4                ;
+; Total fan-out                               ; 65               ;
+; Average fan-out                             ; 0.76             ;
++---------------------------------------------+------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
-; |Microprocessor            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 34   ; 0            ; 0          ; |Microprocessor     ; Microprocessor ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------------+--------------+
+; |instruction_memory        ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 38   ; 0            ; 0          ; |instruction_memory ; instruction_memory ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; return_data[4]~reg0                    ; Stuck at GND due to stuck port data_in ;
+; return_data[5]~reg0                    ; Stuck at GND due to stuck port data_in ;
+; return_data[6]~reg0                    ; Stuck at GND due to stuck port data_in ;
+; return_data[7]~reg0                    ; Stuck at GND due to stuck port data_in ;
+; return_data[8]~reg0                    ; Stuck at GND due to stuck port data_in ;
+; return_data[9]~reg0                    ; Stuck at GND due to stuck port data_in ;
+; return_data[10]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[11]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[12]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[13]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[14]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[15]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[16]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[17]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[18]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[19]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[20]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[21]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[22]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[23]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[24]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[25]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[26]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[27]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[28]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[29]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[30]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; return_data[31]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 28 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++----------------------+---------------------------+----------------------------------------------------------------------------------------+
+; Register name        ; Reason for Removal        ; Registers Removed due to This Register                                                 ;
++----------------------+---------------------------+----------------------------------------------------------------------------------------+
+; return_data[12]~reg0 ; Stuck at GND              ; return_data[20]~reg0, return_data[24]~reg0, return_data[26]~reg0, return_data[27]~reg0 ;
+;                      ; due to stuck port data_in ;                                                                                        ;
+; return_data[4]~reg0  ; Stuck at GND              ; return_data[16]~reg0, return_data[22]~reg0, return_data[25]~reg0                       ;
+;                      ; due to stuck port data_in ;                                                                                        ;
+; return_data[8]~reg0  ; Stuck at GND              ; return_data[18]~reg0, return_data[23]~reg0                                             ;
+;                      ; due to stuck port data_in ;                                                                                        ;
+; return_data[6]~reg0  ; Stuck at GND              ; return_data[17]~reg0                                                                   ;
+;                      ; due to stuck port data_in ;                                                                                        ;
+; return_data[10]~reg0 ; Stuck at GND              ; return_data[19]~reg0                                                                   ;
+;                      ; due to stuck port data_in ;                                                                                        ;
+; return_data[14]~reg0 ; Stuck at GND              ; return_data[21]~reg0                                                                   ;
+;                      ; due to stuck port data_in ;                                                                                        ;
++----------------------+---------------------------+----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -252,7 +282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -262,177 +292,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |Microprocessor ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; word_size      ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |instruction_memory ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; DATA_LENGTH    ; 32    ; Signed Integer                                            ;
+; MEM_LENGTH     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Memory:Instruction_Memory ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; data_length    ; 8     ; Signed Integer                                ;
-; mem_length     ; 64    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Memory:Data_Memory ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; data_length    ; 8     ; Signed Integer                         ;
-; mem_length     ; 64    ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Control_Unit:comb_10 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; word_size      ; 32    ; Signed Integer                           ;
-; opcode_size    ; 5     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU:ALU_Unit ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; ANDS           ; 1     ; Signed Integer                   ;
-; ORRS           ; 2     ; Signed Integer                   ;
-; MVNS           ; 3     ; Signed Integer                   ;
-; EORS           ; 4     ; Signed Integer                   ;
-; ADCS           ; 5     ; Signed Integer                   ;
-; ADDS           ; 6     ; Signed Integer                   ;
-; SBCS           ; 7     ; Signed Integer                   ;
-; SUB            ; 8     ; Signed Integer                   ;
-; MULS           ; 9     ; Signed Integer                   ;
-; LSRS           ; 10    ; Signed Integer                   ;
-; LSLS           ; 11    ; Signed Integer                   ;
-; ASR            ; 12    ; Signed Integer                   ;
-; ROR            ; 13    ; Signed Integer                   ;
-; UXTB           ; 14    ; Signed Integer                   ;
-; UXTH           ; 15    ; Signed Integer                   ;
-; SXTB           ; 16    ; Signed Integer                   ;
-; SXTH           ; 17    ; Signed Integer                   ;
-; CMP            ; 18    ; Signed Integer                   ;
-; NEGATIVE       ; 0     ; Signed Integer                   ;
-; ZERO           ; 1     ; Signed Integer                   ;
-; CARRY          ; 2     ; Signed Integer                   ;
-; OVERFLOW       ; 3     ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU:ALU_Unit|UXTB:UxtbModule ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; UXTB           ; 0     ; Signed Integer                                   ;
-; UXTH           ; 1     ; Signed Integer                                   ;
-; SXTB           ; 2     ; Signed Integer                                   ;
-; SXTH           ; 3     ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU:ALU_Unit|Comparator:Compare ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; NEGATIVE       ; 0     ; Signed Integer                                      ;
-; ZERO           ; 1     ; Signed Integer                                      ;
-; CARRY          ; 2     ; Signed Integer                                      ;
-; OVERFLOW       ; 3     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ALU_Unit|Comparator:Compare|Subtractor:SUB"                                                                                               ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; c_in  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; c_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ALU_Unit|Comparator:Compare"                                                              ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; status_flag[2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ALU_Unit|LSLS:LShiftModule"                                                       ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ALU_Unit"                                                                                              ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                  ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; flags  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; result ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Control_Unit:comb_10"                                                                                          ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                  ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; mem_to_reg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; mem_write  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; reg_write  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; alu_ctrl   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; alu_src    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; imm_src    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Memory:Data_Memory"                                                                                                                                                               ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; rdata ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
-; addr  ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (6 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Memory:Instruction_Memory"                                                                                                                                                        ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; we    ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; rdata ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
-; addr  ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (6 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -440,13 +308,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 34                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
+; boundary_port         ; 38                          ;
+; cycloneiii_ff         ; 4                           ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 6                           ;
+;     normal            ; 6                           ;
 ;         0 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -465,168 +338,120 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu May 23 17:30:26 2024
+    Info: Processing started: Sun May 26 12:41:16 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Microprocessor -c Microprocessor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file register_file.sv
+    Info (12023): Found entity 1: register_file File: D:/Documentos/MiniMicro/Microprocessor/register_file.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_memory.sv
+    Info (12023): Found entity 1: instruction_memory File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file microprocessor.sv
-    Info (12023): Found entity 1: Microprocessor File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 3
-Info (12021): Found 0 design units, including 0 entities, in source file programcounter.sv
+    Info (12023): Found entity 1: Microprocessor File: D:/Documentos/MiniMicro/Microprocessor/Microprocessor.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file programcounter.sv
+    Info (12023): Found entity 1: program_counter File: D:/Documentos/MiniMicro/Microprocessor/ProgramCounter.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file memory.sv
-    Info (12023): Found entity 1: Memory File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Memory.sv Line: 1
+    Info (12023): Found entity 1: Memory File: D:/Documentos/MiniMicro/Microprocessor/Memory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file microprocessor_tb.sv
-    Info (12023): Found entity 1: Microprocessor_tb File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor_tb.sv Line: 3
+    Info (12023): Found entity 1: Microprocessor_tb File: D:/Documentos/MiniMicro/Microprocessor/Microprocessor_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file control_unit.sv
-    Info (12023): Found entity 1: Control_Unit File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 1
+    Info (12023): Found entity 1: Control_Unit File: D:/Documentos/MiniMicro/Microprocessor/Control_Unit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 1
+    Info (12023): Found entity 1: ALU File: D:/Documentos/MiniMicro/Microprocessor/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ands.sv
-    Info (12023): Found entity 1: ANDS File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ANDS.sv Line: 3
+    Info (12023): Found entity 1: ANDS File: D:/Documentos/MiniMicro/Microprocessor/ANDS.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file asr.sv
-    Info (12023): Found entity 1: ASR File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ASR.sv Line: 3
+    Info (12023): Found entity 1: ASR File: D:/Documentos/MiniMicro/Microprocessor/ASR.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: Adder File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Adder.sv Line: 3
+    Info (12023): Found entity 1: Adder File: D:/Documentos/MiniMicro/Microprocessor/Adder.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file bitwisenot.sv
-    Info (12023): Found entity 1: BitwiseNot File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BitwiseNot.sv Line: 1
+    Info (12023): Found entity 1: BitwiseNot File: D:/Documentos/MiniMicro/Microprocessor/BitwiseNot.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file boothmul.sv
-    Info (12023): Found entity 1: Booth File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv Line: 1
+    Info (12023): Found entity 1: Booth File: D:/Documentos/MiniMicro/Microprocessor/BoothMul.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
-    Info (12023): Found entity 1: Comparator File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Comparator.sv Line: 3
+    Info (12023): Found entity 1: Comparator File: D:/Documentos/MiniMicro/Microprocessor/Comparator.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file eors.sv
-    Info (12023): Found entity 1: EORS File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/EORS.sv Line: 3
+    Info (12023): Found entity 1: EORS File: D:/Documentos/MiniMicro/Microprocessor/EORS.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file ext.sv
-    Info (12023): Found entity 1: UXTB File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/EXT.sv Line: 3
-Warning (10238): Verilog Module Declaration warning at LSLS.sv(6): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "LSLS" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/LSLS.sv Line: 6
+    Info (12023): Found entity 1: UXTB File: D:/Documentos/MiniMicro/Microprocessor/EXT.sv Line: 3
+Warning (10238): Verilog Module Declaration warning at LSLS.sv(6): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "LSLS" File: D:/Documentos/MiniMicro/Microprocessor/LSLS.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file lsls.sv
-    Info (12023): Found entity 1: LSLS File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/LSLS.sv Line: 1
+    Info (12023): Found entity 1: LSLS File: D:/Documentos/MiniMicro/Microprocessor/LSLS.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file lsrs.sv
-    Info (12023): Found entity 1: LSRS File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/LSRS.sv Line: 3
-Warning (12018): Entity "NAND" will be ignored because it conflicts with Quartus Prime primitive name File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/NAND.sv Line: 3
+    Info (12023): Found entity 1: LSRS File: D:/Documentos/MiniMicro/Microprocessor/LSRS.sv Line: 3
+Warning (12018): Entity "NAND" will be ignored because it conflicts with Quartus Prime primitive name File: D:/Documentos/MiniMicro/Microprocessor/NAND.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file nand.sv
 Info (12021): Found 1 design units, including 1 entities, in source file orrs.sv
-    Info (12023): Found entity 1: ORRS File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ORRS.sv Line: 1
+    Info (12023): Found entity 1: ORRS File: D:/Documentos/MiniMicro/Microprocessor/ORRS.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ror.sv
-    Info (12023): Found entity 1: ROR File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ROR.sv Line: 3
+    Info (12023): Found entity 1: ROR File: D:/Documentos/MiniMicro/Microprocessor/ROR.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder.sv
-    Info (12023): Found entity 1: FullAdder File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/FullAdder.sv Line: 3
+    Info (12023): Found entity 1: FullAdder File: D:/Documentos/MiniMicro/Microprocessor/FullAdder.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file halfadder.sv
-    Info (12023): Found entity 1: HalfAdder File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/HalfAdder.sv Line: 3
+    Info (12023): Found entity 1: HalfAdder File: D:/Documentos/MiniMicro/Microprocessor/HalfAdder.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file subtractor.sv
-    Info (12023): Found entity 1: Subtractor File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Subtractor.sv Line: 3
+    Info (12023): Found entity 1: Subtractor File: D:/Documentos/MiniMicro/Microprocessor/Subtractor.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file subtractorcarry.sv
-    Info (12023): Found entity 1: SubtractorCarry File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/SubtractorCarry.sv Line: 2
-Warning (10222): Verilog HDL Parameter Declaration warning at Microprocessor.sv(15): Parameter Declaration in module "Microprocessor" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 15
-Warning (10222): Verilog HDL Parameter Declaration warning at Microprocessor.sv(40): Parameter Declaration in module "Microprocessor" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 40
-Warning (10222): Verilog HDL Parameter Declaration warning at Microprocessor.sv(63): Parameter Declaration in module "Microprocessor" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 63
-Warning (10222): Verilog HDL Parameter Declaration warning at Control_Unit.sv(46): Parameter Declaration in module "Control_Unit" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 46
-Warning (10222): Verilog HDL Parameter Declaration warning at Control_Unit.sv(51): Parameter Declaration in module "Control_Unit" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 51
-Critical Warning (10846): Verilog HDL Instantiation warning at Microprocessor.sv(82): instance has no name File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 82
-Info (12127): Elaborating entity "Microprocessor" for the top level hierarchy
-Warning (10034): Output port "output_data" at Microprocessor.sv(6) has no driver File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-Info (12128): Elaborating entity "Memory" for hierarchy "Memory:Instruction_Memory" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at Memory.sv(32): truncated value with size 8 to match size of target (1) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Memory.sv Line: 32
-Info (12128): Elaborating entity "Control_Unit" for hierarchy "Control_Unit:comb_10" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 82
-Warning (10036): Verilog HDL or VHDL warning at Control_Unit.sv(54): object "destination" assigned a value but never read File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 54
-Warning (10036): Verilog HDL or VHDL warning at Control_Unit.sv(54): object "src1" assigned a value but never read File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 54
-Warning (10036): Verilog HDL or VHDL warning at Control_Unit.sv(54): object "src2" assigned a value but never read File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 54
-Warning (10230): Verilog HDL assignment warning at Control_Unit.sv(59): truncated value with size 9 to match size of target (6) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 59
-Warning (10230): Verilog HDL assignment warning at Control_Unit.sv(60): truncated value with size 9 to match size of target (6) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 60
-Warning (10230): Verilog HDL assignment warning at Control_Unit.sv(61): truncated value with size 9 to match size of target (6) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 61
-Warning (10034): Output port "alu_src" at Control_Unit.sv(7) has no driver File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 7
-Warning (10034): Output port "imm_src" at Control_Unit.sv(8) has no driver File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Control_Unit.sv Line: 8
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_Unit" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 103
-Warning (10240): Verilog HDL Always Construct warning at ALU.sv(199): inferring latch(es) for variable "cin_adder", which holds its previous value in one or more paths through the always construct File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 199
-Warning (10240): Verilog HDL Always Construct warning at ALU.sv(199): inferring latch(es) for variable "ext_mode", which holds its previous value in one or more paths through the always construct File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 199
-Warning (10240): Verilog HDL Always Construct warning at ALU.sv(199): inferring latch(es) for variable "ext_sign", which holds its previous value in one or more paths through the always construct File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 199
-Warning (10240): Verilog HDL Always Construct warning at ALU.sv(199): inferring latch(es) for variable "sub_cin", which holds its previous value in one or more paths through the always construct File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 199
-Info (10041): Inferred latch for "sub_cin" at ALU.sv(199) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 199
-Info (10041): Inferred latch for "ext_sign" at ALU.sv(199) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 199
-Info (10041): Inferred latch for "ext_mode" at ALU.sv(199) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 199
-Info (10041): Inferred latch for "cin_adder" at ALU.sv(199) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 199
-Info (12128): Elaborating entity "ANDS" for hierarchy "ALU:ALU_Unit|ANDS:ANDSModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 60
-Info (12128): Elaborating entity "ORRS" for hierarchy "ALU:ALU_Unit|ORRS:ORRSModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 70
-Info (12128): Elaborating entity "BitwiseNot" for hierarchy "ALU:ALU_Unit|BitwiseNot:MVNSModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 78
-Info (12128): Elaborating entity "EORS" for hierarchy "ALU:ALU_Unit|EORS:EORSModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 88
-Info (12128): Elaborating entity "Adder" for hierarchy "ALU:ALU_Unit|Adder:MainAdder" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 101
-Info (12128): Elaborating entity "FullAdder" for hierarchy "ALU:ALU_Unit|Adder:MainAdder|FullAdder:full_adder_gen[0].FullAdders" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Adder.sv Line: 23
-Info (12128): Elaborating entity "HalfAdder" for hierarchy "ALU:ALU_Unit|Adder:MainAdder|FullAdder:full_adder_gen[0].FullAdders|HalfAdder:Adder1" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/FullAdder.sv Line: 20
-Info (12128): Elaborating entity "Subtractor" for hierarchy "ALU:ALU_Unit|Subtractor:SubtModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 114
-Info (12128): Elaborating entity "Booth" for hierarchy "ALU:ALU_Unit|Booth:MulMod" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 123
-Warning (10855): Verilog HDL warning at BoothMul.sv(10): initial value for variable QR should be constant File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv Line: 10
-Warning (10855): Verilog HDL warning at BoothMul.sv(10): initial value for variable MQ should be constant File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv Line: 10
-Warning (10270): Verilog HDL Case Statement warning at BoothMul.sv(19): incomplete case statement has no default case item File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv Line: 19
-Info (10264): Verilog HDL Case Statement information at BoothMul.sv(19): all case item expressions in this case statement are onehot File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at BoothMul.sv(28): truncated value with size 66 to match size of target (65) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv Line: 28
-Warning (10240): Verilog HDL Always Construct warning at BoothMul.sv(18): inferring latch(es) for variable "AC", which holds its previous value in one or more paths through the always construct File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv Line: 18
-Warning (10030): Net "MQ" at BoothMul.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/BoothMul.sv Line: 8
-Info (12128): Elaborating entity "LSLS" for hierarchy "ALU:ALU_Unit|LSLS:LShiftModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 133
-Warning (10762): Verilog HDL Case Statement warning at LSLS.sv(13): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/LSLS.sv Line: 13
-Info (12128): Elaborating entity "LSRS" for hierarchy "ALU:ALU_Unit|LSRS:RShiftModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 144
-Warning (10230): Verilog HDL assignment warning at LSRS.sv(11): truncated value with size 32 to match size of target (1) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/LSRS.sv Line: 11
-Info (12128): Elaborating entity "ASR" for hierarchy "ALU:ALU_Unit|ASR:AsrModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 155
-Warning (10230): Verilog HDL assignment warning at ASR.sv(11): truncated value with size 32 to match size of target (1) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ASR.sv Line: 11
-Info (12128): Elaborating entity "ROR" for hierarchy "ALU:ALU_Unit|ROR:RorModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 164
-Warning (10230): Verilog HDL assignment warning at ROR.sv(12): truncated value with size 33 to match size of target (32) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ROR.sv Line: 12
-Info (12128): Elaborating entity "UXTB" for hierarchy "ALU:ALU_Unit|UXTB:UxtbModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 176
-Warning (10230): Verilog HDL assignment warning at EXT.sv(38): truncated value with size 32 to match size of target (1) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/EXT.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at EXT.sv(43): truncated value with size 32 to match size of target (1) File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/EXT.sv Line: 43
-Info (12128): Elaborating entity "Comparator" for hierarchy "ALU:ALU_Unit|Comparator:Compare" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/ALU.sv Line: 185
-Warning (10235): Verilog HDL Always Construct warning at Comparator.sv(33): variable "num1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Comparator.sv Line: 33
-Warning (10235): Verilog HDL Always Construct warning at Comparator.sv(33): variable "num2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Comparator.sv Line: 33
-Warning (10034): Output port "status_flag[2]" at Comparator.sv(6) has no driver File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Comparator.sv Line: 6
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: SubtractorCarry File: D:/Documentos/MiniMicro/Microprocessor/SubtractorCarry.sv Line: 2
+Warning (10222): Verilog HDL Parameter Declaration warning at Microprocessor.sv(15): Parameter Declaration in module "Microprocessor" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Documentos/MiniMicro/Microprocessor/Microprocessor.sv Line: 15
+Warning (10222): Verilog HDL Parameter Declaration warning at Microprocessor.sv(40): Parameter Declaration in module "Microprocessor" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Documentos/MiniMicro/Microprocessor/Microprocessor.sv Line: 40
+Warning (10222): Verilog HDL Parameter Declaration warning at Microprocessor.sv(63): Parameter Declaration in module "Microprocessor" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Documentos/MiniMicro/Microprocessor/Microprocessor.sv Line: 63
+Warning (10222): Verilog HDL Parameter Declaration warning at Control_Unit.sv(46): Parameter Declaration in module "Control_Unit" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Documentos/MiniMicro/Microprocessor/Control_Unit.sv Line: 46
+Warning (10222): Verilog HDL Parameter Declaration warning at Control_Unit.sv(51): Parameter Declaration in module "Control_Unit" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Documentos/MiniMicro/Microprocessor/Control_Unit.sv Line: 51
+Critical Warning (10846): Verilog HDL Instantiation warning at Microprocessor.sv(82): instance has no name File: D:/Documentos/MiniMicro/Microprocessor/Microprocessor.sv Line: 82
+Info (12127): Elaborating entity "instruction_memory" for the top level hierarchy
+Warning (10030): Net "mem.data_a" at instruction_memory.sv(41) has no driver or initial value, using a default initial value '0' File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 41
+Warning (10030): Net "mem.waddr_a" at instruction_memory.sv(41) has no driver or initial value, using a default initial value '0' File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 41
+Warning (10030): Net "mem.we_a" at instruction_memory.sv(41) has no driver or initial value, using a default initial value '0' File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 41
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276013): RAM logic "mem" is uninferred because MIF is not supported for the selected family File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 41
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output_data[0]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[1]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[2]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[3]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[4]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[5]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[6]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[8]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[9]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[10]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[11]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[12]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[13]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[14]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[15]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[16]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[17]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[18]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[19]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[20]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[21]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[22]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[23]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[24]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[25]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[26]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[27]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[28]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[29]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[30]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-    Warning (13410): Pin "output_data[31]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 6
-Info (144001): Generated suppressed messages file C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/output_files/Microprocessor.map.smsg
+    Warning (13410): Pin "return_data[4]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[5]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[6]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[7]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[8]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[9]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[10]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[11]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[12]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[13]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[14]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[15]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[16]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[17]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[18]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[19]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[20]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[21]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[22]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[23]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[24]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[25]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[26]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[27]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[28]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[29]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[30]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+    Warning (13410): Pin "return_data[31]" is stuck at GND File: D:/Documentos/MiniMicro/Microprocessor/instruction_memory.sv Line: 55
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/Documentos/MiniMicro/Microprocessor/output_files/Microprocessor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 4
-    Warning (15610): No output dependent on input pin "rst" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/Microprocessor.sv Line: 4
-Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 32 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
-    Info: Peak virtual memory: 4739 megabytes
-    Info: Processing ended: Thu May 23 17:30:37 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:26
+    Info (21061): Implemented 5 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4758 megabytes
+    Info: Processing ended: Sun May 26 12:41:24 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/jorgl/OneDrive/Escritorio/MiniMicro Local/Memory/output_files/Microprocessor.map.smsg.
+The suppressed messages can be found in D:/Documentos/MiniMicro/Microprocessor/output_files/Microprocessor.map.smsg.
 
 
