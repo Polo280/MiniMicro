@@ -2,6 +2,7 @@ module Control_Unit #(parameter word_size = 32, parameter opcode_size = 5)(
 	input clk, rst,
 	input [word_size-1:0] instruction,
 	input [3:0] flags,
+	
 	output reg mem_to_reg, mem_write, reg_write,   // MemWrite -> 0 = write, 1 = read
 	output reg [opcode_size-1:0] alu_ctrl,
 	output reg alu_src, imm_src  // Optional implementations for multiplexing
@@ -19,7 +20,7 @@ parameter // Logic operations
 			 ADDS	 = 6,			// Normal addition
 			 SBCS  = 7,			// Subtraction with carry
 			 SUB   = 8,			// Subtraction
-		    MULS  = 9,       // Multiplication
+		     MULS  = 9,       // Multiplication
 
 			 // Shifts
 			 LSRS  = 10,		// Logic Shift Right 

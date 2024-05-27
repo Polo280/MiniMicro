@@ -26,9 +26,9 @@
 
 module register_file (
     input clk,          // Clock signal
-    input [3:0]   A1,   // Read Address 1
-    input [3:0]   A2,   // Read Address 2
-    input [3:0]   A3,   // Write Address
+    input [8:0]   A1,   // Read Address 1
+    input [8:0]   A2,   // Read Address 2
+    input [8:0]   A3,   // Write Address
     input [31:0]  WD3,  // 32-bit write data input
     input [31:0]  R15,  // Recieved from Program Counter
     input         WE3,  // Write Enable

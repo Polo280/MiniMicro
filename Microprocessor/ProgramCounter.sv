@@ -1,5 +1,5 @@
 
-module program_counter (
+module ProgramCounter (
     input clk,
     input rst,
     output [31:0] pc_out
