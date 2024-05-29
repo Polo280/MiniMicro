@@ -1,9 +1,8 @@
 module ALU(
-	input clk,
-	input [4:0] instruction,
-	input [31:0] num1, num2,
-	output reg [31:0] result,
-	output reg [3:0] flags    // N, Z, C, V
+	input [4:0] instruction,  // Instruction recieved from program memory
+	input [31:0] num1, num2,  // Operands
+	output reg [31:0] result, // result of the operation
+	output reg [3:0] flags    // Negative, Zero, Carry, oVerflow
 );
 
 // Enable wires 
@@ -245,7 +244,7 @@ begin
 	endcase
 end
 
-always @(posedge clk)
+always @(instruction)
 begin
 
 	case(instruction) 
