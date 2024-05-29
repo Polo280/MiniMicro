@@ -84,11 +84,11 @@ module register_file (
         //Clear all 15 registers
         for (i = 0; i < 15; i++) 
             begin
-                registers[i] = 0;
+                registers[i] <= 0;
             end
 
         //TODO: reset Addresses
-
+        
 
         end
 
