@@ -15,12 +15,21 @@ module Microprocessor #(parameter word_size = 32)(
 
 
 //Wire output to output of ALU
-assign output_data = ALU_result;
+	//assign output_data = ALU_result;
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////
 //////////  PROGRAM COUNTER  ///////////
 ////////////////////////////////////////
-
 
 reg [31:0] pc_out;  // Contains the Address of the instruction that must be excecuted
 
@@ -31,8 +40,17 @@ ProgramCounter pc(
 	.pc_out(pc_out)
 );
 
-
 ////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -42,18 +60,13 @@ ProgramCounter pc(
 ////////// INSTRUCTION MEMORY //////////
 ////////////////////////////////////////
 
-// NOTE: Data cannot be written to this memory, so it has only an address and a rdata bus 
 
 parameter instruct_data_length = 32, 
 		  instruct_mem_length  = 32;
 			 
-//wire instruct_rst; 
-//wire instruct_we;   			  // Reset, clock, write/read enable
-//reg [instruct_data_length-1:0] instruct_wdata;				  // Instruction write data bus 
-
 
 //INPUTS
-reg [$clog2(instruct_mem_length-1):0] instruct_address;	  // Address bus 
+reg [$clog2(instruct_mem_length-1):0] instruct_address;	  		// Address bus 
 
 //OUTPUTS
 reg [instruct_data_length-1:0]  instruction_mem_return_data;	// contains the actual instruction that must be excecuted
@@ -63,15 +76,72 @@ assign instruct_clk = clk;
 assign instruct_address = pc_out; // Address is the output from the PC
 
 
-//assign instruct_rst = rst;
-//assign instruct_we = 1'b1;  // Read mode
-
 instruction_memory Instruction_Memory(
 	.return_data(instruction_mem_return_data),
 	.address(instruct_address)
 );
 
 ////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////
+///////////// CONTROL UNIT /////////////
+////////////////////////////////////////
+
+parameter opcode_size = 5;
+
+// INPUT WIRES
+wire ctrl_clk;
+wire ctrl_rst;
+wire [word_size-1:0] ctrl_instruction; // full 32bit instruction from prog mem
+wire [3:0] ctrl_flags;   	 		   // flags recieved from previous ALU operation
+
+// OUTPUT WIRES
+wire ctrl_mem_to_reg;            	// Write enable if memory output should be written to registers					
+wire ctrl_mem_write;             	//Write enable for
+wire ctrl_reg_write;             	// Write enable for Data Memory
+wire [opcode_size-1:0] ctr_alu_ctrl; 	//ALU OPCODE
+
+
+
+assign ctrl_clk = clk; 
+assign ctrl_rst = rst;
+
+
+assign ctrl_flags = ALU_flags; // assign input flags from alu output flags
+
+// Instruction comes from the output of program memory
+assign ctrl_instruction = instruction_mem_return_data;
+
+
+Control_Unit control_unit(
+	.clk(ctrl_clk),
+	.rst(ctrl_rst),
+	.mem_to_reg(ctrl_mem_to_reg),
+	.mem_write(ctrl_mem_write),
+	.reg_write(ctrl_reg_write),
+	.flags(ctrl_flags),
+	.instruction(ctrl_instruction),
+	.alu_ctrl(ctrl_alu_ctrl)
+);
+
+////////////////////////////////////////
+
+
+
 
 
 
@@ -95,22 +165,23 @@ wire rf_clk;       //clock
 wire rf_WE3;       //write enable
 reg [8:0]  rf_A1;  // Addr 1 from Instruction mem
 reg [8:0]  rf_A2;  // Addr 2 from Instruction mem
-reg [8:0]  rf_A3;  // Addr 3 from Instru mem
+reg [8:0]  rf_A3;  // Addr 3 from Instruction mem
 reg [31:0] rf_WD3; // data to write to addr 3 (from output of data memory)
-reg [31:0] rf_R15; // where tf does this come from???
+reg [31:0] rf_R15; // current PC value
 
 //outputs
-reg[31:0] rf_RD1;  // output data 1 to ALU	
-reg[31:0] rf_RD2;  // output data 2 to ALU
+reg[31:0] rf_RD1;  // output data 1 (wired in alu instance) 	
+reg[31:0] rf_RD2;  // output data 2 (wired in alu instance)
 
 
 
-assign rf_clk = clk;
-assign rf_A1 = instruction_mem_return_data[26:18]; //get address 1 from instruction
-assign rf_A2 = instruction_mem_return_data[17:9];  //get address 1 from instruction
-
-assign rf_WE3 = ctrl_reg_write;
-assign rf_R15 = pc_out;
+assign rf_clk = clk; //assign clk from global clk
+assign rf_A1 = instruction_mem_return_data[17:9]; // assign address 1 from instruction_memory:output
+assign rf_A2 = instruction_mem_return_data[8:0];  // assign address 2 from instruction_memory:output
+assign rf_WD3 = datamem_rdata;					  // write back comes from data mem
+assign rf_WE3 = ctrl_reg_write;                   // get write enable from ControlUnit:reg_write
+assign rf_R15 = pc_out; 						  // assign PC output to R15 input
+assign rf_A3  = instruction_mem_return_data[26:18];
 
 
 register_file RegFile(
@@ -125,6 +196,10 @@ register_file RegFile(
 	.RD2(rf_RD2)
 );
 
+////////////////////////////////////////
+
+
+
 
 
 
@@ -132,29 +207,74 @@ register_file RegFile(
 
 
 ////////////////////////////////////////
+/////////////// ALU UNIT ///////////////
+////////////////////////////////////////
+
+//Inputs
+wire[opcode_size-1:0] ALU_instruct; //opcode
+reg [word_size-1:0] ALU_num1, ALU_num2;
+
+// Output
+wire[3:0] ALU_flags;    
+wire [word_size-1:0] ALU_result;
+
+
+assign ALU_num1 = rf_A1;             // get first num from reg file
+assign ALU_num2 = rf_A2;             // get second num from reg file
+assign ALU_instruct = ctr_alu_ctrl;  //control recieved from ctrl unit
+
+
+ALU ALU_Unit(
+	.instruction(ctrl_alu_ctrl),
+	.num1(ALU_num1),
+	.num2(ALU_num2),
+	.result(ALU_result),
+	.flags(ALU_flags)
+);
+
+////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////
 ///////////// DATA MEMORY //////////////
 ////////////////////////////////////////
+
 parameter datamem_datalength = 32, 
 		  datamem_length     = 32;
 			 
-wire datamem_rst, datamem_clk, datamem_we;   			// Reset, clock, write/read enable
-reg [$clog2(datamem_length -1):0] datamem_address;	    // Address bus 
+
+//INPUTS
+wire datamem_clk;
+wire datamem_rst;
+wire datamem_we;   			// Reset, clock, write/read enable
 reg [datamem_datalength-1:0] datamem_wdata;				// Instruction write data bus 
+reg [$clog2(datamem_length -1):0] datamem_address;	    // Address bus 
+
+
+//OUTPUTS
 reg [datamem_datalength-1:0]  datamem_rdata;			// Instruction read data bus 
 
 
-//WIRE INPUTS
-assign datamem_clk = clk;
-assign datamem_rst = rst;
+
+assign datamem_clk = clk; 								    //assign clk from global clk
+assign datamem_rst = rst; 								    //assign rst form global rst
+assign datamem_wdata   = ALU_result;                        // Data to write is ALU output
+assign datamem_address = instruction_mem_return_data[8:0];  //Assign addrs to store data
 
 
-
-//WIRE OUTPUTS
-assign datamem_address = instruction_mem_return_data[8:0]; //Assign addrs to store data
-assign datamem_wdata   = ALU_result;                       // Data to write is ALU output
-assign datamem_we	   = ctrl_mem_write;
+assign datamem_we	   = ctrl_mem_write;					//Write enable comes from ctrl unit
 
 
 
@@ -166,80 +286,12 @@ Memory Data_Memory(
 	.rdata(datamem_rdata),
 	.addr(datamem_address)
 );
-////////////////////////////////////////
-
-
-
-
-
-
-////////////////////////////////////////
-///////////// CONTROL UNIT /////////////
-////////////////////////////////////////
-parameter opcode_size = 5;
-
-// INPUT WIRES
-wire ctrl_clk;
-wire ctrl_rst;
-wire [word_size-1:0] ctrl_instruction; // instruction from prog mem
-wire [3:0] ctrl_flags;
-
-// OUTPUT WIRES
-wire ctrl_mem_to_reg;
-wire ctrl_mem_write; //Write enable for
-wire ctrl_reg_write;
-wire [opcode_size-1:0] alu_ctrl;
-
-
-
-assign ctrl_clk = clk;
-assign ctrl_rst = rst;
-
-
-assign ctrl_flags = ALU_flags; // input flags from alu output flags
-
-// Instruction comes from the output of program memory
-assign ctrl_instruction = instruction_mem_return_data;
-
-
-Control_Unit control_unit(
-	.clk(ctrl_clk),
-	.rst(ctrl_rst),
-	.mem_to_reg(ctrl_mem_to_reg),
-	.mem_write(ctrl_mem_write),
-	.reg_write(ctrl_reg_write),
-	.flags(ctrl_flags),
-	.instruction(ctrl_instruction),
-	.alu_ctrl(alu_ctrl)
-);
 
 ////////////////////////////////////////
 
-////////////////////////////////////////
-/////////////// ALU UNIT ///////////////
-////////////////////////////////////////
-wire ALU_clk;
-wire[opcode_size-1:0] ALU_instruct;
-wire[3:0] ALU_flags;   // Output 
-reg [word_size-1:0] ALU_num1, ALU_num2;
-wire [word_size-1:0] ALU_result;
 
 
-assign ALU_clk = clk;
-assign ALU_num1 = rf_A1;  // get first num from reg file
-assign ALU_num2 = rf_A2;  // get second num from reg file
-assign ALU_instruct = alu_ctrl; //control recieved from ctrl unit
 
 
-ALU ALU_Unit(
-	.clk(ALU_clk),
-	.instruction(ALU_instruct),
-	.num1(ALU_num1),
-	.num2(ALU_num2),
-	.result(ALU_result),
-	.flags(ALU_flags)
-);
-
-////////////////////////////////////////
 
 endmodule 
