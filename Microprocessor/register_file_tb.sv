@@ -79,6 +79,7 @@ module register_file_tb();
         #10; // Wait for one clock cycle
 
         rst = 1;
+        $display("rst enabled: ");
         #1;
         // Finish simulation
         $stop;
