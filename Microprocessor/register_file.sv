@@ -15,7 +15,7 @@
 *                   -A1, A2: 4 bit addresses for data retrieval
 *                   -A3: 4 bit address for either read or write
 *                   -WD3: 32 bit Write data Input
-*                   -R15: Input from Program counter
+*                   -R15: input from Program counter (+ 8)
 *                   -WE3: Write enable for address #3
 
 *
@@ -26,15 +26,18 @@
 
 module register_file (
     input clk,          // Clock signal
+    input rst,          // Reset Signal
     input [8:0]   A1,   // Read Address 1
     input [8:0]   A2,   // Read Address 2
     input [8:0]   A3,   // Write Address
-    input [31:0]  WD3,  // 32-bit write data input
+    input [31:0]  WD3,  // 32-bit write data input (used in writeback)
     input [31:0]  R15,  // Recieved from Program Counter
-    input         WE3,  // Write Enable
+    input         WE3,  // Write Enable for write back
 
-    output [31:0] RD1,  // read data from address 1
-    output [31:0] RD2   // read data from address 2
+     //--------------//
+     
+    output reg [31:0] RD1,  // return data from address 1
+    output reg [31:0] RD2   // return data from address 2
 
 
 );
@@ -44,7 +47,7 @@ module register_file (
     two read ports and one write port. The read ports take 4-bit address
     inputs, A1 and A2, each specifying one of 2⁴ = 16 registers as source
     operands. They read the 32-bit register values onto read data outputs
-    RD1 and RD2, respectively.
+    RD1 and RD2, respectively.hj
     
     The write port takes a 4-bit address input,
     A3; a 32-bit write data input, WD3; a write enable input, WE3; and a
@@ -62,25 +65,52 @@ module register_file (
 
     // 14+1 register memory
     
-    reg [31:0] registers [15:0];
+    reg [31:0] registers [0:14];
 
-    always @(posedge clk) 
+    int i;
+    initial begin
+        for (i = 0; i < 15 ; i++)
+        begin
+            registers[i] = 0;
+        end
+    end
+
+    always @(posedge clk or posedge rst) 
     begin
 
-        // return values of looked for addresses
-        RD1 <= registers[A1];
-        RD2 <= registers[A2];    
 
-        if(WE3)
-        begin
+        if (rst) begin
 
-            /*If the write enable is asserted, then the register file writes the data
-              into the specified register on the rising edge of the clock.*/
-            registers[A3] <= WD3;
+        //Clear all 15 registers
+        for (i = 0; i < 15; i++) 
+            begin
+                registers[i] = 0;
+            end
+
+        //TODO: reset Addresses
+
+
         end
 
+        else begin
 
-        //TODO: wtf with R15???
+        // return values of looked-for addresses
+            RD1 = registers[A1];
+            RD2 = registers[A2];    
+
+
+            if(WE3)
+            begin
+
+                /*If the write enable is asserted, then the register file writes the data
+                into the specified register on the rising edge of the clock.*/
+                registers[A3] = WD3; //Write back semi stage
+            end
+
+
+            //R15 input (PC) is stored and added 8
+            registers[14] = R15 + 2;
+        end
 
     end
 
