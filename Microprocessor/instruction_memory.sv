@@ -32,26 +32,25 @@
 module instruction_memory #(parameter DATA_LENGTH = 32, 
                             parameter MEM_LENGTH  = 32) //32 bit by 32 registers
 (
-    input [$clog2(MEM_LENGTH)-1:0] address,         // address to read
-    output reg [DATA_LENGTH-1:0] return_data        // data output 
+    input      [$clog2(MEM_LENGTH)-1:0] address,         // address to read
+    output reg [DATA_LENGTH-1:0]        return_data        // data output 
 );
 
-    reg [DATA_LENGTH-1:0] mem [0:MEM_LENGTH-1];
+    reg [DATA_LENGTH-1:0] mem [0:MEM_LENGTH-1]; //32 bit by 32 regs
 
     /* Initialize values from file */
 
     initial
     begin
-        $readmemb("instructions.mem", mem);         // initializes values into memory
+        $display("Reading memory from file...");
+        $readmemb("/home/fredi/Documents/miniprocessor/Microprocessor/instructions.mem", mem); // Initializes values into memory
+        $display("Memory initialization complete.");
     end
 
-    // Or initialize from code, better for testing
-    // initial begin
-    //    mem[0] = 32'b00110000000011000000000000000001; // Example binary instruction
-    // end
 
-    always @(posedge address)
+
+    always @(*)
     begin 
-        return_data <= mem[address];    
+        return_data = mem[address];    
     end 
 endmodule
