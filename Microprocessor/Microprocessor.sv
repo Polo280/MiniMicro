@@ -14,7 +14,8 @@ module Microprocessor #(parameter word_size = 32)(
 );
 
 
-
+//Wire output to output of ALU
+assign output_data = ALU_result;
 
 ////////////////////////////////////////
 //////////  PROGRAM COUNTER  ///////////
@@ -52,7 +53,6 @@ parameter instruct_data_length = 32,
 
 
 //INPUTS
-wire instruct_clk;
 reg [$clog2(instruct_mem_length-1):0] instruct_address;	  // Address bus 
 
 //OUTPUTS
@@ -67,7 +67,6 @@ assign instruct_address = pc_out; // Address is the output from the PC
 //assign instruct_we = 1'b1;  // Read mode
 
 instruction_memory Instruction_Memory(
-	.clk(instruct_clk),
 	.return_data(instruction_mem_return_data),
 	.address(instruct_address)
 );
@@ -101,7 +100,7 @@ reg [31:0] rf_WD3; // data to write to addr 3 (from output of data memory)
 reg [31:0] rf_R15; // where tf does this come from???
 
 //outputs
-reg[31:0] rf_RD1;  // output data 1 to ALU
+reg[31:0] rf_RD1;  // output data 1 to ALU	
 reg[31:0] rf_RD2;  // output data 2 to ALU
 
 
@@ -111,6 +110,7 @@ assign rf_A1 = instruction_mem_return_data[26:18]; //get address 1 from instruct
 assign rf_A2 = instruction_mem_return_data[17:9];  //get address 1 from instruction
 
 assign rf_WE3 = ctrl_reg_write;
+assign rf_R15 = pc_out;
 
 
 register_file RegFile(
