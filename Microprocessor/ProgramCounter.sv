@@ -14,7 +14,7 @@ module ProgramCounter (
         end 
         else 
         begin
-            pc_out <= pc_out + 4; // Increment PC by instruction width (32-bit)
+            pc_out <= pc_out + 1; // Increment PC by instruction width (32-bit)
         end
     end
 
