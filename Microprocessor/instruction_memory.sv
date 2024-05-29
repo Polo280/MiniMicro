@@ -16,7 +16,6 @@
 *
 * 	PORTS:
 * 		- INPUT:
-*					-clk: The clock signal. Data is read from memory on the rising edge of this clock.
 *
 * 				 	-address: The address input to specify which memory location 
 * 		                          to read. The width of this port is determined by 
@@ -31,9 +30,8 @@
 
 
 module instruction_memory #(parameter DATA_LENGTH = 32, 
-             parameter MEM_LENGTH = 32) //32 bit by 32 registers
+                            parameter MEM_LENGTH  = 32) //32 bit by 32 registers
 (
-    input clk,                                      // clock
     input [$clog2(MEM_LENGTH)-1:0] address,         // address to read
     output reg [DATA_LENGTH-1:0] return_data        // data output 
 );
@@ -52,7 +50,7 @@ module instruction_memory #(parameter DATA_LENGTH = 32,
     //    mem[0] = 32'b00110000000011000000000000000001; // Example binary instruction
     // end
 
-    always @(posedge clk)
+    always @(posedge address)
     begin 
         return_data <= mem[address];    
     end 
