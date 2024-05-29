@@ -1,10 +1,15 @@
 module Control_Unit #(parameter word_size = 32, parameter opcode_size = 5)(
-	input clk, rst,
-	input [word_size-1:0] instruction,
-	input [3:0] flags,
+	input clk,  						   //CLK
+	input rst,  						   //RST
+	input [word_size-1:0] instruction,     // Instruction recieved from progmem
+	input [3:0] flags,  				   // flags recieved from previous ALU OP
 	
-	output reg mem_to_reg, mem_write, reg_write,   // MemWrite -> 0 = write, 1 = read
+	output reg mem_to_reg,                 // Write enable if memory output should be written to registers
+			   mem_write,                  // Write enable for Data Memory
+			   reg_write,                  // MemWrite -> 0 = write, 1 = read
 	output reg [opcode_size-1:0] alu_ctrl,
+
+	//optional
 	output reg alu_src, imm_src  // Optional implementations for multiplexing
 );
 
@@ -13,7 +18,7 @@ parameter // Logic operations
 			 ANDS  = 1,			// Bitwise AND
 			 ORRS  = 2,			// Bitwise OR 
 			 MVNS  = 3,			// Bitwise NOT
-			 EORS  = 4,		   // Bitwise XOR 
+			 EORS  = 4,		    // Bitwise XOR 
 			 
 			 // Arithmetic operations 
 			 ADCS  = 5,			// Add with carry
@@ -68,13 +73,18 @@ end
 ////////////////////////////////////////
 
 always @(posedge clk or posedge rst) begin
+
+	//on reset:
 	if(rst) begin
 		alu_ctrl <= 5'b0;
 		mem_write <= 1;
 		mem_to_reg <= 0;
 		reg_write <= 0;
 	end else begin
+		//if op is 0, do nothing
 		if(opcode != 0) begin 
+
+			//check if op must be performed by ALU
 			if(opcode < 5'b10001) begin   // ALU instructions 
 				alu_ctrl <= opcode;
 			end else begin // Memory/additional instructions 
