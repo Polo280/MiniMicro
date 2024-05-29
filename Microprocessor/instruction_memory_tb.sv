@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module instruction_memory_tb;
+module instruction_memory_tb();
 
     // Parameters
     parameter DATA_LENGTH = 32;
@@ -20,42 +20,28 @@ module instruction_memory_tb;
 
     initial begin
         // Initialize Inputs
-        address = 0;
+        $display("Starting test...");
 
-        // Wait for the global reset
+        address = 0;
         #5;
 
         // Add stimulus here
-        address = 1;
-        #5; // Wait for 5 time units
-        
-        address = 2;
-        #5; // Wait for 5 time units
-
-        address = 3;
-        #5; // Wait for 5 time units
-
-        address = 4;
-        #5; // Wait for 5 time units
-
-        address = 5;
-        #5; // Wait for 5 time units
-
-        address = 30;
-        #5; // Wait for 5 time units
-
-        address = 31;
-        #5; // Wait for 5 time units
-        address = 32;
-        #5; // Wait for 5 time units
+        address = 1; #5;
+        address = 2; #5;
+        address = 3; #5;
+        address = 4; #5;
+        address = 5; #5;
+        address = 30; #5;
+        address = 31; #5;
+        address = 35; #5; // This address is out of range, expect 32'hDEADBEEF
 
         // Finish simulation
         $stop;
     end
 
-    initial 
-    begin
+
+    initial begin
         // Monitor the changes
-        $display("address = %d, return_data = %h", address, return_data);
+        $monitor("At time %t: address = %d, return_data = %h", $time, address, return_data);
     end
 endmodule
