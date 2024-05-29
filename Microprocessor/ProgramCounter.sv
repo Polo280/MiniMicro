@@ -1,14 +1,16 @@
 
+
+
 module ProgramCounter (
     input clk,
     input rst,
-    output [31:0] pc_out
+    output reg [31:0] pc_out
 );   
 
     always @(posedge clk) begin
         if (rst) 
         begin
-            pc_out <= 32'h0; // Reset PC to initial address
+            pc_out <= 32'h0;      // Reset PC to initial address
         end 
         else 
         begin
