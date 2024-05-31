@@ -16,16 +16,21 @@ output reg [data_length-1:0] rdata 				// Read(return) data bus
 //create actual memory
 reg [data_length-1:0] mem [0:mem_length-1];
 
+int i; //var for loop on reset
+
 
 always @(posedge clk or posedge rst)
 begin 
 	// Clear memory on rst
-	if(rst) begin
-		int i;
-		for (i = 0 ; i <= 0; i = i+1)
+	if(rst) 
+	begin
+		
+		for (i = 0 ; i <= mem_length; i = i+1)
 		begin
-			mem[i] <= 0;
+			mem[i] <= i;
 		end
+
+	
 	end 
 	else 
 	begin 
