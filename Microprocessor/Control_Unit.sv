@@ -7,7 +7,7 @@ module Control_Unit #(parameter word_size = 32, parameter opcode_size = 5)(
 	output reg mem_to_reg,                 // Write enable if memory output should be written to registers
 			   mem_write,                  // Write enable for Data Memory
 			   reg_write,                  // Write enable for register files -> 0 = dont write, 1 = WRITE
-	output reg [opcode_size-1:0] alu_ctrl,
+	output reg [opcode_size-1:0] alu_ctrl, // ALU OPCODE
 
 	//optional
 	output reg alu_src, imm_src  // Optional implementations for multiplexing
@@ -110,7 +110,7 @@ always @(*) begin
 					// Memory/additional instructions 
 					if(opcode == LOAD || opcode == MOV) 
 					begin
-						mem_write  = 0;  // Disable Writing to data memory
+						mem_write  = 1;  // Disable Writing to data memory
 						mem_to_reg = 1;  // Enable writing to registers
 						reg_write  = 1;  // Write enable to registers						 
 					end 

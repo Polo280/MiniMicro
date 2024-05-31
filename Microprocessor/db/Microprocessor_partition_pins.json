@@ -2,48 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "return_data[0]",
-					"strict" : false
-				},
-				{
-					"name" : "return_data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "return_data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "return_data[3]",
-					"strict" : false
-				},
-				{
-					"name" : "address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "address[3]",
-					"strict" : false
-				},
-				{
-					"name" : "address[4]",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "address[1]",
-					"strict" : false
-				},
-				{
-					"name" : "address[2]",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }

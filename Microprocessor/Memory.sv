@@ -5,7 +5,7 @@ input [data_length-1:0] wdata, 					// Data to be written into memory (Write dat
 input we, 										// Read - write mode : 0 = READ, 1 = WRITE
 input [$clog2(mem_length)-1:0] addr, 			// Address bus
 
-output reg [data_length-1:0] rdata 				// Read data bus 
+output reg [data_length-1:0] rdata 				// Read(return) data bus 
 );
 
 // 32 different memory locations 
@@ -19,14 +19,15 @@ reg [data_length-1:0] mem [0:mem_length-1];
 
 always @(posedge clk or posedge rst)
 begin 
-	// Manage initial conditions 
+	// Clear memory on rst
 	if(rst) begin
 		int i;
 		for (i = 0 ; i <= 0; i = i+1)
 		begin
 			mem[i] <= 0;
 		end
-	end else 
+	end 
+	else 
 	begin 
 		// Identify read or write mode 
 		if(we)

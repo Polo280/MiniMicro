@@ -1,0 +1,264 @@
+# do Microprocessor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/fredi/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:33 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv 
+# -- Compiling module register_file
+# 
+# Top level modules:
+# 	register_file
+# End time: 22:20:33 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Microprocessor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:33 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/Microprocessor.sv 
+# -- Compiling module Microprocessor
+# 
+# Top level modules:
+# 	Microprocessor
+# End time: 22:20:33 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ProgramCounter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:33 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/ProgramCounter.sv 
+# -- Compiling module ProgramCounter
+# 
+# Top level modules:
+# 	ProgramCounter
+# End time: 22:20:33 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:33 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/Memory.sv 
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+# End time: 22:20:33 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:33 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv 
+# -- Compiling module Control_Unit
+# 
+# Top level modules:
+# 	Control_Unit
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ANDS.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/ANDS.sv 
+# -- Compiling module ANDS
+# 
+# Top level modules:
+# 	ANDS
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ASR.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/ASR.sv 
+# -- Compiling module ASR
+# 
+# Top level modules:
+# 	ASR
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/Adder.sv 
+# -- Compiling module Adder
+# 
+# Top level modules:
+# 	Adder
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/BitwiseNot.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/BitwiseNot.sv 
+# -- Compiling module BitwiseNot
+# 
+# Top level modules:
+# 	BitwiseNot
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/BoothMul.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/BoothMul.sv 
+# -- Compiling module Booth
+# 
+# Top level modules:
+# 	Booth
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Comparator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/Comparator.sv 
+# -- Compiling module Comparator
+# 
+# Top level modules:
+# 	Comparator
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/EORS.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/EORS.sv 
+# -- Compiling module EORS
+# 
+# Top level modules:
+# 	EORS
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/EXT.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/EXT.sv 
+# -- Compiling module UXTB
+# 
+# Top level modules:
+# 	UXTB
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/LSLS.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/LSLS.sv 
+# -- Compiling module LSLS
+# 
+# Top level modules:
+# 	LSLS
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/LSRS.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/LSRS.sv 
+# -- Compiling module LSRS
+# 
+# Top level modules:
+# 	LSRS
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ORRS.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/ORRS.sv 
+# -- Compiling module ORRS
+# 
+# Top level modules:
+# 	ORRS
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ROR.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/ROR.sv 
+# -- Compiling module ROR
+# 
+# Top level modules:
+# 	ROR
+# End time: 22:20:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/FullAdder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:34 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/FullAdder.sv 
+# -- Compiling module FullAdder
+# 
+# Top level modules:
+# 	FullAdder
+# End time: 22:20:35 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/HalfAdder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:35 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/HalfAdder.sv 
+# -- Compiling module HalfAdder
+# 
+# Top level modules:
+# 	HalfAdder
+# End time: 22:20:35 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Subtractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:35 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/Subtractor.sv 
+# -- Compiling module Subtractor
+# 
+# Top level modules:
+# 	Subtractor
+# End time: 22:20:35 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/instruction_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:35 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/instruction_memory.sv 
+# -- Compiling module instruction_memory
+# 
+# Top level modules:
+# 	instruction_memory
+# End time: 22:20:35 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:35 on May 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/fredi/Documents/miniprocessor/Microprocessor" /home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv 
+# -- Compiling module load_tb
+# 
+# Top level modules:
+# 	load_tb
+# End time: 22:20:35 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  load_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" load_tb 
+# Start time: 22:20:35 on May 30,2024
+# Loading sv_std.std
+# Loading work.load_tb
+# Loading work.Control_Unit
+# Loading work.register_file
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (9) for port 'WD3'. The port definition is at: /home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv(33).
+#    Time: 0 ps  Iteration: 0  Instance: /load_tb/RF_DUT File: /home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv Line: 64
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# WD3 value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# TEST LOAD:
+# ** Note: $stop    : /home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv(105)
+#    Time: 30 ps  Iteration: 0  Instance: /load_tb
+# Break in Module load_tb at /home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv line 105

@@ -1,32 +1,42 @@
-`timescale 1ns / 1ns
+`timescale 1ns/1ps
 
-module Microprocessor_tb();
+module Microprocessor_tb;
 
-parameter word_size = 32;
+    // Parameters
+    parameter WORD_SIZE = 32;
 
-// Signals 
-reg clock, rst;
+    // Inputs
+    reg clk;
+    reg rst;
 
-// Output
-wire out;
+    // Outputs
+    wire [WORD_SIZE:0] output_data;
 
-// Module instantiation
-Microprocessor Micro(
-	.clk(clock),
-	.rst(rst),
-	.output_data(out)
-);
+    // Instantiate the Microprocessor module
+    Microprocessor #(.word_size(WORD_SIZE)) dut (
+        .clk(clk),
+        .rst(rst),
+        .output_data(output_data)
+    );
 
-// Simulation 
-initial begin
-	clock = 0;
-end
+    // Clock generation
+    always #10 clk = ~clk;
 
+    // Testbench initial block
+    initial begin
+        // Initialize inputs
+        clk = 0;
+        rst = 1;
 
-// Clock toggle 
-always 
-	begin
-		#1
-		clock = ~clock;
-	end
-endmodule 
+        // Reset the microprocessor
+        #10 rst = 0;
+
+        // Test case 1: Load and execute a simple instruction
+        // Load ()
+        $display("Output Data: %b", output_data);
+
+        // Finish the simulation
+        #100 $stop;
+    end
+
+endmodule
