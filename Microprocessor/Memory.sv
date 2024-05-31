@@ -1,4 +1,4 @@
-module Memory # (parameter data_length = 32, parameter mem_length = 32)(
+module Memory # (parameter data_length = 32, parameter mem_length = 512)(
 input clk,										// Clock to syncrhonize 	
 input rst,  									// Reset block to start with initial known values 
 input [data_length-1:0] wdata, 					// Data to be written into memory (Write data bus)
@@ -25,7 +25,7 @@ begin
 	if(rst) 
 	begin
 		
-		for (i = 0 ; i <= mem_length; i = i+1)
+		for (i = 0 ; i < mem_length; i = i+1)
 		begin
 			mem[i] <= i;
 		end
