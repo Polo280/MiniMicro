@@ -5,28 +5,10 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv}
 vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Microprocessor.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ProgramCounter.sv}
 vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Memory.sv}
 vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ALU.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ANDS.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ASR.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Adder.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/BitwiseNot.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/BoothMul.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Comparator.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/EORS.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/EXT.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/LSLS.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/LSRS.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ORRS.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/ROR.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/FullAdder.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/HalfAdder.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/Subtractor.sv}
-vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/instruction_memory.sv}
 
 vlog -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor {/home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv}
 

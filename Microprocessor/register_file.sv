@@ -73,7 +73,7 @@ module register_file (
         begin
             registers[i] = 0;
         end
-        registers[0] = 1;
+
     end
 
     always @(posedge clk or posedge rst) 
@@ -87,7 +87,7 @@ module register_file (
             begin
                 registers[i] <= 0;
             end
-            //registers[0] <= 1;
+
 
         //TODO: reset Addresses
         

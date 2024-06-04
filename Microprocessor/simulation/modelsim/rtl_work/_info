@@ -9,621 +9,109 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/fredi/Documents/miniprocessor/Microprocessor/simulation/modelsim
-vAdder
-Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1717129234
-!i10b 1
-!s100 >Nk^FPNEG5C=EAVTaQfQC0
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IXFI:59J0;FgI9A0P4EJDX2
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-S1
-R0
-Z5 w1716568453
-8/home/fredi/Documents/miniprocessor/Microprocessor/Adder.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/Adder.sv
-!i122 8
-L0 3 28
-Z6 OV;L;2020.1;71
-r1
-!s85 0
-31
-Z7 !s108 1717129234.000000
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/Adder.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/Adder.sv|
-!i113 1
-Z8 o-sv -work work
-Z9 !s92 -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor
-Z10 tCvgOpt 0
-n@adder
-vALU
-R1
-R2
-!i10b 1
-!s100 faY9PU]Vf28czMMeh96`51
-R3
-I1n^42I1UIg@mS0hnU0Q>80
-R4
-S1
-R0
-w1716943912
-8/home/fredi/Documents/miniprocessor/Microprocessor/ALU.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/ALU.sv
-!i122 5
-L0 1 412
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/ALU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/ALU.sv|
-!i113 1
-R8
-R9
-R10
-n@a@l@u
-vANDS
-R1
-R2
-!i10b 1
-!s100 iMS?DOd6:O7K[nY_CY[8M3
-R3
-I]T62QN_ljAbEoBHeZECSj2
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/ANDS.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/ANDS.sv
-!i122 6
-L0 3 21
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/ANDS.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/ANDS.sv|
-!i113 1
-R8
-R9
-R10
-n@a@n@d@s
-vASR
-R1
-R2
-!i10b 1
-!s100 o<RSV3e`d2NG3hXK;L_XN2
-R3
-IVMZ?KW?^B>lLBdN0JISJ22
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/ASR.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/ASR.sv
-!i122 7
-Z11 L0 3 23
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/ASR.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/ASR.sv|
-!i113 1
-R8
-R9
-R10
-n@a@s@r
-vBitwiseNot
-R1
-R2
-!i10b 1
-!s100 oNbIEAmaoXSLY><@>:Eb`3
-R3
-Io?T=hjaDhh]Eb_YRfdN6^3
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/BitwiseNot.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/BitwiseNot.sv
-!i122 9
-L0 1 13
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/BitwiseNot.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/BitwiseNot.sv|
-!i113 1
-R8
-R9
-R10
-n@bitwise@not
-vBooth
-R1
-R2
-!i10b 1
-!s100 KNjUe76_D[;H??7C]h?zh2
-R3
-I1E1`mAUZ>FAf:H8Ok`>Qd3
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/BoothMul.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/BoothMul.sv
-!i122 10
-L0 1 33
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/BoothMul.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/BoothMul.sv|
-!i113 1
-R8
-R9
-R10
-n@booth
-vComparator
-R1
-R2
-!i10b 1
-!s100 :XVi?8:>;n?2fn02c=b0l3
-R3
-I<<cM`WR=iCOkle5Xl?@BU2
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/Comparator.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/Comparator.sv
-!i122 11
-L0 3 35
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/Comparator.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/Comparator.sv|
-!i113 1
-R8
-R9
-R10
-n@comparator
 vControl_Unit
-R1
-R2
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1717519836
 !i10b 1
 !s100 ]z_81b?bM?BO;QogGkASW0
-R3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IR=cO9PT6@VVc8fmQ5n]Ne0
-R4
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
 w1717043681
 8/home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv
 F/home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv
-!i122 4
+!i122 3
 L0 1 137
-R6
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z12 !s108 1717129233.000000
+Z6 !s108 1717519836.000000
 !s107 /home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv|
 !i113 1
-R8
-R9
-R10
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+/home/fredi/Documents/miniprocessor/Microprocessor
+Z9 tCvgOpt 0
 n@control_@unit
-vEORS
+vload_tb
 R1
 R2
 !i10b 1
-!s100 F0c^oL^lgO^:?P=Z`;Vbd3
+!s100 OAD4n6knJ`CaCAbzhS^8^3
 R3
-IZ5>R:f]PF:NXchk;QClCT1
+IEDS?H>_XFcLd;>j?dmF^P1
 R4
 S1
 R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/EORS.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/EORS.sv
-!i122 12
-L0 3 20
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/EORS.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/EORS.sv|
-!i113 1
-R8
-R9
-R10
-n@e@o@r@s
-vFullAdder
-R1
-Z13 !s110 1717129235
-!i10b 1
-!s100 fUC8ZmBCL>H_]<R>Cn0J<0
-R3
-IUEk?b6_6cJVB99@N[j;iK0
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/FullAdder.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/FullAdder.sv
-!i122 18
-L0 3 30
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/FullAdder.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/FullAdder.sv|
-!i113 1
-R8
-R9
-R10
-n@full@adder
-vHalfAdder
-R1
-R13
-!i10b 1
-!s100 n7aX5gPlFOg9HSQ9l0Sm>0
-R3
-Ib1bc5WBMWZ4mKETbIRUT^2
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/HalfAdder.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/HalfAdder.sv
-!i122 19
-L0 3 11
-R6
-r1
-!s85 0
-31
-Z14 !s108 1717129235.000000
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/HalfAdder.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/HalfAdder.sv|
-!i113 1
-R8
-R9
-R10
-n@half@adder
-vinstruction_memory
-R1
-R13
-!i10b 1
-!s100 ;U3^iL8AdeHAR3i6XJgd43
-R3
-Ija6mL^oczDW0`9nM<8XJO1
-R4
-S1
-R0
-w1717014319
-8/home/fredi/Documents/miniprocessor/Microprocessor/instruction_memory.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/instruction_memory.sv
-!i122 21
-L0 32 25
-R6
-r1
-!s85 0
-31
-R14
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/instruction_memory.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/instruction_memory.sv|
-!i113 1
-R8
-R9
-R10
-vload_tb
-R1
-R13
-!i10b 1
-!s100 ;Iegk633TLnF`l5@<FNlN1
-R3
-I<aOR<6AUE8Kabk7N;RMMU1
-R4
-S1
-R0
-w1717129224
+w1717516426
 8/home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv
 F/home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv
-!i122 22
-L0 1 118
-R6
+!i122 4
+L0 1 198
+R5
 r1
 !s85 0
 31
-R14
+R6
 !s107 /home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv|
 !i113 1
-R8
-R9
-R10
-vLSLS
-R1
-R2
-!i10b 1
-!s100 CmHb5>oZQ:W3e1SJYM`A`2
-R3
-If_UnMjM40RR>S4GTmALXj0
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/LSLS.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/LSLS.sv
-!i122 14
-L0 1 49
-R6
-r1
-!s85 0
-31
 R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/LSLS.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/LSLS.sv|
-!i113 1
 R8
 R9
-R10
-n@l@s@l@s
-vLSRS
-R1
-R2
-!i10b 1
-!s100 FzM98;@[zMX4U4ON=oGXJ1
-R3
-IG=c0S5zRn_lG^n<LO<4;S1
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/LSRS.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/LSRS.sv
-!i122 15
-R11
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/LSRS.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/LSRS.sv|
-!i113 1
-R8
-R9
-R10
-n@l@s@r@s
 vMemory
 R1
-Z15 !s110 1717129233
+R2
 !i10b 1
-!s100 fH4;kfY>Ll;PEB@E=b`WT0
+!s100 <H2WmR;mz06mJKT=;HDX[0
 R3
-I;R6gGG[ciWWR2eT0iD0^n1
+IjObE=[JGXROCaDlhZPAAC3
 R4
 S1
 R0
-w1717015678
+w1717171618
 8/home/fredi/Documents/miniprocessor/Microprocessor/Memory.sv
 F/home/fredi/Documents/miniprocessor/Microprocessor/Memory.sv
-!i122 3
-L0 1 41
-R6
+!i122 2
+L0 1 46
+R5
 r1
 !s85 0
 31
-R12
+Z10 !s108 1717519835.000000
 !s107 /home/fredi/Documents/miniprocessor/Microprocessor/Memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/Memory.sv|
 !i113 1
-R8
-R9
-R10
-n@memory
-vMicroprocessor
-R1
-R15
-!i10b 1
-!s100 WVXRkG2cm1PDZanYL76O:3
-R3
-IYGTiDDKLMb;M1o>Jk<J8c1
-R4
-S1
-R0
-w1717045524
-8/home/fredi/Documents/miniprocessor/Microprocessor/Microprocessor.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/Microprocessor.sv
-!i122 1
-L0 11 290
-R6
-r1
-!s85 0
-31
-R12
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/Microprocessor.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/Microprocessor.sv|
-!i113 1
-R8
-R9
-R10
-n@microprocessor
-vORRS
-R1
-R2
-!i10b 1
-!s100 X`ohIzOL_jLQZX=F6jG`?3
-R3
-I]PZ4W<4AF_Y^hYfkS?4]=3
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/ORRS.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/ORRS.sv
-!i122 16
-L0 1 25
-R6
-r1
-!s85 0
-31
 R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/ORRS.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/ORRS.sv|
-!i113 1
 R8
 R9
-R10
-n@o@r@r@s
-vProgramCounter
-R1
-R15
-!i10b 1
-!s100 4d0?oQHTUE;3VL]d;mi>Z3
-R3
-I^bc<ja2NAfLJ`Wd`OH>DT1
-R4
-S1
-R0
-w1717014414
-8/home/fredi/Documents/miniprocessor/Microprocessor/ProgramCounter.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/ProgramCounter.sv
-!i122 2
-L0 4 19
-R6
-r1
-!s85 0
-31
-R12
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/ProgramCounter.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/ProgramCounter.sv|
-!i113 1
-R8
-R9
-R10
-n@program@counter
+n@memory
 vregister_file
 R1
-R15
+!s110 1717519835
 !i10b 1
-!s100 0E4]k0]B;L7Q46JHCV97c1
+!s100 n;]86kdDP]clMg^Y4hh[Q2
 R3
-IjE;`57eLiiQMTijkf6HQB3
+I`8X[U7fn^Zd7ICE>l2i@B3
 R4
 S1
 R0
-w1717129067
+w1717166413
 8/home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv
 F/home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv
-!i122 0
+!i122 1
 L0 27 95
-R6
+R5
 r1
 !s85 0
 31
-R12
+R10
 !s107 /home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv|
 !i113 1
-R8
-R9
-R10
-vROR
-R1
-R2
-!i10b 1
-!s100 CV_b8A]UcB7<Wz5Zzo?Xi0
-R3
-IHC]P4LFYV<O0eb6MjF<OR1
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/ROR.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/ROR.sv
-!i122 17
-L0 3 44
-R6
-r1
-!s85 0
-31
 R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/ROR.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/ROR.sv|
-!i113 1
 R8
 R9
-R10
-n@r@o@r
-vSubtractor
-R1
-R13
-!i10b 1
-!s100 G]UbHzGH60cdX^OlFB7WI1
-R3
-Idm6ijI@<HZTB;Z0T8Xj^Z2
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/Subtractor.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/Subtractor.sv
-!i122 20
-L0 3 32
-R6
-r1
-!s85 0
-31
-R14
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/Subtractor.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/Subtractor.sv|
-!i113 1
-R8
-R9
-R10
-n@subtractor
-vUXTB
-R1
-R2
-!i10b 1
-!s100 86TI[WhZ5FF8Uj_TG53@V2
-R3
-IZN4c?T==`Rn@JJfza2mzk0
-R4
-S1
-R0
-R5
-8/home/fredi/Documents/miniprocessor/Microprocessor/EXT.sv
-F/home/fredi/Documents/miniprocessor/Microprocessor/EXT.sv
-!i122 13
-L0 3 63
-R6
-r1
-!s85 0
-31
-R7
-!s107 /home/fredi/Documents/miniprocessor/Microprocessor/EXT.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/EXT.sv|
-!i113 1
-R8
-R9
-R10
-n@u@x@t@b

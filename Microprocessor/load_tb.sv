@@ -4,8 +4,8 @@ module load_tb();
     parameter word_size = 32;
     parameter opcode_size = 5;
 
-    reg clk;
-    reg rst;
+    reg clk; //gloal clk 
+    reg rst; //gloal rst
 
 
     //////////////////
@@ -19,12 +19,12 @@ module load_tb();
     reg [3:0] flags;
 
     // Outputs
-    wire mem_to_reg;
-    wire mem_write;
-    wire reg_write;
-    wire [opcode_size-1:0] alu_ctrl;
-    wire alu_src;
-    wire imm_src;
+    wire CU_mem_to_reg;
+    wire CU_mem_write;
+    wire CU_reg_write;
+    wire [opcode_size-1:0] CU_alu_ctrl;
+    wire CU_alu_src;
+    wire CU_imm_src;
 
     // Instantiate the Unit Under Test (UUT)
     Control_Unit #(
@@ -35,13 +35,59 @@ module load_tb();
         .rst(rst),
         .instruction(CU_in_instruction),
         .flags(flags),
-        .mem_to_reg(mem_to_reg),
-        .mem_write(mem_write),
-        .reg_write(reg_write),
-        .alu_ctrl(alu_ctrl),
-        .alu_src(alu_src),
-        .imm_src(imm_src)
+        .mem_to_reg(CU_mem_to_reg),
+        .mem_write(CU_mem_write),
+        .reg_write(CU_reg_write),
+        .alu_ctrl(CU_alu_ctrl),
+        .alu_src(CU_alu_src),
+        .imm_src(CU_imm_src)
     );
+///////////////////////////////////////////////////////////////////
+
+
+
+    //////////////////
+    ////// RAM ///////
+    //////////////////
+
+
+    parameter DATA_LENGTH = 32;
+    parameter MEM_LENGTH = 32;
+
+    // Signals
+    reg [DATA_LENGTH-1:0] RAM_wdata;
+    reg RAM_we;
+    reg [$clog2(MEM_LENGTH)-1:0] RAM_addr;
+    wire [31:0] RAM_rdata;
+
+    //WIRE INPUTS
+    assign RAM_addr  = CU_in_instruction[26:18];   // r/w destination address(bit 6 to 15 of instruction)
+    assign RAM_wdata = CU_in_instruction[17:9];    // Data to write
+    assign RAM_we    = CU_mem_write;               // Write Enable flag from CU
+     
+
+    // Instantiate the Memory module
+    Memory #(
+        .data_length(DATA_LENGTH),
+        .mem_length(MEM_LENGTH)
+    ) RAM_DUT (
+        .clk(clk),
+        .rst(rst),
+        .wdata(RAM_wdata),
+        .we(RAM_we),
+        .addr(RAM_addr),
+        .rdata(RAM_rdata)
+    );
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,43 +95,53 @@ module load_tb();
     // REGISTER FILE /
     //////////////////
 
-    reg [8:0] A1;
-    reg [8:0] A2;
-    reg [8:0] A3;
-    reg [31:0] WD3;
-    reg [31:0] R15;
-    reg WE3;
+    reg [8:0]  RF_A1;
+    reg [8:0]  RF_A2;
+    reg [8:0]  RF_A3;
+    reg [8:0]  RF_WD3;
+    reg [31:0] RF_R15;
+    reg RF_WE3;
 
     // Outputs
-    wire [31:0] RD1;
-    wire [31:0] RD2;
+    wire [31:0] RF_RD1;
+    wire [31:0] RF_RD2;
+
+
+    //assign RF_WD3 = RAM_rdata;
 
     // Instantiate the Unit Under Test (UUT)
     register_file RF_DUT (
         .clk(clk), 
         .rst(rst),
         .A1(CU_in_instruction[26:18]), 
-        .A2(A2), 
+        .A2(RF_A2), 
         .A3(CU_in_instruction[26:18]),  //get addrs from instruction (destination)
-        .WD3(CU_in_instruction[17:9]),  //get data from instruction (operand 1)
-        .R15(R15), 
-        .WE3(reg_write), 
-        .RD1(RD1), 
-        .RD2(RD2)
+        //.WD3(CU_in_instruction[17:9]),  //get data from instruction (operand 1)
+        .WD3(RAM_rdata),
+        .R15(RF_15), 
+        .WE3(CU_reg_write), 
+        .RD1(RF_RD1), 
+        .RD2(RF_RD2)
     );
 
+/////////////////////////////////////////////////////////////////////////
 
 
 
 
 
+
+    ///////////////////////////////////
+    //////////// SIMULATION ///////////
+    ///////////////////////////////////
 
     // Initialize Inputs
     initial begin
         clk = 0;
         rst = 1;
-        CU_in_instruction = 32'h00000000; // Default instruction
+        //CU_in_instruction = 32'h00000000; // Default instruction
         flags = 4'b0000;
+        RF_WD3 = 0;
 
         // Apply reset
         #10;
@@ -93,8 +149,29 @@ module load_tb();
         #10
 
         $display("TEST LOAD:");
-        CU_in_instruction = 32'b10011000000000000000001000000000; // LOAD instruction
+        clk = 1;
+        //CU_in_instruction <= 32'b10011000000000000000001000000000; // LOAD instruction
         #10;
+        CU_in_instruction <= 32'b10011000000000000000001000000000; // LOAD instruction
+        $display("cicle 0 ->   reg_write: %b   |    RD1 value: %b     |  inst: %b" , CU_reg_write ,RF_WD3, CU_in_instruction);
+
+
+
+        CU_in_instruction <= 32'b10011000000000000000001000000000; // LOAD instruction
+        
+        #10;
+        $display("     TEST MEMORY");
+
+
+        $display("ram address: %h   |    ram ret data: %b     |  write enable: %b     |      RAM_WDATA: %h \n" , 
+                RAM_addr ,RAM_rdata, RAM_we, RAM_wdata);
+        $display("Reg input data : %h", RF_WD3);
+
+
+
+
+        //$display("reg_write: %b   |    RD1 value: %b     |  inst: %b     |      RAM_WDATA: %h" , 
+        //        CU_reg_write ,RF_A1, CU_in_instruction, RAM_wdata);
 
 
 
@@ -106,12 +183,15 @@ module load_tb();
     end
 
     // Generate clock signal
-    always #5 clk = ~clk;
+    always
+    begin
+        #1 clk = ~clk;        
+    end
 
     // Display signals
     initial begin
         
-        $monitor("RD1 value: %b" , WD3);
+        //$display("reg_write: %b   |    RD1 value: %b     |  inst: %b" , reg_write ,WD3, CU_in_instruction);
 
     end
 
