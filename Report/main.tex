@@ -114,7 +114,7 @@
         CISC processors boast a rich set of complex instructions. These instructions can perform multiple operations in a single step, making programming potentially easier and more intuitive for developers. For example, a single CISC instruction might add two numbers and store the result in a specific memory location. While CISC instructions can be efficient for some tasks, their complexity can sometimes lead to slower execution compared to RISC. Decoding these complex instructions can take time, and they might not always be perfectly optimized for the hardware. Popular CISC architectures include the x86 family (used by Intel and AMD) and the POWER architecture (developed by IBM).
 
     \subsection{Our Implementation}
-    The implementation we well be looking into in the following steps of this paper is an ARM Cortex M0 with a custom \textit{Instuction Set Architecture} (ISA). This implementation is far simlpler 
+    The implementation we well be looking into in the following steps of this paper is an ARM Cortex M0 with a custom \textit{Instuction Set Architecture} (ISA). This implementation is far simlpler \dots
     
     
 
@@ -175,7 +175,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         \centering  % This command centers the image
         \includegraphics[width=0.3\textwidth]{images/PCImg.png}
         \caption{Program Counter RTL}
-        \label{fig:my_label}
+        \label{fig:Counter RTL}
     \end{figure}
 
 
@@ -212,7 +212,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         \centering  % This command centers the image
         \includegraphics[width=0.5\textwidth]{images/InstMemImg.png}
         \caption{Instruction Memory RTL}
-        \label{fig:my_label}
+        \label{fig:Instruction Memory RTL}
     \end{figure}
     
 %----------------------------------------------------------%
@@ -250,7 +250,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         \centering  % This command centers the image
         \includegraphics[width=0.3\textwidth]{images/CUImg.png}
         \caption{Control Unit RTL}
-        \label{fig:my_label}
+        \label{fig:Control Unit RTL}
     \end{figure}
 
 
@@ -280,7 +280,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         \centering  % This command centers the image
         \includegraphics[width=0.5\textwidth]{images/ALUImg.png}
         \caption{ALU RTL}
-        \label{fig:my_label}
+        \label{fig:ALU RTL}
     \end{figure}
 
 
@@ -310,7 +310,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         \centering  % This command centers the image
         \includegraphics[width=0.3\textwidth]{images/DataMemImg.png}
         \caption{Data Memory RTL}
-        \label{fig:my_label}
+        \label{fig:Data Memory RTL}
     \end{figure}
 
 
@@ -324,7 +324,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
     \centering  % This command centers the image
     \includegraphics[width=0.27\textwidth]{images/RegFileImg.png}
     \caption{Register File RTL}
-    \label{fig:my_label}
+    \label{fig:Register File RTL}
 \end{figure}
 
 
@@ -469,7 +469,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
             \centering  % This command centers the image
             \includegraphics[width=0.5\textwidth]{images/ISA.JPG}
             \caption{Instruction Set Format}
-            \label{fig:my_label}
+            \label{fig:ISA Format}
         \end{figure}
 
         The main consideration for designing and understanding the opcode of our proposed architecture is knowing how many instructions there are to be represented. Adding up 18 operations from the ALU, 3 from the memory interactions, and 3 from jump instructions, we come out to needing 5 bits of opcode, given by the formula:
