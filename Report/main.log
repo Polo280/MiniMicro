@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.4)  4 JUN 2024 21:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.4)  4 JUN 2024 21:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1826,7 +1826,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <8> not available
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 (Font)              scaled to size 7.59998pt on input line 84.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 97.
+(Font)              scaled to size 6.64998pt on input line 87.
  [1{C:/Users/fredi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-t1.enc}
 
 
@@ -1842,7 +1842,7 @@ File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 Package microtype Info: Character `textflorin ' is missing
 (microtype)             in font `TS1/stix2/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
-<images/RTLImg.png, id=79, 1878.01625pt x 397.485pt>
+<images/RTLImg.png, id=163, 1878.01625pt x 397.485pt>
 File: images/RTLImg.png Graphic file (type png)
 <use images/RTLImg.png>
 Package pdftex.def Info: images/RTLImg.png  used on input line 124.
@@ -1857,17 +1857,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-<images/PCImg.png, id=81, 1183.42125pt x 455.7025pt>
+<images/PCImg.png, id=165, 1183.42125pt x 455.7025pt>
 File: images/PCImg.png Graphic file (type png)
 <use images/PCImg.png>
 Package pdftex.def Info: images/PCImg.png  used on input line 160.
 (pdftex.def)             Requested size: 157.9144pt x 60.80792pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
-
+[2{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-ts1.enc} <./images/RTLImg.png>]
 Underfull \hbox (badness 1158) in paragraph at lines 180--181
 []\T1/stix2/b/n/9 (+20) Feeding the Pipeline\T1/stix2/m/n/9 (+20) : The re-trieved in-struc-tion is then
  []
@@ -1877,7 +1880,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-<images/InstMemImg.png, id=82, 1183.42125pt x 455.7025pt>
+<images/InstMemImg.png, id=173, 1183.42125pt x 455.7025pt>
 File: images/InstMemImg.png Graphic file (type png)
 <use images/InstMemImg.png>
 Package pdftex.def Info: images/InstMemImg.png  used on input line 197.
@@ -1888,9 +1891,6 @@ Overfull \hbox (7.5pt too wide) in paragraph at lines 197--198
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-ts1.enc} <./images/RTLImg.png> <./images/PCImg.png (PNG copy)>]
 Underfull \hbox (badness 1803) in paragraph at lines 213--214
 \T1/stix2/m/n/9 (+20) com-mands; it also man-ages the over-all flow of pro-gram
  []
@@ -1905,12 +1905,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
-<images/CUImg.png, id=91, 866.23625pt x 411.5375pt>
+<images/CUImg.png, id=174, 866.23625pt x 411.5375pt>
 File: images/CUImg.png Graphic file (type png)
 <use images/CUImg.png>
 Package pdftex.def Info: images/CUImg.png  used on input line 235.
 (pdftex.def)             Requested size: 157.9144pt x 75.02176pt.
-<images/ALUImg.png, id=92, 1244.65pt x 379.4175pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+<images/ALUImg.png, id=175, 1244.65pt x 379.4175pt>
 File: images/ALUImg.png Graphic file (type png)
 <use images/ALUImg.png>
 Package pdftex.def Info: images/ALUImg.png  used on input line 265.
@@ -1925,32 +1935,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--278
 
  []
 
-<images/DataMemImg.png, id=93, 726.715pt x 573.14125pt>
+[3 <./images/PCImg.png (PNG copy)> <./images/InstMemImg.png (PNG copy)> <./images/CUImg.png (PNG copy)> <./images/ALUImg.png>]
+<images/DataMemImg.png, id=185, 726.715pt x 573.14125pt>
 File: images/DataMemImg.png Graphic file (type png)
 <use images/DataMemImg.png>
 Package pdftex.def Info: images/DataMemImg.png  used on input line 295.
 (pdftex.def)             Requested size: 157.9144pt x 124.54352pt.
-[3 <./images/InstMemImg.png (PNG copy)> <./images/CUImg.png (PNG copy)> <./images/ALUImg.png> <./images/DataMemImg.png (PNG copy)>]
-<images/RegFileImg.png, id=103, 416.55624pt x 485.815pt>
+<images/RegFileImg.png, id=186, 416.55624pt x 485.815pt>
 File: images/RegFileImg.png Graphic file (type png)
 <use images/RegFileImg.png>
-Package pdftex.def Info: images/RegFileImg.png  used on input line 331.
+Package pdftex.def Info: images/RegFileImg.png  used on input line 309.
 (pdftex.def)             Requested size: 142.12376pt x 165.75311pt.
 
+Underfull \hbox (badness 1097) in paragraph at lines 353--354
+\T1/stix2/m/n/9 (+20) This op-er-a-tion per-forms an ad-di-tion with carry on two 32-bit
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
-
+[4 <./images/DataMemImg.png (PNG copy)> <./images/RegFileImg.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 451--451
+|[]\T1/phv/b/n/10 (+20) Case of Study:|
  []
 
 
-LaTeX Warning: Empty bibliography on input line 361.
+Underfull \hbox (badness 10000) in paragraph at lines 455--455
+|[]\T1/phv/b/n/10 (+20) Conclusion|
+ []
 
-[4 <./images/RegFileImg.png>] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
+
+ []
+
+[5{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}]
+
+LaTeX Warning: Empty bibliography on input line 474.
+
+[6
+
+] 
 enddocument/afterlastpage: lastpage setting LastPage.
-Package pbalance Info: Done balancing page 4 on input line 365.
+
+Package pbalance Warning: Could not balance, doing nothing.
+
 (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1965,17 +1991,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 79063 strings out of 474486
- 1869531 string characters out of 5743756
- 3128526 words of memory out of 5000000
- 100031 multiletter control sequences out of 15000+600000
- 769833 words of font info for 301 fonts, out of 8000000 for 9000
+ 79111 strings out of 474486
+ 1869711 string characters out of 5743756
+ 3134328 words of memory out of 5000000
+ 100038 multiletter control sequences out of 15000+600000
+ 777463 words of font info for 306 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  137i,12n,143p,1095b,1931s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (4 pages, 986541 bytes).
+<C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (6 pages, 1216227 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 82128 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 410 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 84400 words of extra memory for PDF output out of 89155 (max. 10000000)
 

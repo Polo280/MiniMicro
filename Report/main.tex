@@ -243,7 +243,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
 %%                   ALU
 %----------------------------------------------------------%
 \subsubsection{ALU}
-    The ALU, which stands for Arithmetic Logic Unit, is the workhorse of the CPU (Central Processing Unit)  when it comes to performing calculations and making logical decisions. It can do arithmetic operation like addition and subtraction, Logical operations like comparing 2 numbers, and bitwise operations like shifts
+    The ALU, which stands for Arithmetic Logic Unit, is the workhorse of the CPU (Central Processing Unit)  when it comes to performing calculations and making logical decisions. It can do arithmetic operation like addition and subtraction, Logical operations like comparing 2 numbers, and bitwise operations like shifts\\ \\
 
     \textbf{Inputs}:
     \begin{itemize}
@@ -296,17 +296,22 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         \caption{Data Memory RTL}
         \label{fig:my_label}
     \end{figure}
-    
-
-
-
-
 
 
 %----------------------------------------------------------%
 %%                   REGISTER FILE
 %----------------------------------------------------------%
 \subsubsection{Register File}
+
+
+\begin{figure}[h]  % The [h] here is a placement specifier (here)
+    \centering  % This command centers the image
+    \includegraphics[width=0.27\textwidth]{images/RegFileImg.png}
+    \caption{Register File RTL}
+    \label{fig:my_label}
+\end{figure}
+
+
     The register file is a set of high-speed internal memory locations within the CPU (Central Processing Unit).  They act as the CPU's scratchpad or workbench, holding frequently accessed data and intermediate results for quick manipulation. Compared to main memory (data memory), registers offer significantly faster access times, making them critical for efficient program execution. \\
     This implementation consist of a 14+1 register file. The first 14 registers act general function registers, while the 15th register gets its value from the program counter + 2, the purpose of this offset is to compensate for the 2 clock cicles that have elapsed (Fetch/Decode) from the previous clock cicles.
 
@@ -326,14 +331,122 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
     
 
 
-    \begin{figure}[h]  % The [h] here is a placement specifier (here)
-        \centering  % This command centers the image
-        \includegraphics[width=0.27\textwidth]{images/RegFileImg.png}
-        \caption{Register File RTL}
-        \label{fig:my_label}
-    \end{figure}
 
 
+
+
+        % INSTRUCTION SET
+        \section{Custom Instruction Set Arquitecture (ISA)}
+
+
+        We propose using a total of 18 instructions that run inside the ALU. These instructions span from simple logical operations like an AND bitwise instruction operation, to arithmetic operations like adding of two integers. We \textit{do not implement floating point arithmetic} natively. 
+    
+        \subsection{ANDS}
+        This operation performs a bitwise AND on two 32-bit operands, where each bit of the output is the logical AND of the corresponding bits of the operands. This means that if both corresponding bits are 1, then the output bit is 1, otherwise it is 0. 
+        \subsection{ORRS}
+        This operation performs a bitwise OR on two 32-bit operands, where each bit of the output is the logical OR of the corresponding bits of the operands. This means that if either corresponding bit is 1, then the output bit is 1, otherwise it is 0. 
+        \subsection{MVNS}
+        This operation performs a bitwise NOT on a 32-bit operand, which means that it flips all the bits of the operand. This is also known as a bitwise complement. 
+        \subsection{EORS}
+        This operation performs a bitwise XOR on two 32-bit operands, where each bit of the output is the logical XOR of the corresponding bits of the operands. This means that if the corresponding bits are not equal, then the output bit is 1, otherwise it is 0. 
+        \subsection{ADCS}
+        This operation performs an addition with carry on two 32-bit operands, where the carry flag is taken into account. This means that if the carry flag is set, then it is added to the result of the addition. This operation is useful for implementing multi-word arithmetic. 
+        \subsection{ADDS}
+        This operation performs a normal addition on two 32-bit operands, without taking the carry flag into account. This operation is useful for adding two numbers together. 
+        \subsection{SBCS}
+        This operation performs a subtraction with carry on two 32-bit operands, where the carry flag is taken into account. This means that if the carry flag is set, then it is subtracted from the result of the subtraction. This operation is useful for implementing multi-word arithmetic. 
+        \subsection{SUB}
+        This operation performs a normal subtraction on two 32-bit operands, without taking the carry flag into account. This operation is useful for subtracting two numbers together. 
+        \subsection{MULS}
+        This operation performs a multiplication on two 32-bit operands, where the result is a 32-bit value. This operation is useful for multiplying two numbers together. 
+        \subsection{LSRS}
+        This operation performs a logic shift right on a 32-bit operand, where the rightmost bit is shifted out, and the leftmost bit is filled with 0. This operation is useful for dividing a number by a power of 2. 
+        \subsection{LSLS}
+        This operation performs a logic shift left on a 32-bit operand, where the leftmost bit is shifted out, and the rightmost bit is filled with 0. This operation is useful for multiplying a number by a power of 2. 
+        \subsection{ROR}
+        This operation performs a rotate right on a 32-bit operand, where the rightmost bit is shifted into the leftmost bit and all other bits are shifted to the right. This operation is useful for circularly shifting a number. 
+        \subsection{UXTB}
+        This operation performs an unsigned extend byte on a 32-bit operand, where the lower 8 bits of the operand are sign-extended to 32 bits. This operation is useful for converting a byte value to a 32-bit value. 
+        \subsection{UXTH}
+        This operation performs an unsigned extend halfword on a 32-bit operand, where the lower 16 bits of the operand are sign-extended to 32 bits. This operation is useful for converting a halfword value to a 32-bit value. 
+        \subsection{SXTB}
+        This operation performs a signed extend byte on a 32-bit operand, where the lower 8 bits of the operand are sign-extended to 32 bits. This operation is useful for converting a byte value to a 32-bit value. 
+        \subsection{SXTH}
+        This operation performs a signed extend halfword on a 32-bit operand, where the lower 16 bits of the operand are sign-extended to 32 bits. This operation is useful for converting a halfword value to a 32-bit value. 
+        \subsection{CMP}
+        This operation performs a comparison between two 32-bit operands, where the result is determined by subtracting one operand from the other and setting the status flags based on the result. This operation is useful for comparing two numbers. 
+        \subsection{NOP}
+        This operation performs a no-operation, which means that it does nothing. This operation is useful for adding a delay or for synchronizing operations.
+    
+    
+        %----------------------------------------------------------%
+        %%                   Memory instructions                  %%
+        %----------------------------------------------------------%
+        \section{Memory instructions}
+    
+        \textbf{DESCRIPTION MISSING}
+    
+        \subsection{LOADI}
+        This instruction loads data from memory (RAM) into a register. It is useful for accessing data stored in memory. 
+        \subsection{STORE}
+        This instruction stores data from a register into memory (RAM). It is useful for saving data to be used later.
+        \subsection{Move (MOV)}
+        This instruction moves data between registers or from a register to memory. It is useful for manipulating data within the processor.
+    
+        %----------------------------------------------------------%
+        %%                    Jump instructions                   %%
+        %----------------------------------------------------------%
+        \section{Jump instructions}
+    
+    
+        \subsection{Jump (J)}
+        This instruction allows the CPU to jump to a specific memory address to continue execution. It is useful for changing the flow of execution in a program. 
+        \subsection{Branch Equal (BEQ)}
+        This instruction enables the CPU to branch to a specific memory address if two registers are equal. It is useful for conditional branching in a program. 
+        \subsection{Halt (HLT)}
+        This instruction stops the CPU from executing further instructions, effectively halting the processor. It is useful for terminating a program or stopping execution when necessary.
+    
+    
+        %----------------------------------------------------------%
+        %%                   Opcode description                   %%
+        %----------------------------------------------------------%
+        \section{Opcode description}
+    
+        The main consideration for designing and understanding the opcode of our proposed architecture is knowing how many instructions there are to be represented. Adding up 18 operations from the ALU, 3 from the memory interactions, and 3 from jump instructions, we come out to needing 5 bits of opcode, given by the formula:
+        \begin{equation}
+            \text{Bits} = \left\lceil \log_{2}{x} \right\rceil
+        \end{equation}
+    
+        \centering
+        \begin{tabular}{c|c}
+        \textbf{Opcode} & \textbf{Operation} \\ \hline
+        00000 & RESERVED \\
+        00001 & ANDS \\
+        00010 & ORRS \\
+        00011 & MVNS \\
+        00100 & EORS \\
+        00101 & ADCS \\
+        00110 & ADDS \\
+        00111 & SBCS \\
+        01000 & SUB \\
+        01001 & MULS \\
+        01010 & LSRS \\
+        01011 & LSLS \\
+        01100 & ROR \\
+        01101 & UXTB \\
+        01110 & UXTH \\
+        01111 & SXTB \\
+        10000 & SXTH \\
+        10001 & CMP \\
+        10010 & NOP \\
+        10011 & LOADI \\
+        10100 & STORE \\
+        10101 & MOV \\
+        10110 & J \\
+        10111 & BEQ \\
+        11000 & HLT \\
+        11001-11111 & RESERVED \\
+        \end{tabular} \\
 
 \section{Case of Study:}
 
