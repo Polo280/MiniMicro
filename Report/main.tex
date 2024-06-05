@@ -87,6 +87,21 @@
     
         \subsubsection{Von Neumann Architecture}
         The von Neumann architecture is a foundational design concept for computers. It features a unified memory space that stores both program instructions and data. The CPU fetches both from this single location, simplifying the overall design and control logic. This architecture typically involves sequential access, where instructions and data are retrieved one after another. While this can be efficient for applications where instruction and data access are balanced, it can create bottlenecks for tasks requiring frequent data manipulation, as the CPU might need to wait for data retrieval before continuing program execution. Despite this potential drawback, the von Neumann architecture remains popular due to its simplicity, ease of programming, and cost-effectiveness, making it a suitable choice for general-purpose computing.
+
+        \subsubsection{Dataflow Architecture}
+        Dataflow architecture is a dataflow-based computer architecture that directly contrasts the traditional von Neumann architecture or control flow architecture. Dataflow architectures have no program counter, in concept: the executability and execution of instructions is solely determined based on the availability of input arguments to the instructions, so that the order of instruction execution may be hard to predict.\\
+
+        Although no commercially successful general-purpose computer hardware has used a dataflow architecture, it has been successfully implemented in specialized hardware such as in digital signal processing, network routing, graphics processing, telemetry, and more recently in data warehousing, and artificial intelligence (as: polymorphic dataflow Convolution Engine, structure-driven, dataflow scheduling). It is also very relevant in many software architectures today including database engine designs and parallel computing frameworks.
+
+        Synchronous dataflow architectures tune to match the workload presented by real-time data path applications such as wire speed packet forwarding. Dataflow architectures that are deterministic in nature enable programmers to manage complex tasks such as processor load balancing, synchronization and accesses to common resources.
+
+        \subsubsection{Vector Architecture}
+        A vector processor or array processor is a central processing unit (CPU) that implements an instruction set where its instructions are designed to operate efficiently and effectively on large one-dimensional arrays of data called vectors. This is in contrast to scalar processors, whose instructions operate on single data items only, and in contrast to some of those same scalar processors having additional single instruction, multiple data (SIMD) or SWAR Arithmetic Units. Vector processors can greatly improve performance on certain workloads, notably numerical simulation and similar tasks. Vector processing techniques also operate in video-game console hardware and in graphics accelerators.
+        
+
+
+
+
     
     \subsection{Existing implementations}
     There also 2 main existing implementations, they are the Complex Instruction Set Computer (CISC) and Reduced Instruction Set Computer (RISC). An instruction set, also known as an Instruction Set Architecture (ISA), is essentially the language a processor understands. It defines a set of commands that the processor can execute to perform various operations. These operations can be simple, like adding two numbers, or more complex, like moving data between memory locations or controlling external devices.
@@ -98,7 +113,8 @@
         \subsubsection{CISC}
         CISC processors boast a rich set of complex instructions. These instructions can perform multiple operations in a single step, making programming potentially easier and more intuitive for developers. For example, a single CISC instruction might add two numbers and store the result in a specific memory location. While CISC instructions can be efficient for some tasks, their complexity can sometimes lead to slower execution compared to RISC. Decoding these complex instructions can take time, and they might not always be perfectly optimized for the hardware. Popular CISC architectures include the x86 family (used by Intel and AMD) and the POWER architecture (developed by IBM).
 
-    
+    \subsection{Our Implementation}
+    The implementation we well be looking into in the following steps of this paper is an ARM Cortex M0 with a custom \textit{Instuction Set Architecture} (ISA). This implementation is far simlpler 
     
     
 
@@ -123,7 +139,7 @@
     \centering  % This command centers the image
     \includegraphics[width=0.5\textwidth]{images/RTLImg.png}
     \caption{RTL Overview}
-    \label{fig:my_label}
+    \label{fig:RTL Overview}
 \end{figure}
 
 %----------------------------------------------------------%
