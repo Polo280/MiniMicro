@@ -1,0 +1,193 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package File ~ 'tau.sty'
+% Version 1.2 (05/04/2024)
+%
+% Description:
+% Tau.sty is a package that includes the definition of the
+% environments, presonalized colors and other packages.
+%
+% Author: 
+% Guillermo Jimenez (memo.notess1@gmail.com)
+%
+% Notes:
+% Tau.sty was made for 'tau-book'.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         WARNING:
+% Do not remove this package from the 'tau.tex' to 
+% avoid compilation problems. This package defines the 
+% environments, colors and other packages necessary for 
+% tau.cls to work.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------
+% Package configuration
+%----------------------------------------------------------
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tau}[2024/04/05]
+
+%----------------------------------------------------------
+% Math
+%----------------------------------------------------------
+
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+% \RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{pgfplots}
+\RequirePackage{pgfplotstable}
+\usepgfplotslibrary{patchplots}
+\pgfplotsset{compat=1.18}
+
+%----------------------------------------------------------
+% Misc packages
+%----------------------------------------------------------
+
+\RequirePackage{bookmark}
+\RequirePackage{ragged2e}
+\RequirePackage{lipsum}
+\RequirePackage{chemfig}         % Chemical structures
+\RequirePackage{circuitikz}      % Circuits schematics
+\usepackage[switch]{lineno}
+\usepackage{csquotes}
+\usepackage{supertabular}
+\usepackage{matlab-prettifier}
+\usepackage{cleveref}
+\RequirePackage{listings}
+
+%----------------------------------------------------------
+% Items
+%----------------------------------------------------------
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+
+%----------------------------------------------------------
+% Tables
+%----------------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{array} 
+
+%----------------------------------------------------------
+% Fonts
+%----------------------------------------------------------
+
+\RequirePackage{fontawesome5}    % For icons
+% \RequirePackage{lettrine}
+% \RequirePackage{pifont}
+% \usepackage[sc]{mathpazo}	% Use the Palatino font
+% \usepackage[oldstyle,oldstylemath]{kpfonts}	% Stylish old font
+% \RequirePackage{times}
+% \RequirePackage{XCharter}
+% \RequirePackage{mathpazo} 
+% \RequirePackage{lmodern}
+
+%----------------------------------------------------------
+% Color
+%----------------------------------------------------------
+
+\RequirePackage{xcolor}
+
+%----------------------------------------------------------
+% Custom colors
+%----------------------------------------------------------
+
+\definecolor{taublue}{rgb}{0.0,0.2,0.4}
+
+%----------------------------------------------------------
+% Figures
+%----------------------------------------------------------
+
+\usepackage{graphicx}
+\RequirePackage{here}
+
+%----------------------------------------------------------
+% Tables
+%----------------------------------------------------------
+
+\usepackage{adjustbox}
+\RequirePackage{colortbl}
+\RequirePackage{tcolorbox}
+
+%----------------------------------------------------------
+% Tau environments
+%----------------------------------------------------------
+
+\newmdenv[
+	backgroundcolor=taublue!22, 					
+	linecolor=taublue,									
+	linewidth=0.7pt,
+	frametitle=\vskip0pt\bfseries,
+	frametitlerule=false,
+	frametitlefont=\color{taublue}\bfseries\sffamily,			
+	frametitlealignment=\raggedright,
+	innertopmargin=3pt,
+	innerbottommargin=6pt,
+	innerleftmargin=6pt,
+	innerrightmargin=6pt,
+	font=\selectfont,
+	fontcolor=taublue,									
+	frametitleaboveskip=8pt,
+	skipabove=10pt
+]{tauenv}
+
+%----------------------------------------------------------
+
+\newcommand{\infolanguage}{
+    \iflanguage{spanish}{
+        {\bfseries\noindent Informaci\'on}%
+    }{%
+        {\bfseries\noindent Information}%
+    }%
+}
+
+\newmdenv[
+	backgroundcolor=taublue!22, 						
+	linecolor=taublue,									
+	linewidth=0.7pt,
+	frametitle=\vskip0pt\bfseries\infolanguage,
+	frametitlerule=false,
+	frametitlefont=\color{taublue}\bfseries\sffamily,			
+	frametitlealignment=\raggedright,
+	innertopmargin=3pt,
+	innerbottommargin=6pt,
+	innerleftmargin=6pt,
+	innerrightmargin=6pt,
+	font=\normalfont,
+	fontcolor=taublue,									
+	frametitleaboveskip=3pt,
+	skipabove=10pt
+]{info}
+
+%----------------------------------------------------------
+
+\newcommand{\notelanguage}{
+    \iflanguage{spanish}{
+        {\bfseries\noindent Nota}%
+    }{%
+        {\bfseries\noindent Note}%
+    }%
+}
+
+\newmdenv[
+	backgroundcolor=taublue!22, 						
+	linecolor=taublue,									
+	linewidth=0.7pt,
+	frametitle=\vskip0pt\bfseries\notelanguage,
+	frametitlerule=false,
+	frametitlefont=\color{taublue}\bfseries\sffamily,			
+	frametitlealignment=\raggedright,
+	innertopmargin=3pt,
+	innerbottommargin=6pt,
+	innerleftmargin=6pt,
+	innerrightmargin=6pt,
+	font=\normalfont,
+	fontcolor=taublue,									
+	frametitleaboveskip=3pt,
+	skipabove=10pt
+]{note}
+
+%----------------------------------------------------------
+
+\endinput

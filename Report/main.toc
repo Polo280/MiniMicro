@@ -1,0 +1,22 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{I}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Brief History of Microprocessors.}{I}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Existing Architectures}{I}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Hardvard Architecture:}{I}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Von Neumann Architecture}{I}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}Existing implementations}{I}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}RISC}{II}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}CISC}{II}{subsubsection.1.3.2}%
+\contentsline {section}{\numberline {2}Design and Implementation}{II}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Pipeline overview}{II}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Modules}{II}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}PC}{II}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Instruction Memory}{II}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Control Unit}{II}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}ALU}{III}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Data Memory}{III}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Register File}{III}{subsubsection.2.2.6}%
+\contentsline {section}{\numberline {3}Case of Study:}{IV}{section.3}%
+\contentsline {section}{\numberline {4}Conclusion}{IV}{section.4}%
+\contentsline {section}{References}{IV}{section.4}%
+\contentsfinish 
