@@ -766,8 +766,6 @@ INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro8c.vf
-INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvbo8t.vf
-INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvbo8r.tfm
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
@@ -790,6 +788,8 @@ INPUT .\images\PCImg.png
 INPUT .\images\PCImg.png
 INPUT .\images\PCImg.png
 INPUT .\images\PCImg.png
+INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvbo8t.vf
+INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvbo8r.tfm
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\stix2-type1\stix2-ts1.enc
 INPUT .\images\InstMemImg.png
 INPUT .\images\InstMemImg.png
@@ -826,6 +826,13 @@ INPUT .\images\RegFileImg.png
 INPUT .\images\RegFileImg.png
 INPUT .\images\RegFileImg.png
 INPUT .\images\RegFileImg.png
+INPUT .\images\ISA.JPG
+INPUT .\images\ISA.JPG
+INPUT .\images\ISA.JPG
+INPUT .\images\ISA.JPG
+INPUT .\images\ISA.JPG
+INPUT .\images\ISA.JPG
+INPUT .\images\ISA.JPG
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix2-type1\t1-stix2text.tfm
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\stix2-type1\stix2-mathrm.enc
 INPUT C:\Users\fredi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\stix2-type1\stix2-mathex.enc

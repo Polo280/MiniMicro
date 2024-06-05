@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Introduction}{I}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Brief History of Microprocessors.}{I}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Existing Architectures}{I}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Hardvard Architecture:}{I}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.1}Hardvard Architecture:}{II}{subsubsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2}Von Neumann Architecture}{II}{subsubsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.3}Existing implementations}{II}{subsection.1.3}%
 \contentsline {subsubsection}{\numberline {1.3.1}RISC}{II}{subsubsection.1.3.1}%
@@ -14,7 +14,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Instruction Memory}{II}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Control Unit}{III}{subsubsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.4}ALU}{III}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Data Memory}{III}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.5}Data Memory}{IV}{subsubsection.2.2.5}%
 \contentsline {subsubsection}{\numberline {2.2.6}Register File}{IV}{subsubsection.2.2.6}%
 \contentsline {section}{\numberline {3}Custom Instruction Set Arquitecture (ISA)}{IV}{section.3}%
 \contentsline {subsection}{\numberline {3.1}ANDS}{IV}{subsection.3.1}%
@@ -24,7 +24,7 @@
 \contentsline {subsection}{\numberline {3.5}ADCS}{IV}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}ADDS}{IV}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}SBCS}{IV}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}SUB}{IV}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.8}SUB}{V}{subsection.3.8}%
 \contentsline {subsection}{\numberline {3.9}MULS}{V}{subsection.3.9}%
 \contentsline {subsection}{\numberline {3.10}LSRS}{V}{subsection.3.10}%
 \contentsline {subsection}{\numberline {3.11}LSLS}{V}{subsection.3.11}%
@@ -43,8 +43,12 @@
 \contentsline {subsection}{\numberline {5.1}Jump (J)}{V}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Branch Equal (BEQ)}{V}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Halt (HLT)}{V}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Opcode description}{V}{section.6}%
-\contentsline {section}{\numberline {7}Case of Study:}{V}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{V}{section.8}%
-\contentsfinish 
+\contentsline {section}{\numberline {6}Instruction Set Architecture}{V}{section.6}%
+\contentsline {section}{\numberline {7}Case of Study:}{VI}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Program description and Instructions}{VI}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}C like code}{VI}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Data Flow}{VI}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Testbench \& results}{VI}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Conclusion}{VI}{section.8}%
 \contentsline {section}{References}{VI}{section.8}%
+\contentsfinish 

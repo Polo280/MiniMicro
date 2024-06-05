@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.4)  4 JUN 2024 21:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.4)  4 JUN 2024 23:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1595,6 +1595,12 @@ LaTeX Warning: Label `fig:my_label' multiply defined.
 
 LaTeX Warning: Label `fig:my_label@cref' multiply defined.
 
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label@cref' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1842,7 +1848,7 @@ File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 Package microtype Info: Character `textflorin ' is missing
 (microtype)             in font `TS1/stix2/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
-<images/RTLImg.png, id=163, 1878.01625pt x 397.485pt>
+<images/RTLImg.png, id=174, 1878.01625pt x 397.485pt>
 File: images/RTLImg.png Graphic file (type png)
 <use images/RTLImg.png>
 Package pdftex.def Info: images/RTLImg.png  used on input line 124.
@@ -1857,7 +1863,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-<images/PCImg.png, id=165, 1183.42125pt x 455.7025pt>
+<images/PCImg.png, id=176, 1183.42125pt x 455.7025pt>
 File: images/PCImg.png Graphic file (type png)
 <use images/PCImg.png>
 Package pdftex.def Info: images/PCImg.png  used on input line 160.
@@ -1880,7 +1886,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-<images/InstMemImg.png, id=173, 1183.42125pt x 455.7025pt>
+<images/InstMemImg.png, id=185, 1183.42125pt x 455.7025pt>
 File: images/InstMemImg.png Graphic file (type png)
 <use images/InstMemImg.png>
 Package pdftex.def Info: images/InstMemImg.png  used on input line 197.
@@ -1905,7 +1911,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
-<images/CUImg.png, id=174, 866.23625pt x 411.5375pt>
+<images/CUImg.png, id=186, 866.23625pt x 411.5375pt>
 File: images/CUImg.png Graphic file (type png)
 <use images/CUImg.png>
 Package pdftex.def Info: images/CUImg.png  used on input line 235.
@@ -1920,7 +1926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
-<images/ALUImg.png, id=175, 1244.65pt x 379.4175pt>
+<images/ALUImg.png, id=187, 1244.65pt x 379.4175pt>
 File: images/ALUImg.png Graphic file (type png)
 <use images/ALUImg.png>
 Package pdftex.def Info: images/ALUImg.png  used on input line 265.
@@ -1936,12 +1942,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--278
  []
 
 [3 <./images/PCImg.png (PNG copy)> <./images/InstMemImg.png (PNG copy)> <./images/CUImg.png (PNG copy)> <./images/ALUImg.png>]
-<images/DataMemImg.png, id=185, 726.715pt x 573.14125pt>
+<images/DataMemImg.png, id=197, 726.715pt x 573.14125pt>
 File: images/DataMemImg.png Graphic file (type png)
 <use images/DataMemImg.png>
 Package pdftex.def Info: images/DataMemImg.png  used on input line 295.
 (pdftex.def)             Requested size: 157.9144pt x 124.54352pt.
-<images/RegFileImg.png, id=186, 416.55624pt x 485.815pt>
+<images/RegFileImg.png, id=198, 416.55624pt x 485.815pt>
 File: images/RegFileImg.png Graphic file (type png)
 <use images/RegFileImg.png>
 Package pdftex.def Info: images/RegFileImg.png  used on input line 309.
@@ -1952,31 +1958,26 @@ Underfull \hbox (badness 1097) in paragraph at lines 353--354
  []
 
 [4 <./images/DataMemImg.png (PNG copy)> <./images/RegFileImg.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 451--451
-|[]\T1/phv/b/n/10 (+20) Case of Study:|
+<images/ISA.JPG, id=206, 472.76625pt x 77.088pt>
+File: images/ISA.JPG Graphic file (type jpg)
+<use images/ISA.JPG>
+Package pdftex.def Info: images/ISA.JPG  used on input line 454.
+(pdftex.def)             Requested size: 263.188pt x 42.91608pt.
+
+Overfull \hbox (7.5pt too wide) in paragraph at lines 454--455
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--455
-|[]\T1/phv/b/n/10 (+20) Conclusion|
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+[5]
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+LaTeX Warning: Empty bibliography on input line 486.
 
- []
-
-[5{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}]
-
-LaTeX Warning: Empty bibliography on input line 474.
-
-[6
-
-] 
+[6{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc} <./images/ISA.JPG>] 
 enddocument/afterlastpage: lastpage setting LastPage.
-
-Package pbalance Warning: Could not balance, doing nothing.
-
+Package pbalance Info: Done balancing page 6 on input line 490.
 (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1989,19 +1990,23 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 409 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 79111 strings out of 474486
- 1869711 string characters out of 5743756
- 3134328 words of memory out of 5000000
- 100038 multiletter control sequences out of 15000+600000
- 777463 words of font info for 306 fonts, out of 8000000 for 9000
+ 79153 strings out of 474486
+ 1870640 string characters out of 5743756
+ 3135487 words of memory out of 5000000
+ 100076 multiletter control sequences out of 15000+600000
+ 777415 words of font info for 305 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 137i,12n,143p,1095b,1931s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,13n,143p,1095b,1997s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (6 pages, 1216227 bytes).
+Output written on main.pdf (6 pages, 1231785 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 84400 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 84437 words of extra memory for PDF output out of 89155 (max. 10000000)
 

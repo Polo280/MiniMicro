@@ -383,8 +383,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         %%                   Memory instructions                  %%
         %----------------------------------------------------------%
         \section{Memory instructions}
-    
-        \textbf{DESCRIPTION MISSING}
+
     
         \subsection{LOADI}
         This instruction loads data from memory (RAM) into a register. It is useful for accessing data stored in memory. 
@@ -405,19 +404,10 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         This instruction enables the CPU to branch to a specific memory address if two registers are equal. It is useful for conditional branching in a program. 
         \subsection{Halt (HLT)}
         This instruction stops the CPU from executing further instructions, effectively halting the processor. It is useful for terminating a program or stopping execution when necessary.
-    
-    
-        %----------------------------------------------------------%
-        %%                   Opcode description                   %%
-        %----------------------------------------------------------%
-        \section{Opcode description}
-    
-        The main consideration for designing and understanding the opcode of our proposed architecture is knowing how many instructions there are to be represented. Adding up 18 operations from the ALU, 3 from the memory interactions, and 3 from jump instructions, we come out to needing 5 bits of opcode, given by the formula:
-        \begin{equation}
-            \text{Bits} = \left\lceil \log_{2}{x} \right\rceil
-        \end{equation}
-    
-        \centering
+
+
+        \begingroup
+        {\centering
         \begin{tabular}{c|c}
         \textbf{Opcode} & \textbf{Operation} \\ \hline
         00000 & RESERVED \\
@@ -446,26 +436,48 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         10111 & BEQ \\
         11000 & HLT \\
         11001-11111 & RESERVED \\
-        \end{tabular} \\
+        \end{tabular}}
 
+
+    
+        
+        %----------------------------------------------------------%
+        %%                   Opcode description                   %%
+        %----------------------------------------------------------%
+        \section{Instruction Set Architecture}
+
+
+        The design we will be working on considers 32 bit long instructions which contain the necessary information to execute various operations within our RISC ARM-v6 based micro controller. Out of these 32 bits, the first 5 of them are intended to be used as the instruction opcode which identifies the type of operation that will be executed, leaving us with 27 free bits which will be distributed equally for specifying destination and source memory addresses for instruction execution. 
+
+        \begin{figure}[h]  % The [h] here is a placement specifier (here)
+            \centering  % This command centers the image
+            \includegraphics[width=0.5\textwidth]{images/ISA.JPG}
+            \caption{Instruction Set Format}
+            \label{fig:my_label}
+        \end{figure}
+
+        The main consideration for designing and understanding the opcode of our proposed architecture is knowing how many instructions there are to be represented. Adding up 18 operations from the ALU, 3 from the memory interactions, and 3 from jump instructions, we come out to needing 5 bits of opcode, given by the formula:
+        \begin{equation}
+            \text{Bits} = \left\lceil \log_{2}{x} \right\rceil
+        \end{equation}
+    
+
+
+%\justifying
 \section{Case of Study:}
+    \subsection{Program description and Instructions}
+    \subsection{C like code}
+
+    \subsection{Data Flow}
+
+    \subsection{Testbench \& results}
 
 
      
 \section{Conclusion}
 \justifying
 
-    This paper explored the design considerations and implementation details for a LOAD instruction within a custom architecture. We discussed the fundamental functionalities of the memory hierarchy, including instruction memory, data memory, registers, and the program counter. We then delved into the concept of the LOAD instruction, explaining its role in data transfer between memory and registers.\\
-    
-    The design of the LOAD instruction for a custom architecture requires careful consideration of factors such as:
-    
-    \begin{itemize}
-        \item Instruction format: Defining the opcode, operand types (immediate, register addressing, memory addressing modes), and their encoding scheme.
-        \item Memory access mechanisms: Specifying how the CPU calculates the effective memory address based on the chosen addressing mode.
-        \item Interaction with other components: Ensuring proper coordination between the control unit, ALU, and data memory during the LOAD instruction execution.
-        \item Pipeline compatibility: Designing the LOAD instruction to work seamlessly within the pipelined execution scheme of the processor, considering potential data hazards.
-        \item By understanding these aspects and tailoring the design to the specific architecture requirements, we can create an efficient LOAD instruction that facilitates data movement and enables effective program execution. This paves the way for further development of the custom instruction set architecture (ISA) and the creation of a powerful and versatile processing unit.
-    \end{itemize}
+CONCLUSION
 
 
 %----------------------------------------------------------
