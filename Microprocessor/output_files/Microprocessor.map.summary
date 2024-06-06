@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Tue Jun  4 09:38:31 2024
+Analysis & Elaboration Status : Successful - Thu Jun 06 16:07:02 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Microprocessor
-Top-level Entity Name : load_tb
+Top-level Entity Name : Microprocessor
 Family : MAX 10
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

@@ -65,57 +65,45 @@ module register_file (
 
     // 14+1 register memory
     
-    reg [31:0] registers [0:14];
+    reg [31:0] registers [14:0];
+	 reg [31:0] status_register;
 
-    int i;
-    initial begin
-        for (i = 0; i < 15 ; i++)
-        begin
-            registers[i] = 0;
-        end
-
-    end
-
-    always @(posedge clk or posedge rst) 
+    always @(posedge clk) 
     begin
-
-
         if (rst) begin
-
-        //Clear all 15 registers
-        for (i = 0; i < 15; i++) 
-            begin
-                registers[i] <= 0;
-            end
-
-
-        //TODO: reset Addresses
-        
-
+		  // Reset registers 
+			  registers[0] <= 7;
+			  registers[1] <= 0;
+			  registers[2] <= 0;
+			  registers[3] <= 0;
+			  registers[4] <= 0;
+			  registers[5] <= 0;
+			  registers[6] <= 0;
+			  registers[7] <= 0;
+			  registers[8] <= 0;
+			  registers[9] <= 0;
+			  registers[10] <= 0;
+			  registers[11] <= 0;
+			  registers[12] <= 0;
+			  registers[13] <= 0;
+			  registers[14] <= 0;
+			  status_register <= 0;
+			  RD1 <= 0;
+			  RD2 <= 0;
         end
 
         else begin
-
-        // return values of looked-for addresses
-            RD1 = registers[A1];
-            RD2 = registers[A2];    
-
+				// return values of looked-for addresses
+            RD1 <= registers[A1];
+            RD2 <= registers[A2];    
 
             if(WE3)
             begin
-
                 /*If the write enable is asserted, then the register file writes the data
                 into the specified register on the rising edge of the clock.*/
                 registers[A3] = WD3; //Write back semi stage
             end
-
-
-            //R15 input (PC) is stored and added 8
-            registers[14] = R15 + 2;
         end
 
     end
-
-
-    
-endmodule
+endmodule 
