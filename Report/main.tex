@@ -153,6 +153,37 @@
     \label{fig:RTL Overview}
 \end{figure}
 
+
+
+%----------------------------------------------------------%
+%%                   
+%%                      Exec cicles
+%%
+%----------------------------------------------------------%
+\subsection{Execution Cicle}
+The execution cicle of a 3 step arquitecture is fairly simple and straight forward
+\begin{itemize}
+    \item 1. (Cycle 1): The CPU fetches the first instruction from the instruction memory. Simultaneously, the control unit decodes the previously fetched instruction and prepares for execution.
+    The Execute unit executes the instruction that was decoded in the previous cycle (I-1)
+    I
+    \item 2. (Cycle 2): The CPU fetches the second instruction from instruction memory and loads. The control unit decodes the first instruction and prepares for execution. The Execute unit executes the previously decoded instruction.
+
+    \item 3. (Subsequent Cycles): The process continues in a similar manner for each cycle.  A new instruction is fetched in each cycle, while the previous instructions progress through the control and Execute stages.
+
+\end{itemize}
+
+
+There are some serious benefits to using this pipeline, mainly it allows the CPU to potentially execute multiple instructions per clock cycle, improving overall performance and reduced waiting by overlapping the fetch, decode, and execute stages, the CPU avoids waiting for one instruction to complete before fetching the next. \\
+
+There are also some considerations that must be taken into acount when using pipelining. Pipelining can be less efficient if instructions depend on the results of previous instructions. In such cases, the pipeline may stall until the required data becomes available; also, jumps and branches can disrupt the pipeline flow. The CPU may need to flush instructions in the pipeline and re-fetch them based on the new program flow.
+
+
+
+
+
+
+
+
 %----------------------------------------------------------%
 %%                   
 %%                      Modules

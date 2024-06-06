@@ -13,13 +13,14 @@
 \contentsline {subsection}{\numberline {1.4}Our Implementation}{II}{subsection.1.4}%
 \contentsline {section}{\numberline {2}Design and Implementation}{III}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Pipeline overview}{III}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Modules}{III}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}PC}{III}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Instruction Memory}{III}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Control Unit}{III}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}ALU}{IV}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Data Memory}{IV}{subsubsection.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.6}Register File}{IV}{subsubsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2}Execution Cicle}{III}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Modules}{III}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}PC}{III}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Instruction Memory}{III}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Control Unit}{IV}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}ALU}{IV}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Data Memory}{IV}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}Register File}{V}{subsubsection.2.3.6}%
 \contentsline {section}{\numberline {3}Custom Instruction Set Architecture}{V}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Opcode}{V}{subsection.3.1}%
 \contentsline {section}{\numberline {4}ALU Instructions}{V}{section.4}%
@@ -29,11 +30,11 @@
 \contentsline {subsection}{\numberline {4.4}EORS}{V}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}ADCS}{V}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}ADDS}{V}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}SBCS}{V}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}SUB}{V}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}MULS}{V}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}LSRS}{V}{subsection.4.10}%
-\contentsline {subsection}{\numberline {4.11}LSLS}{V}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.7}SBCS}{VI}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}SUB}{VI}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}MULS}{VI}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}LSRS}{VI}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}LSLS}{VI}{subsection.4.11}%
 \contentsline {subsection}{\numberline {4.12}ROR}{VI}{subsection.4.12}%
 \contentsline {subsection}{\numberline {4.13}UXTB}{VI}{subsection.4.13}%
 \contentsline {subsection}{\numberline {4.14}UXTH}{VI}{subsection.4.14}%
@@ -49,11 +50,11 @@
 \contentsline {subsection}{\numberline {6.1}Jump (J)}{VI}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Branch Equal (BEQ)}{VI}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Halt (HLT)}{VI}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Case of Study:}{VI}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Program description and Instructions}{VI}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}C like code}{VI}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Data Flow}{VI}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Testbench \& results}{VI}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Conclusion}{VI}{section.8}%
-\contentsline {section}{References}{VI}{section.8}%
 \contentsfinish 
+\contentsline {section}{\numberline {7}Case of Study:}{VII}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Program description and Instructions}{VII}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}C like code}{VII}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Data Flow}{VII}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Testbench \& results}{VII}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Conclusion}{VII}{section.8}%
+\contentsline {section}{References}{VII}{section.8}%
