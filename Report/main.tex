@@ -97,6 +97,8 @@
 
         \subsubsection{Vector Architecture}
         A vector processor or array processor is a central processing unit (CPU) that implements an instruction set where its instructions are designed to operate efficiently and effectively on large one-dimensional arrays of data called vectors. This is in contrast to scalar processors, whose instructions operate on single data items only, and in contrast to some of those same scalar processors having additional single instruction, multiple data (SIMD) or SWAR Arithmetic Units. Vector processors can greatly improve performance on certain workloads, notably numerical simulation and similar tasks. Vector processing techniques also operate in video-game console hardware and in graphics accelerators.
+
+        
         
 
 
@@ -113,8 +115,17 @@
         \subsubsection{CISC}
         CISC processors boast a rich set of complex instructions. These instructions can perform multiple operations in a single step, making programming potentially easier and more intuitive for developers. For example, a single CISC instruction might add two numbers and store the result in a specific memory location. While CISC instructions can be efficient for some tasks, their complexity can sometimes lead to slower execution compared to RISC. Decoding these complex instructions can take time, and they might not always be perfectly optimized for the hardware. Popular CISC architectures include the x86 family (used by Intel and AMD) and the POWER architecture (developed by IBM).
 
+
+        \subsubsection{VLIW}
+        Very long instruction word refers to instruction set architectures that are designed to exploit instruction-level parallelism (ILP). A VLIW processor allows programs to explicitly specify instructions to execute in parallel, whereas conventional central processing units (CPUs) mostly allow programs to specify instructions to execute in sequence only. VLIW is intended to allow higher performance without the complexity inherent in some other designs.
+
+        The traditional means to improve performance in processors include dividing instructions into substeps so the instructions can be executed partly at the same time (termed pipelining), dispatching individual instructions to be executed independently, in different parts of the processor (superscalar architectures), and even executing instructions in an order different from the program (out-of-order execution). These methods all complicate hardware (larger circuits, higher cost and energy use) because the processor must make all of the decisions internally for these methods to work.
+
+        In contrast, the VLIW method depends on the programs providing all the decisions regarding which instructions to execute simultaneously and how to resolve conflicts. As a practical matter, this means that the compiler (software used to create the final programs) becomes more complex, but the hardware is simpler than in many other means of parallelism.
+
     \subsection{Our Implementation}
-    The implementation we well be looking into in the following steps of this paper is an ARM Cortex M0 with a custom \textit{Instuction Set Architecture} (ISA). This implementation is far simlpler \dots
+    The implementation that we well be looking into in the following steps of this paper is a Hardvard architecture, ARM Cortex M0 - based microprocessor with a custom \textit{Instuction Set Architecture} (ISA). 
+    This implementation, although simple, is still fairly complete and powerfull, as it has the basic functionality of any general pourpose computer and the  \textit{ISA} is based on the simplest but complete architecture ARM has to offer. Our ISA (touched upon later in this paper) consist of 4 byte encodings(32 bit) based on the 32 bit  \textit{Thumb-2} ISA that is used in most Cortex M and similar microcontrollers.
     
     
 
@@ -122,7 +133,7 @@
 %%                   Design & implementation              %%
 %----------------------------------------------------------%
 \section{Design and Implementation}
-    Our architecture is based on an Arm Cortex M0 3-stage architecture.\\
+    As previously mentioned, our architecture is based on an Arm Cortex M0 3-stage architecture. \\
     The 3-stage pipeline is a fundamental concept in computer architecture that optimizes the instruction processing speed within a CPU. It breaks down the instruction execution process into three distinct stages, allowing the CPU to work on multiple instructions simultaneously.\\
 \subsection{Pipeline overview}
     \begin{itemize}
@@ -348,14 +359,37 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
 
 
 
+       %----------------------------------------------------------%
+        %%                   Opcode description                   %%
+        %----------------------------------------------------------%
+        \section{Custom Instruction Set Architecture}
+
+        Our custom \textit{Instruction Set Architecture} (ISA) is based on the 32 bit (4 byte) Thumb-2 ISA. The main difference regarding our ISA is that the Thumb-2 instructions are generally stored on contigous 8 bit blocks of memory while our ISA consists of a block of 32 bit instructions.\\
+
+        Out of these 32 bits, the first 5 of them are intended to be used as the instruction opcode which identifies the type of operation that will be executed, leaving us with 27 free bits which will be distributed equally for specifying destination and source memory addresses for instruction execution. 
+        We propose using a total of 18 instructions that run inside the ALU. These instructions span from simple logical operations like an AND bitwise instruction operation, to arithmetic operations like adding of two integers. We \textit{do not implement floating point arithmetic} natively. If Floating Point Arithmetic is requierd it would need to be managed by software. 
+
+        \subsection{Opcode}
+
+        \begin{figure}[h]  % The [h] here is a placement specifier (here)
+            \centering  % This command centers the image
+            \includegraphics[width=0.5\textwidth]{images/ISA.JPG}
+            \caption{Instruction Set Format}
+            \label{fig:ISA Format}
+        \end{figure}
+
+        The main consideration for designing and understanding the opcode of our proposed architecture is knowing how many instructions there are to be represented. Adding up 18 operations from the ALU, 3 from the memory interactions, and 3 from jump instructions, we come out to needing 5 bits of opcode, given by the formula:
+        \begin{equation}
+            \text{Bits} = \left\lceil \log_{2}{x} \right\rceil
+        \end{equation}
+    
 
 
 
         % INSTRUCTION SET
-        \section{Custom Instruction Set Arquitecture (ISA)}
+        \section{ALU Instructions}
 
-
-        We propose using a total of 18 instructions that run inside the ALU. These instructions span from simple logical operations like an AND bitwise instruction operation, to arithmetic operations like adding of two integers. We \textit{do not implement floating point arithmetic} natively. 
+        The folowing instructions are executed by the \textit{Arithmetic Logic Unit} as they requiere math, logic, bitwise operations and comparisons:
     
         \subsection{ANDS}
         This operation performs a bitwise AND on two 32-bit operands, where each bit of the output is the logical AND of the corresponding bits of the operands. This means that if both corresponding bits are 1, then the output bit is 1, otherwise it is 0. 
@@ -399,7 +433,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         %%                   Memory instructions                  %%
         %----------------------------------------------------------%
         \section{Memory instructions}
-
+        This instructions don't require the use of the \textit{ALU}, they only move data around from one place (like the RAM) to another (Register File):
     
         \subsection{LOADI}
         This instruction loads data from memory (RAM) into a register. It is useful for accessing data stored in memory. 
@@ -412,14 +446,15 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         %%                    Jump instructions                   %%
         %----------------------------------------------------------%
         \section{Jump instructions}
-    
-    
+        This instrcutions modify the normal flow of the program, they modify the data that the program counter uses to make it skip or move a certain number of instruction (sometimes only if a certain condition is met).
+        
         \subsection{Jump (J)}
         This instruction allows the CPU to jump to a specific memory address to continue execution. It is useful for changing the flow of execution in a program. 
         \subsection{Branch Equal (BEQ)}
         This instruction enables the CPU to branch to a specific memory address if two registers are equal. It is useful for conditional branching in a program. 
         \subsection{Halt (HLT)}
         This instruction stops the CPU from executing further instructions, effectively halting the processor. It is useful for terminating a program or stopping execution when necessary.
+
 
 
         \begingroup
@@ -457,27 +492,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
 
     
         
-        %----------------------------------------------------------%
-        %%                   Opcode description                   %%
-        %----------------------------------------------------------%
-        \section{Instruction Set Architecture}
-
-
-        The design we will be working on considers 32 bit long instructions which contain the necessary information to execute various operations within our RISC ARM-v6 based micro controller. Out of these 32 bits, the first 5 of them are intended to be used as the instruction opcode which identifies the type of operation that will be executed, leaving us with 27 free bits which will be distributed equally for specifying destination and source memory addresses for instruction execution. 
-
-        \begin{figure}[h]  % The [h] here is a placement specifier (here)
-            \centering  % This command centers the image
-            \includegraphics[width=0.5\textwidth]{images/ISA.JPG}
-            \caption{Instruction Set Format}
-            \label{fig:ISA Format}
-        \end{figure}
-
-        The main consideration for designing and understanding the opcode of our proposed architecture is knowing how many instructions there are to be represented. Adding up 18 operations from the ALU, 3 from the memory interactions, and 3 from jump instructions, we come out to needing 5 bits of opcode, given by the formula:
-        \begin{equation}
-            \text{Bits} = \left\lceil \log_{2}{x} \right\rceil
-        \end{equation}
-    
-
+ 
 
 %\justifying
 \section{Case of Study:}
