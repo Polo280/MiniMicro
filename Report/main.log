@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.4)  7 JUN 2024 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.4)  7 JUN 2024 17:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1571,6 +1571,12 @@ LaTeX Warning: Label `fig:ISA Format' multiply defined.
 
 LaTeX Warning: Label `fig:ISA Format@cref' multiply defined.
 
+
+LaTeX Warning: Label `fig:ISA Format' multiply defined.
+
+
+LaTeX Warning: Label `fig:ISA Format@cref' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1825,7 +1831,7 @@ Package microtype Info: Character `textflorin ' is missing
 (microtype)             in font `TS1/stix2/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
  [2{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}]
-<images/RTLImg.png, id=211, 1606.0pt x 699.61375pt>
+<images/RTLImg.png, id=214, 1606.0pt x 699.61375pt>
 File: images/RTLImg.png Graphic file (type png)
 <use images/RTLImg.png>
 Package pdftex.def Info: images/RTLImg.png  used on input line 140.
@@ -1840,7 +1846,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-<images/PCImg.png, id=212, 840.13875pt x 203.76125pt>
+<images/PCImg.png, id=215, 840.13875pt x 203.76125pt>
 File: images/PCImg.png Graphic file (type png)
 <use images/PCImg.png>
 Package pdftex.def Info: images/PCImg.png  used on input line 176.
@@ -1860,7 +1866,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
-<images/InstMemImg.png, id=213, 1013.7875pt x 407.5225pt>
+<images/InstMemImg.png, id=216, 1013.7875pt x 407.5225pt>
 File: images/InstMemImg.png Graphic file (type png)
 <use images/InstMemImg.png>
 Package pdftex.def Info: images/InstMemImg.png  used on input line 213.
@@ -1886,7 +1892,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
  []
 
 [3 <./images/RTLImg.png> <./images/PCImg.png> <./images/InstMemImg.png>]
-<images/CUImg.png, id=221, 1056.94875pt x 500.87125pt>
+<images/CUImg.png, id=224, 1056.94875pt x 500.87125pt>
 File: images/CUImg.png Graphic file (type png)
 <use images/CUImg.png>
 Package pdftex.def Info: images/CUImg.png  used on input line 251.
@@ -1901,7 +1907,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
-<images/ALUImg.png, id=222, 851.18pt x 449.68pt>
+<images/ALUImg.png, id=225, 851.18pt x 449.68pt>
 File: images/ALUImg.png Graphic file (type png)
 <use images/ALUImg.png>
 Package pdftex.def Info: images/ALUImg.png  used on input line 281.
@@ -1916,12 +1922,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 291--294
 
  []
 
-<images/DataMemImg.png, id=223, 548.0475pt x 391.4625pt>
+<images/DataMemImg.png, id=226, 548.0475pt x 391.4625pt>
 File: images/DataMemImg.png Graphic file (type png)
 <use images/DataMemImg.png>
 Package pdftex.def Info: images/DataMemImg.png  used on input line 311.
 (pdftex.def)             Requested size: 157.9144pt x 112.79845pt.
-<images/RegFileImg.png, id=224, 1002.74625pt x 769.87625pt>
+<images/RegFileImg.png, id=227, 1002.74625pt x 769.87625pt>
 File: images/RegFileImg.png Graphic file (type png)
 <use images/RegFileImg.png>
 Package pdftex.def Info: images/RegFileImg.png  used on input line 325.
@@ -1932,76 +1938,80 @@ Underfull \hbox (badness 1097) in paragraph at lines 369--370
  []
 
 [5]
-<images/ISA.JPG, id=237, 472.76625pt x 77.088pt>
+<images_tb/alu_tb.png, id=240, 1282.7925pt x 789.95125pt>
+File: images_tb/alu_tb.png Graphic file (type png)
+<use images_tb/alu_tb.png>
+Package pdftex.def Info: images_tb/alu_tb.png  used on input line 430.
+(pdftex.def)             Requested size: 263.188pt x 162.07364pt.
+
+Overfull \hbox (7.5pt too wide) in paragraph at lines 430--431
+ [][] 
+ []
+
+<images/ISA.JPG, id=241, 472.76625pt x 77.088pt>
 File: images/ISA.JPG Graphic file (type jpg)
 <use images/ISA.JPG>
-Package pdftex.def Info: images/ISA.JPG  used on input line 438.
+Package pdftex.def Info: images/ISA.JPG  used on input line 446.
 (pdftex.def)             Requested size: 263.188pt x 42.91608pt.
 
-Overfull \hbox (7.5pt too wide) in paragraph at lines 438--439
+Overfull \hbox (7.5pt too wide) in paragraph at lines 446--447
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--480
+Underfull \hbox (badness 10000) in paragraph at lines 458--488
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<images_tb/add_tb.png, id=238, 1606.0pt x 522.95375pt>
+<images_tb/add_tb.png, id=242, 1606.0pt x 522.95375pt>
 File: images_tb/add_tb.png Graphic file (type png)
 <use images_tb/add_tb.png>
-Package pdftex.def Info: images_tb/add_tb.png  used on input line 506.
+Package pdftex.def Info: images_tb/add_tb.png  used on input line 513.
 (pdftex.def)             Requested size: 263.188pt x 85.70113pt.
 
-Overfull \hbox (7.5pt too wide) in paragraph at lines 506--507
+Overfull \hbox (7.5pt too wide) in paragraph at lines 513--514
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images_tb/and_tb.png, id=239, 1606.0pt x 518.93875pt>
+<images_tb/and_tb.png, id=243, 1606.0pt x 518.93875pt>
 File: images_tb/and_tb.png Graphic file (type png)
 <use images_tb/and_tb.png>
-Package pdftex.def Info: images_tb/and_tb.png  used on input line 515.
+Package pdftex.def Info: images_tb/and_tb.png  used on input line 522.
 (pdftex.def)             Requested size: 263.188pt x 85.04315pt.
 
-Overfull \hbox (7.5pt too wide) in paragraph at lines 515--516
+Overfull \hbox (7.5pt too wide) in paragraph at lines 522--523
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc} <./images/ISA.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+[6{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix2-type1/stix2-mathit.enc} <./images_tb/alu_tb.png (PNG copy)> <./images/ISA.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
 []\T1/stix2/m/it/9 (+20) The Ed-i-tors of En-cy-clopae-dia Bri-tan-nica. (n.d.).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
 \T1/stix2/m/it/9 (+20) tran-sis-tor sum-mary. En-cy-clo-pe-dia Bri-tan-nica.
  []
 
 
-Overfull \hbox (11.01814pt too wide) in paragraph at lines 555--556
+Overfull \hbox (11.01814pt too wide) in paragraph at lines 562--563
 []\T1/stix2/m/it/9 (-20) RISC vs. CISC. (n.d.). https://cs.stanford.edu/people/eroberts/courses 
  []
 
 
-Overfull \hbox (26.43704pt too wide) in paragraph at lines 557--558
+Overfull \hbox (26.43704pt too wide) in paragraph at lines 564--565
 []\T1/stix2/m/it/9 (-20) https://course.ece.cmu.edu/ ece740/f13/lib/exe/fetch.php%3Fmedia=seth-
  []
 
 
-LaTeX Warning: Empty bibliography on input line 569.
+LaTeX Warning: Empty bibliography on input line 576.
 
 [7 <./images_tb/add_tb.png> <./images_tb/and_tb.png (PNG copy)>] 
 enddocument/afterlastpage: lastpage setting LastPage.
-Package pbalance Info: Done balancing page 7 on input line 573.
+Package pbalance Info: Done balancing page 7 on input line 580.
 (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -2017,20 +2027,20 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 448 (\begingroup)
+### semi simple group (level 1) entered at line 456 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 79243 strings out of 474486
- 1872234 string characters out of 5743756
- 3138033 words of memory out of 5000000
- 100122 multiletter control sequences out of 15000+600000
+ 79253 strings out of 474486
+ 1872459 string characters out of 5743756
+ 3138111 words of memory out of 5000000
+ 100130 multiletter control sequences out of 15000+600000
  786705 words of font info for 319 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  137i,13n,143p,1095b,2033s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Math.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (7 pages, 1829902 bytes).
+Output written on main.pdf (7 pages, 2123187 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 86575 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 86588 words of extra memory for PDF output out of 89155 (max. 10000000)
 

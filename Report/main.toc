@@ -46,13 +46,14 @@
 \contentsline {subsection}{\numberline {5.1}Jump (J)}{VI}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Branch Equal (BEQ)}{VI}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Halt (HLT)}{VI}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}ALU Testbench}{VI}{subsection.5.4}%
 \contentsline {section}{\numberline {6}Instruction Decoding Process}{VI}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Opcode}{VI}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Destination}{VI}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Operands 1 \& 2}{VI}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Instructions Testbench}{VI}{section.7}%
 \contentsline {subsection}{\numberline {7.1}ADD}{VI}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}AND}{VI}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.2}AND}{VII}{subsection.7.2}%
 \contentsline {section}{\numberline {8}Case of Study:}{VII}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Program description and Instructions}{VII}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}C like code}{VII}{subsection.8.2}%

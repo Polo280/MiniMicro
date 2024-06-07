@@ -394,7 +394,8 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         \subsection{NOP}
         This operation performs a no-operation, which means that it does nothing. This operation is useful for adding a delay or for synchronizing operations.
     
-    
+       
+
         %----------------------------------------------------------%
         %%                   Memory instructions                  %%
         %----------------------------------------------------------%
@@ -422,11 +423,18 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         This instruction stops the CPU from executing further instructions, effectively halting the processor. It is useful for terminating a program or stopping execution when necessary.
 
 
-
+        \subsection{ALU Testbench}
+        The testbench for the Alu consist of sending a succesion of instructions (by incrementing the opcode by 1 every clock cicle). By looking at the 2 operands, the output and the resulting flags we can ensure that the ALU is working correctly.
+        \begin{figure}[h]  % The [h] here is a placement specifier (here)
+            \centering  % This command centers the image
+            \includegraphics[width=0.5\textwidth]{images_tb/alu_tb.png}
+            \caption{Instruction Set Format}
+            \label{fig:ISA Format}
+        \end{figure}
     
         
         %----------------------------------------------------------%
-        %%                   Instruction Decode process                       %%
+        %%                   Instruction Decode process           %%
         %----------------------------------------------------------%
         \section{Instruction Decoding Process}
 
@@ -480,16 +488,15 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
 
 
         The main consideration for designing and understanding the opcode of our proposed architecture is knowing how many instructions there are to be represented. Adding up 18 operations from the ALU, 3 from the memory interactions, and 3 from jump instructions (24 in total), we come out to needing 5 bits of opcode, given by the formula:
+
         \begin{equation}
             \text{Bits} = \left\lceil \log_{2}{x} \right\rceil
         \end{equation}
 
         
+
         \subsection{Destination}
         The destination is given in the following 9 bits of the instruction after the OPCODE ([26:18]) 
-
-
-
 
         \subsection{Operands 1 \& 2}
         The 2 operands (op1 and op2) are used as the operands for the ALU, or valuese for other instructions, they are encoded in the last 18 bits of the opcode (OP1 on [17:9]) (OP2 on [8:0])
