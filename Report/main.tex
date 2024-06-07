@@ -495,11 +495,32 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         The 2 operands (op1 and op2) are used as the operands for the ALU, or valuese for other instructions, they are encoded in the last 18 bits of the opcode (OP1 on [17:9]) (OP2 on [8:0])
         
     
+\section{Operation Testbench}
+This section is dedicated to explaining the testing and operation of some relevant instruction
+        \subsection{ADD}
 
+            The ADD instruction is beign tested by sending the instruction 00110000000001000000010000000111 (show in the Testbench as current instruction). By decoding it we get the opcode to be 00110 which is the add instruction, Then the next nine bits are the destination where we want to store the result (in this case address 1), them the next 9 bits form operand 1 and the last 9 operand 2. This instruction would be similar to writing C code like x = 1 + 2
+
+            \begin{figure}[h]  % The [h] here is a placement specifier (here)
+                \centering  % This command centers the image
+                \includegraphics[width=0.5\textwidth]{images_tb/add_tb.png}
+                \caption{ADD Testbench}
+                \label{fig:ISA Format}
+            \end{figure}
+
+        \subsection{AND}
+        The AND instruction is beign tested by sending the instruction 000010000000010000000011000000010 (show in the Testbench as current instruction). By decoding it we get the opcode to be 00001 which is the AND instruction, Then the next nine bits are the destination where we want to store the result (in this case address 1), them the next 9 bits form operand 1 and the last 9 operand 2. This instruction would be similar to writing C code like x = (1 | 3)
+        \begin{figure}[h]  % The [h] here is a placement specifier (here)
+            \centering  % This command centers the image
+            \includegraphics[width=0.5\textwidth]{images_tb/and_tb.png}
+            \caption{AND Testbench}
+            \label{fig:ISA Format}
+        \end{figure}
 
 %\justifying
 \section{Case of Study:}
     \subsection{Program description and Instructions}
+
     \subsection{C like code}
 
     \subsection{Data Flow}
