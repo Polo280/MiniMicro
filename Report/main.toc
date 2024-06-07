@@ -50,7 +50,7 @@
 \contentsline {subsection}{\numberline {6.1}Opcode}{VI}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Destination}{VI}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Operands 1 \& 2}{VI}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Operation Testbench}{VI}{section.7}%
+\contentsline {section}{\numberline {7}Instructions Testbench}{VI}{section.7}%
 \contentsline {subsection}{\numberline {7.1}ADD}{VI}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}AND}{VI}{subsection.7.2}%
 \contentsline {section}{\numberline {8}Case of Study:}{VII}{section.8}%

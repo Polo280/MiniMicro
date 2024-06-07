@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber main"] 1717800148.46565 "main.bcf" "main.bbl" "main" 1717800958.45937 0
-  "main.bcf" 1717800957 107857 d954e29c074024cf4c65b2b9be70ce25 "pdflatex"
+["biber main"] 1717800148.46565 "main.bcf" "main.bbl" "main" 1717801151.6104 0
+  "main.bcf" 1717801150 107857 d954e29c074024cf4c65b2b9be70ce25 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1717800951.14409 "c:/Users/fredi/Documents/MiniMicro/Report/main.tex" "main.pdf" "main" 1717800958.46098 0
+["pdflatex"] 1717801145.18761 "c:/Users/fredi/Documents/MiniMicro/Report/main.tex" "main.pdf" "main" 1717801151.61156 0
   "C:/Users/fredi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1717556876 87510 b3766c2e1f241588f88cba4a8bf1b25f ""
   "C:/Users/fredi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717554798 24225045 4bc9f3d65c603444fd43efb4f0eb3b6d ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -378,7 +378,7 @@
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/fredi/Documents/MiniMicro/Report/main.tex" 1717800928 40626 d7bfbf54977339b69ec9dfafd0a7cc7c ""
+  "c:/Users/fredi/Documents/MiniMicro/Report/main.tex" 1717801137 40629 87b0738fcfb83d7dc60f2656ec837216 ""
   "images/ALUImg.png" 1717739444 39213 c09342dcc1e1d3eda5c8199ad43bec0f ""
   "images/CUImg.png" 1717739495 58271 7db31ccca353dab30e2a3a71eb860130 ""
   "images/DataMemImg.png" 1717739334 24070 2a1eae2ffa6d203074fe98503f97d4e7 ""
@@ -389,11 +389,11 @@
   "images/RegFileImg.png" 1717739462 71947 7d8f95ba6f8e40ae24fa830a6c9219a7 ""
   "images_tb/add_tb.png" 1717798833 161542 32322f1e128587722b1071b96eb86377 ""
   "images_tb/and_tb.png" 1717798868 538264 ae42d9b311fe15609161125ce8ac7e7d ""
-  "main.aux" 1717800957 25552 8ad5b6a487b12fba943af39766a4eb17 "pdflatex"
+  "main.aux" 1717801150 25585 076468ddeaed6e9c5ce916741990ee8d "pdflatex"
   "main.bbl" 1717800151 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.run.xml" 1717800957 2395 28580175f7ee7e3f754dbb3c6d1a322f "pdflatex"
-  "main.tex" 1717800928 40626 d7bfbf54977339b69ec9dfafd0a7cc7c ""
-  "main.toc" 1717800957 4896 4459df076885d277275621483a426b3f "pdflatex"
+  "main.run.xml" 1717801150 2395 28580175f7ee7e3f754dbb3c6d1a322f "pdflatex"
+  "main.tex" 1717801137 40629 87b0738fcfb83d7dc60f2656ec837216 ""
+  "main.toc" 1717801150 4899 8ddaeffedcc9637812bdd4733f4115a4 "pdflatex"
   "tau.cls" 1717555611 12780 376ede097771d679c9baae36c52b02cf ""
   "tau.sty" 1717555611 5178 8d55094f18d2fd08a3cd6904a1c1ce8a ""
   (generated)
