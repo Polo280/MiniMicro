@@ -355,7 +355,7 @@ There are 5 main modules that form the CPU, the \textit{Program Counter}, \texti
         \section{Instruction List (ISA)}
 
 
-        We implemented a total of 24 instructions that run inside the ALU and on their own (managed souly by the Control Unit). These instructions span from simple logical operations like an AND bitwise instruction operation, to arithmetic operations like adding of two integers. We \textit{do not implement floating point arithmetic} natively. The implementation of a Floating Point unit goes beyond the scope of this paper, but implementing it would require doing \textit{Soft-Floating Point}, which is a floatin point implementation that uses the CPU integer registers to store and do bit manipulation.  
+        We implemented a total of 24 instructions that run inside the ALU (18) and on their own (6 managed souly by the Control Unit). These instructions span from simple logical operations like an AND bitwise instruction operation, to arithmetic operations like adding of two integers. We \textit{do not implement floating point arithmetic} natively. The implementation of a Floating Point unit goes beyond the scope of this paper, but implementing it would require doing \textit{Soft-Floating Point}, which is a floatin point implementation that uses the CPU integer registers to store and do bit manipulation.  
     
         \subsection{ANDS}
         This operation performs a bitwise AND on two 32-bit operands, where each bit of the output is the logical AND of the corresponding bits of the operands. This means that if both corresponding bits are 1, then the output bit is 1, otherwise it is 0. 
@@ -521,7 +521,23 @@ However, this journey is just the beginning. The world of CPUs is vast, with adv
 \section{Sources}
 
 \begin{enumerate}
+
     \item \textit{Shirriff, K. (2022, March 9). The surprising story of the first microprocessors. IEEE Spectrum. https://spectrum.ieee.org/the-surprising-story-of-the-first-microprocessors}
+    
+    \item \textit{The Editors of Encyclopaedia Britannica. (n.d.). transistor summary. Encyclopedia Britannica. https://www.britannica.com/summary/transistor}
+
+    \item \textit{Wikipedia contributors. (2024, May 15). Integrated circuit.
+     Wikipedia. https://en.wikipedia.org/wiki/Integrated_circuit}
+    
+    \item \textit{Cass, S. (2024, March 15). Chip Hall of Fame: Intel 4004 microprocessor. IEEE Spectrum. https://spectrum.ieee.org/chip-hall-of-fame-intel-4004-microprocessor}
+    \item \textit{Arm Ltd. (n.d.). What is RISC? Arm | the Architecture for the Digital World. https://www.arm.com/glossary/risc}
+    \item \textit{RISC vs. CISC. (n.d.). https://cs.stanford.edu/people/eroberts/courses}
+    \item \textit{Cortex-M0. (n.d.). https://developer.arm.com/Processors/Cortex-M0}
+    \item \textit{https://course.ece.cmu.edu/~ece740/f13/lib/exe/fetch.php%3Fmedia=seth-740-fall13-module5.1-simd-vector-gpu.pdf}
+
+
+
+
 \end{enumerate}
 
 

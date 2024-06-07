@@ -1,11 +1,12 @@
 # Fdb version 4
-["biber main"] 1717741379.26058 "main.bcf" "main.bbl" "main" 1717741460.4614 0
-  "main.bcf" 1717741459 107857 d954e29c074024cf4c65b2b9be70ce25 "pdflatex"
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1717742668.31583 -1
+  "main.bcf" 1717742667 107857 d954e29c074024cf4c65b2b9be70ce25 "pdflatex"
+  "tau.bib" 1717555611 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1717741454.87152 "c:/Users/fredi/Documents/MiniMicro/Report/main.tex" "main.pdf" "main" 1717741460.46311 0
+["pdflatex"] 1717742663.04308 "c:/Users/fredi/Documents/MiniMicro/Report/main.tex" "main.pdf" "main" 1717742668.31688 2
   "C:/Users/fredi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1717556876 87510 b3766c2e1f241588f88cba4a8bf1b25f ""
   "C:/Users/fredi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717554798 24225045 4bc9f3d65c603444fd43efb4f0eb3b6d ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -20,7 +21,6 @@
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvbo8t.tfm" 1136793854 6880 fe6c7967f27585f6fa9876f3af14edd2 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvr8r.tfm" 1136793854 4712 9ef4d7d106579d4b136e1529e1a4533c ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvr8t.tfm" 1136793854 7040 b2bd27e2bfe6f6948cbc3239cae7444f ""
-  "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvro8c.tfm" 1136793854 1500 ca9ebc9fbb3d8eb94a860a07b76ff3a6 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvro8r.tfm" 1136793854 4964 f223217e5e1f85fa3742fb0480aba9e8 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvro8t.tfm" 1136793854 7292 d408122871055bbc541d7280c154e210 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/symbol/psyr.tfm" 1136793854 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -61,7 +61,6 @@
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvb8t.vf" 1136793854 2340 0efed6a948c3c37d870e4e7ddb85c7c3 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvbo8t.vf" 1136793854 2344 88834f8322177295b0266ecc4b0754c3 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvr8t.vf" 1136793854 2344 44ff28c9ef2fc97180cd884f900fee71 ""
-  "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvro8c.vf" 1136793854 3564 623cb370babed06de5e386657b2fd6f6 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvro8t.vf" 1136793854 2348 717f0e01beff9c30c0df4945e471886f ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/fonts/stix2-type1/ls1stix2.fd" 1610878633 1808 36d637b6ef5eb6a1a4ca761369bb8f72 ""
@@ -353,7 +352,6 @@
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/helvet.sty" 1585926771 1558 de0ad166b701b820e03588a29bb30798 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/pifont.sty" 1585926771 2350 62e73848f29fd8cd37fb7974c7cf2221 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/t1phv.fd" 1585253778 1536 47067fbe7c3ffed1ede7aaa7b8549d7a ""
-  "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ts1phv.fd" 1585253778 1221 ec0c641cd2e0fb69a449534a0279b5ca ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/upsy.fd" 1585253778 153 2da0acd77cba348f34823f44cabf0058 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/upzd.fd" 1585253778 153 b2a94082cb802f90d3daf6dd0c7188a0 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/ragged2e/ragged2e.sty" 1687525147 10085 3dececaeed388e31285c366e124c0c4e ""
@@ -378,7 +376,7 @@
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/fredi/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/fredi/Documents/MiniMicro/Report/main.tex" 1717741448 37928 f8aaf5b3947d2e5400acdb88ee25a62f ""
+  "c:/Users/fredi/Documents/MiniMicro/Report/main.tex" 1717742655 38883 fc2fef9a3ef5fcd74469334e2c123cfc ""
   "images/ALUImg.png" 1717739444 39213 c09342dcc1e1d3eda5c8199ad43bec0f ""
   "images/CUImg.png" 1717739495 58271 7db31ccca353dab30e2a3a71eb860130 ""
   "images/DataMemImg.png" 1717739334 24070 2a1eae2ffa6d203074fe98503f97d4e7 ""
@@ -387,11 +385,10 @@
   "images/PCImg.png" 1717739369 19268 0ece63c6433f831c68520f6b297c0842 ""
   "images/RTLImg.png" 1717739284 102364 4aeaa0f9c181612acfaef9fbd8c559ff ""
   "images/RegFileImg.png" 1717739462 71947 7d8f95ba6f8e40ae24fa830a6c9219a7 ""
-  "main.aux" 1717741459 22279 4ba76be8d6463dd1f768ff04c7067291 "pdflatex"
+  "main.aux" 1717742667 23184 f6e3422c22244d2d36af6e8dbe615a97 "pdflatex"
   "main.bbl" 1717741382 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.run.xml" 1717741459 2395 3758a7f92bf96a539d77b473644c1047 "pdflatex"
-  "main.tex" 1717741448 37928 f8aaf5b3947d2e5400acdb88ee25a62f ""
-  "main.toc" 1717741459 4670 d1fef20c7617b088f2ccf6a284ef125a "pdflatex"
+  "main.tex" 1717742655 38883 fc2fef9a3ef5fcd74469334e2c123cfc ""
+  "main.toc" 1717742667 4666 45ff7d8f20d43b4f3ad19346e22ad681 "pdflatex"
   "tau.cls" 1717555611 12780 376ede097771d679c9baae36c52b02cf ""
   "tau.sty" 1717555611 5178 8d55094f18d2fd08a3cd6904a1c1ce8a ""
   (generated)
