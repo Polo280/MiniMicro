@@ -33,50 +33,50 @@ module register_file_tb();
     initial begin
         // Initialize Inputs
         clk = 0;
-        rst = 1;
+        rst = 0;
         A1  = 0;
         A2  = 0;
         A3  = 0;
         WD3 = 0;
         R15 = 0;
         WE3 = 0;       
+
          
 
         // Wait for the global reset
-        #2;
-		  rst = 0;
+        #5;
         $display("START: ");
 
         // Test sequence
         // Write to register 1 (EXPECT 0 BECAUSE WE IS DISABLED)
-        A3 = 4'b0001;
-        WD3 = 12345678;
-        #2; // Wait for one clock cycle
+        A3 = 4'h1;
+        WD3 = 32'h12345678;
+        #10; // Wait for one clock cycle
 
         // Write to register 2
         WE3 = 1;
-        A3 = 2;
-        WD3 = 87654321;
-        #2; // Wait for one clock cycle
+        A3 = 4'h2;
+        WD3 = 32'h87654321;
+        #10; // Wait for one clock cycle
 
         // Disable write
         WE3 = 0;
 
         // Read from register 1
-        A1 = 1;
-        #2; // Wait for one clock cycle
+        A1 = 4'h1;
+        #10; // Wait for one clock cycle
 
         // Read from register 2
-        A2 = 2;
-        #2; // Wait for one clock cycle
+        A2 = 4'h2;
+        #10; // Wait for one clock cycle
 
         // Test R15 handling
         R15 = 32'h00000010;
-        #2; // Wait for one clock cycle
+        #10; // Wait for one clock cycle
 
         // Read from register 14 (which is R15 + 8)
         A1 = 4'hE;
-        #2; // Wait for one clock cycle
+        #10; // Wait for one clock cycle
 
         rst = 1;
         $display("rst enabled: ");
@@ -86,7 +86,7 @@ module register_file_tb();
     end
 
     // Generate clock signal
-    always #1 clk = ~clk;
+    always #5 clk = ~clk;
 
     initial begin
         // Monitor the changes

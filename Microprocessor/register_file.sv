@@ -65,8 +65,7 @@ module register_file (
 
     // 14+1 register memory
     
-    reg [31:0] registers [14:0];
-	 reg [31:0] status_register;
+    reg [31:0] registers [0:14];
 
     always @(*) 
     begin
@@ -105,4 +104,7 @@ module register_file (
 				RD2 <= registers[A2]; 
         end
     end
-endmodule 
+
+
+    
+endmodule

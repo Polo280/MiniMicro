@@ -1,8 +1,3 @@
-////////////////////////////////////////
-///////////// CONTROL UNIT /////////////
-////////////////////////////////////////
-`timescale 1ns / 1ps
-
 module Control_Unit_tb();
 
     // Parameters
@@ -42,40 +37,40 @@ module Control_Unit_tb();
 
     // Initialize Inputs
     initial begin
-        clk = 1;
+        clk = 0;
         rst = 1;
         instruction = 32'h00000000; // Default instruction
         flags = 4'b0000;
 
         // Apply reset
-        #2
+        #10;
         rst = 0;
+        #10
+
+        // Test cases
+
+
         // Test Memory instruction (LOAD)
         $display("              TEST LOAD");
-        instruction = 32'b10011_000000000_000000001_000000000; // LOAD instruction (save mem 0 in reg 0)
-        #2
+        instruction = 32'b10011000000000000000000000000000; // LOAD instruction
+        #10;
 
-        // Test ALU instruction (ADD)             TEST ADD");
-        instruction = 32'b10011_000000001_000000001_000000001; // LOAD instruction (save mem 1 in reg 1)
-        #2
-		  
-		  instruction = 32'b00110_000000000_000000001_000000010; // ADD instruction reg0 + reg1 (save in reg 2)
-		  #2 
-		  
-		  instruction = 32'b10011_000000000_000000001_000000000; // ADD instruction reg1 + reg2 (save in reg 3)
-		  #2
+        // Test ALU instruction (ADD)
+        $display("              TEST ADD");
+        instruction = 32'b00110000000000000000001000000010; // ADD reg 1 and 2, store on 0
+        #10;
 
         // Test default instruction (NOP)
         $display("              TEST ALL 0's");
         instruction = 32'b0; // NOP instruction
-        #2
+        #10;
 
         // Finish simulation
-        $Stop;
+        $stop;
     end
 
     // Generate clock signal
-    always #1 clk = ~clk;
+    always #5 clk = ~clk;
 
     // Display signals
     initial begin

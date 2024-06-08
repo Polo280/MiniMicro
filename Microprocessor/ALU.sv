@@ -1,5 +1,4 @@
 module ALU(
-	input clk, 
 	input [4:0] instruction,  // Instruction recieved from program memory
 	input [31:0] num1, num2,  // Operands
 	output reg [31:0] result, // result of the operation
@@ -22,7 +21,7 @@ parameter // Logic operations
 			 ADDS	 = 6,			// Normal addition
 			 SBCS  = 7,			// Subtraction with carry
 			 SUB   = 8,			// Subtraction
-		    MULS  = 9,       // Multiplication
+		     MULS  = 9,       // Multiplication
 
 			 // Shifts
 			 LSRS  = 10,		// Logic Shift Right 
@@ -247,6 +246,7 @@ end
 
 always @(num1 or num2 or instruction)
 begin
+
 	case(instruction) 
 	
 		///////////// ANDS //////////////

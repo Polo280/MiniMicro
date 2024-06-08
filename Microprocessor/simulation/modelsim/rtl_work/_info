@@ -8,23 +8,23 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/simulation/modelsim
-vAdder
+Z0 d/home/fredi/Documents/miniprocessor/Microprocessor/simulation/modelsim
+vControl_Unit
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
 Z2 !s110 1717819231
 !i10b 1
-!s100 >Nk^FPNEG5C=EAVTaQfQC0
+!s100 ]z_81b?bM?BO;QogGkASW0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ikn?e5`V?U_>AlnIa@Qig32
+IR=cO9PT6@VVc8fmQ5n]Ne0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1717525381
-8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Adder.sv
-FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Adder.sv
-!i122 9
-L0 3 28
-Z6 OV;L;2020.1;71
+w1717043681
+8/home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv
+F/home/fredi/Documents/miniprocessor/Microprocessor/Control_Unit.sv
+!i122 3
+L0 1 137
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
@@ -369,12 +369,12 @@ I>M]`>VD_2708B`eSEn:F]1
 R4
 S1
 R0
+w1717516426
+8/home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv
+F/home/fredi/Documents/miniprocessor/Microprocessor/load_tb.sv
+!i122 4
+L0 1 198
 R5
-8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSLS.sv
-FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSLS.sv
-!i122 15
-L0 1 49
-R6
 r1
 !s85 0
 31
@@ -409,10 +409,9 @@ R13
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSRS.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSRS.sv|
 !i113 1
+R7
 R8
 R9
-R10
-n@l@s@r@s
 vMemory
 R1
 R16
@@ -478,11 +477,6 @@ R4
 S1
 R0
 R5
-8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ORRS.sv
-FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ORRS.sv
-!i122 17
-L0 1 25
-R6
 r1
 !s85 0
 31
@@ -490,6 +484,7 @@ R13
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ORRS.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ORRS.sv|
 !i113 1
+R7
 R8
 R9
 R10
@@ -557,19 +552,20 @@ I[ZZoBmLUYWbMh0oB0?Nbl0
 R4
 S1
 R0
+w1717166413
+8/home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv
+F/home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv
+!i122 1
+L0 27 95
 R5
-8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ROR.sv
-FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ROR.sv
-!i122 18
-L0 3 44
-R6
 r1
 !s85 0
 31
-R15
-!s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ROR.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ROR.sv|
+R10
+!s107 /home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/fredi/Documents/miniprocessor/Microprocessor|/home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv|
 !i113 1
+R7
 R8
 R9
 R10
