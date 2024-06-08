@@ -16,9 +16,12 @@ output reg [data_length-1:0] rdata 				// Read(return) data bus
 //create actual memory
 reg [data_length-1:0] mem [0:mem_length-1];
 
+<<<<<<< HEAD
 int i; //var for loop on reset
 
 
+=======
+>>>>>>> 06ece06 (Working LDR and ALU instructions)
 always @(addr)
 begin 
 	// Clear memory on rst
