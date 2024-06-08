@@ -12,239 +12,239 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/register_file.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:16 on Jun 06,2024
+# Start time: 22:00:30 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/register_file.sv 
 # -- Compiling module register_file
 # 
 # Top level modules:
 # 	register_file
-# End time: 16:07:17 on Jun 06,2024, Elapsed time: 0:00:01
+# End time: 22:00:30 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/instruction_memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:17 on Jun 06,2024
+# Start time: 22:00:30 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/instruction_memory.sv 
 # -- Compiling module InstructionMemory
 # 
 # Top level modules:
 # 	InstructionMemory
-# End time: 16:07:17 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:30 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Microprocessor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:17 on Jun 06,2024
+# Start time: 22:00:30 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Microprocessor.sv 
 # -- Compiling module Microprocessor
 # 
 # Top level modules:
 # 	Microprocessor
-# End time: 16:07:17 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:30 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ProgramCounter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:17 on Jun 06,2024
+# Start time: 22:00:30 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ProgramCounter.sv 
 # -- Compiling module ProgramCounter
 # 
 # Top level modules:
 # 	ProgramCounter
-# End time: 16:07:17 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:30 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:17 on Jun 06,2024
+# Start time: 22:00:30 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Memory.sv 
 # -- Compiling module Memory
 # 
 # Top level modules:
 # 	Memory
-# End time: 16:07:17 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:30 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Control_Unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:17 on Jun 06,2024
+# Start time: 22:00:31 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Control_Unit.sv 
 # -- Compiling module Control_Unit
 # 
 # Top level modules:
 # 	Control_Unit
-# End time: 16:07:17 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:31 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:17 on Jun 06,2024
+# Start time: 22:00:31 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ALU.sv 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 16:07:18 on Jun 06,2024, Elapsed time: 0:00:01
+# End time: 22:00:31 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ANDS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:18 on Jun 06,2024
+# Start time: 22:00:31 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ANDS.sv 
 # -- Compiling module ANDS
 # 
 # Top level modules:
 # 	ANDS
-# End time: 16:07:18 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:31 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ASR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:18 on Jun 06,2024
+# Start time: 22:00:31 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ASR.sv 
 # -- Compiling module ASR
 # 
 # Top level modules:
 # 	ASR
-# End time: 16:07:18 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:31 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:18 on Jun 06,2024
+# Start time: 22:00:31 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Adder.sv 
 # -- Compiling module Adder
 # 
 # Top level modules:
 # 	Adder
-# End time: 16:07:18 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:31 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/BitwiseNot.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:18 on Jun 06,2024
+# Start time: 22:00:31 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/BitwiseNot.sv 
 # -- Compiling module BitwiseNot
 # 
 # Top level modules:
 # 	BitwiseNot
-# End time: 16:07:18 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:31 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/BoothMul.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:18 on Jun 06,2024
+# Start time: 22:00:31 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/BoothMul.sv 
 # -- Compiling module Booth
 # 
 # Top level modules:
 # 	Booth
-# End time: 16:07:18 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:32 on Jun 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Comparator.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:18 on Jun 06,2024
+# Start time: 22:00:32 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Comparator.sv 
 # -- Compiling module Comparator
 # 
 # Top level modules:
 # 	Comparator
-# End time: 16:07:19 on Jun 06,2024, Elapsed time: 0:00:01
+# End time: 22:00:32 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/EORS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:19 on Jun 06,2024
+# Start time: 22:00:32 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/EORS.sv 
 # -- Compiling module EORS
 # 
 # Top level modules:
 # 	EORS
-# End time: 16:07:19 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:32 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/EXT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:19 on Jun 06,2024
+# Start time: 22:00:32 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/EXT.sv 
 # -- Compiling module UXTB
 # 
 # Top level modules:
 # 	UXTB
-# End time: 16:07:19 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:32 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSLS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:19 on Jun 06,2024
+# Start time: 22:00:32 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSLS.sv 
 # -- Compiling module LSLS
 # 
 # Top level modules:
 # 	LSLS
-# End time: 16:07:19 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:32 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSRS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:19 on Jun 06,2024
+# Start time: 22:00:32 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSRS.sv 
 # -- Compiling module LSRS
 # 
 # Top level modules:
 # 	LSRS
-# End time: 16:07:19 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:32 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ORRS.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:19 on Jun 06,2024
+# Start time: 22:00:32 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ORRS.sv 
 # -- Compiling module ORRS
 # 
 # Top level modules:
 # 	ORRS
-# End time: 16:07:19 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:33 on Jun 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ROR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:19 on Jun 06,2024
+# Start time: 22:00:33 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ROR.sv 
 # -- Compiling module ROR
 # 
 # Top level modules:
 # 	ROR
-# End time: 16:07:19 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:33 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/FullAdder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:20 on Jun 06,2024
+# Start time: 22:00:33 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/FullAdder.sv 
 # -- Compiling module FullAdder
 # 
 # Top level modules:
 # 	FullAdder
-# End time: 16:07:20 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:33 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/HalfAdder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:20 on Jun 06,2024
+# Start time: 22:00:33 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/HalfAdder.sv 
 # -- Compiling module HalfAdder
 # 
 # Top level modules:
 # 	HalfAdder
-# End time: 16:07:20 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:33 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Subtractor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:20 on Jun 06,2024
+# Start time: 22:00:33 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Subtractor.sv 
 # -- Compiling module Subtractor
 # 
 # Top level modules:
 # 	Subtractor
-# End time: 16:07:20 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:33 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:07:20 on Jun 06,2024
+# Start time: 22:00:33 on Jun 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv 
 # -- Compiling module load_tb
 # 
 # Top level modules:
 # 	load_tb
-# End time: 16:07:20 on Jun 06,2024, Elapsed time: 0:00:00
+# End time: 22:00:33 on Jun 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  load_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" load_tb 
-# Start time: 16:07:20 on Jun 06,2024
+# Start time: 22:00:33 on Jun 07,2024
 # Loading sv_std.std
 # Loading work.load_tb
 # Loading work.Microprocessor
@@ -286,7 +286,7 @@
 # ** Warning: (vsim-3722) C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Comparator.sv(19): [TFMPC] - Missing connection for port 'c_in'.
 # ** Warning: (vsim-3722) C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Comparator.sv(19): [TFMPC] - Missing connection for port 'c_out'.
 # ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$Stop' is not defined.
-#    Time: 0 ps  Iteration: 0  Instance: /load_tb File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv Line: 35
+#    Time: 0 ps  Iteration: 0  Instance: /load_tb File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv Line: 37
 # 
 # add wave *
 # view structure
@@ -295,4 +295,8 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Error (suppressible): (vsim-12023) Cannot execute undefined system task/function '$Stop'
-#    Time: 12 ns  Iteration: 0  Process: /load_tb/#INITIAL#29 File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv Line: 35
+#    Time: 12 ns  Iteration: 0  Process: /load_tb/#INITIAL#31 File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv Line: 37
+# Break key hit
+# Break in Module Subtractor in file C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Subtractor.sv
+# End time: 22:01:09 on Jun 07,2024, Elapsed time: 0:00:36
+# Errors: 1, Warnings: 12

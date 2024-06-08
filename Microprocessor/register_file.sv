@@ -68,11 +68,11 @@ module register_file (
     reg [31:0] registers [14:0];
 	 reg [31:0] status_register;
 
-    always @(posedge clk) 
+    always @(*) 
     begin
         if (rst) begin
 		  // Reset registers 
-			  registers[0] <= 7;
+			  registers[0] <= 0;
 			  registers[1] <= 0;
 			  registers[2] <= 0;
 			  registers[3] <= 0;
@@ -82,8 +82,8 @@ module register_file (
 			  registers[7] <= 0;
 			  registers[8] <= 0;
 			  registers[9] <= 0;
-			  registers[10] <= 0;
-			  registers[11] <= 0;
+			  registers[10]<= 0;
+			  registers[11]<= 0;
 			  registers[12] <= 0;
 			  registers[13] <= 0;
 			  registers[14] <= 0;
@@ -92,18 +92,17 @@ module register_file (
 			  RD2 <= 0;
         end
 
-        else begin
+        else begin   
+				if(WE3) begin
+					 /*If the write enable is asserted, then the register file writes the data
+					 into the specified register on the rising edge of the clock.*/
+					 registers[A3] <= WD3; //Write back semi stage
+				end else begin
+					registers[A3] <= registers[A3];
+				end
 				// return values of looked-for addresses
-            RD1 <= registers[A1];
-            RD2 <= registers[A2];    
-
-            if(WE3)
-            begin
-                /*If the write enable is asserted, then the register file writes the data
-                into the specified register on the rising edge of the clock.*/
-                registers[A3] = WD3; //Write back semi stage
-            end
+				RD1 <= registers[A1];
+				RD2 <= registers[A2]; 
         end
-
     end
 endmodule 

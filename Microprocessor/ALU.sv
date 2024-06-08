@@ -245,7 +245,7 @@ begin
 	endcase
 end
 
-always @(posedge clk)
+always @(num1 or num2 or instruction)
 begin
 	case(instruction) 
 	

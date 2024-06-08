@@ -1,5 +1,5 @@
 Flow report for Microprocessor
-Thu Jun 06 16:07:02 2024
+Fri Jun 07 21:47:02 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 06 16:07:02 2024       ;
+; Flow Status                        ; Successful - Fri Jun 07 21:47:01 2024       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Microprocessor                              ;
 ; Top-level Entity Name              ; Microprocessor                              ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2024 16:06:51 ;
+; Start date & time ; 06/07/2024 21:46:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Microprocessor      ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 93383154581526.171771161125336         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 93383154581526.171781840921964         ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ALU_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; instruction_memory_tb             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ProgramCounter_tb                 ;
@@ -137,8 +137,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4719 MB             ; 00:00:28                           ;
-; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4764 MB             ; 00:00:27                           ;
+; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:27                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

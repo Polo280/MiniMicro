@@ -4,9 +4,9 @@ module Microprocessor #(parameter word_size = 32)(
 	input clk, rst,
 	output reg[word_size-1:0] output_data, 
 	// Testing 
-	output reg[word_size-1:0] tester, outALU, srctest1, srctest2, RD1test, RD2test, RA3test, RWD3test, datamem_addr, current_inst,
+	output reg[word_size-1:0] tester, outALU, srctest1, srctest2, RD1test, RD2test, RA3test, RWD3test, datamem_addr, current_inst, datamem_datawrite,
 	output reg [5:0] inputALU, pctest,
-	output reg writeReg, mem_to_regtest
+	output reg writeReg, mem_to_regtest, writeMem
 );
 
 ////////////////////////////////////////
@@ -95,11 +95,11 @@ Control_Unit control_unit(
 // inputs
 wire rf_clk;       // clock
 wire rf_WE3;       // write enable
-reg [8:0]  rf_A1;  // Addr 1 from Instruction mem
-reg [8:0]  rf_A2;  // Addr 2 from Instruction mem
-reg [8:0]  rf_A3;  // Addr 3 from Instruction mem
-reg [31:0] rf_WD3; // data to write to addr 3 (from output of data memory)
-reg [31:0] rf_R15; // current PC value
+wire [8:0]  rf_A1;  // Addr 1 from Instruction mem
+wire [8:0]  rf_A2;  // Addr 2 from Instruction mem
+wire [8:0]  rf_A3;  // Addr 3 from Instruction mem
+reg  [31:0] rf_WD3; // data to write to addr 3 (from output of data memory)
+wire [31:0] rf_R15; // current PC value
 
 //outputs
 reg[31:0] rf_RD1;  // output data 1 (wired in alu instance) 	
@@ -170,7 +170,7 @@ parameter datamem_datalength = 32,
 		    datamem_length     = 32;
 
 // DATA MEMORY SOURCE
-reg datamem_src;      // Control the data source for data memory, 1= Data from ALU, 0= Data from RD2 (register file read 2)
+reg datamem_src;      // Control the data source for data memory, 1= Data from ALU, 0= Data from RD1 (register file read 1)
 
 //INPUTS
 wire datamem_clk;
@@ -181,7 +181,7 @@ reg [$clog2(datamem_length -1):0] datamem_address;	   // Address bus
 
 
 //OUTPUTS
-reg [datamem_datalength-1:0]  datamem_rdata;			 // Read data bus 
+wire [datamem_datalength-1:0]  datamem_rdata;			 // Read data bus 
 //assign datamem_address = current_instruct[8:0];  // Assign address to store data
 assign datamem_we	= ctrl_mem_write;						 // Write enable comes from ctrl unit
 
@@ -202,7 +202,7 @@ always @(*) begin
 		if(datamem_src) begin
 			datamem_wdata = ALU_result;
 		end else begin
-			datamem_wdata = rf_RD2;
+			datamem_wdata = rf_RD1;
 		end 
 	end 
 end 
@@ -215,10 +215,10 @@ always @(*) begin
 	if(rst) begin 
 		datamem_address = 0;
 	end else begin 
-		if(ctrl_instruction[word_size-1:27] == LDR) begin
-			datamem_address = ctrl_instruction[26:18];  // Src1 as data address for data mem
-		end else if (ctrl_instruction[word_size-1:27] == STR) begin
-			datamem_address = ctrl_instruction[8:0];	  // Dst bits for data mem address 
+		if(current_instruct[word_size-1:27] == LDR) begin
+			datamem_address = current_instruct[26:18];  // Src1 as data address for data mem
+		end else if (current_instruct[word_size-1:27] == STR) begin
+			datamem_address = current_instruct[8:0];	  // Dst bits for data mem address 
 		end else begin
 			datamem_address = 0;  // Default case = 0 to save power 
 		end
@@ -254,6 +254,8 @@ always @(*) begin
 	mem_to_regtest = ctrl_mem_to_reg;
 	current_inst = current_instruct;
 	pctest = instruct_mem_addr;
+	writeMem = datamem_we;
+	datamem_datawrite = datamem_wdata;
 end
 
 

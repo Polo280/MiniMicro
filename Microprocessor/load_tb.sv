@@ -2,9 +2,9 @@
 module load_tb();
 
 reg clock, rst;
-wire [31:0] datamemory, instruction, outALU, srctest1, srctest2, RD1test, RD2test, RA3test, RWD3test, datamem_addr, current_inst;
+wire [31:0] datamemory, instruction, outALU, srctest1, srctest2, RD1test, RD2test, RA3test, RWD3test, datamem_addr, current_inst, datamem_datawrite;
 wire [5:0] inputALU, pc_out;
-wire writeReg, mem_to_regtest;
+wire writeReg, mem_to_regtest, writeDataMem;
 
 Microprocessor Micro(
 	.clk(clock),
@@ -21,7 +21,9 @@ Microprocessor Micro(
 	.RA3test(RA3test),
 	.RWD3test(RWD3test),
 	.datamem_addr(datamem_addr),
+	.datamem_datawrite(datamem_datawrite),
 	.writeReg(writeReg),
+	.writeMem(writeDataMem),
 	.mem_to_regtest(mem_to_regtest),
 	.pctest(pc_out)
 );
