@@ -1,8 +1,8 @@
-module Memory # (parameter data_length = 32, parameter mem_length = 512)(
-input clk,										// Clock to syncrhonize 	
-input rst,  									// Reset block to start with initial known values 
+module Memory # (parameter data_length = 32, parameter mem_length = 64)(
+input clk,												// Clock to synchronize 	
+input rst,  											// Reset block to start with initial known values 
 input [data_length-1:0] wdata, 					// Data to be written into memory (Write data bus)
-input we, 										// Read - write mode : 0 = READ, 1 = WRITE
+input we, 												// Read - write mode : 0 = READ, 1 = WRITE
 input [$clog2(mem_length)-1:0] addr, 			// Address bus
 
 output reg [data_length-1:0] rdata 				// Read(return) data bus 
@@ -14,14 +14,8 @@ output reg [data_length-1:0] rdata 				// Read(return) data bus
 
 
 //create actual memory
-reg [data_length-1:0] mem [0:mem_length-1];
+reg [data_length-1:0] mem [mem_length-1:0];
 
-<<<<<<< HEAD
-int i; //var for loop on reset
-
-
-=======
->>>>>>> 06ece06 (Working LDR and ALU instructions)
 always @(addr)
 begin 
 	// Clear memory on rst
@@ -105,4 +99,5 @@ begin
 			rdata = 0;
 		end 
 	end
+end
 endmodule 

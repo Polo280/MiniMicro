@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at register_file.sv(79): always construct contains both blocking and non-blocking assignments File: /home/fredi/Documents/miniprocessor/Microprocessor/register_file.sv Line: 79
+Warning (10268): Verilog HDL information at register_file.sv(71): always construct contains both blocking and non-blocking assignments File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/register_file.sv Line: 71
