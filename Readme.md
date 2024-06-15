@@ -6,10 +6,13 @@ The modules that were put into consideration for this design were the following.
 Instruction and data memories were implemented as an array of 'reg' data types in Verilog which can be used to store data through time. They are parametrized to  adjust their storage capacity in an easy way for different requirements. In our current design, instruction and data memories are separated in different modules, following a Harvard architecture with a word length of 32-bits and 64 different addresses. 
 
 **Data Memory**
+
+
 ![image](Report/ReadmeImages/Datamem.JPG)
 
 
 **Instruction Memory**
+
 ![image](Report/ReadmeImages/InstructMem.JPG)
 
 
