@@ -38,3 +38,21 @@ This module represents a simple counter which increments each clock cycle, furth
 The Arithmetic Logic Unit was implemented in a modular way, with each ALU instruction with its own module. Currently, arithmetic, logical and shifting operations are supported and each operation yields a 32-bit result along with the negative/zero/overflow/carry flags. 
 
 ![image](Report/ReadmeImages/ALU.JPG)
+
+## Microcontroller Design 
+
+![image](Report/ReadmeImages/Complete.JPG)
+
+NOTE: The outputs shown at the right of the image are for debugging purposes in simulations using ModelSim
+
+## Simulation 
+
+As it was mentioned previously, simulations of the design were done leveraging Altera ModelSim capabilities.
+
+Sample ALU subtract operation, store result in R5
+
+![image](Report/ReadmeImages/Subtract.JPG)
+
+Sample LOAD operation, load data memory address 1 into R1 
+
+![image](Report/ReadmeImages/LOAD.JPG)

@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/simulation/modelsim
 vAdder
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1717819231
+Z2 !s110 1718487189
 !i10b 1
 !s100 >Nk^FPNEG5C=EAVTaQfQC0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -19,7 +19,7 @@ Ikn?e5`V?U_>AlnIa@Qig32
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1717525381
+Z5 w1718430491
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Adder.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Adder.sv
 !i122 9
@@ -28,7 +28,7 @@ Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1717819231.000000
+Z7 !s108 1718487189.000000
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Adder.sv|
 !i113 1
@@ -46,7 +46,7 @@ I[=L4D3<5Vo:?X695VAbR^2
 R4
 S1
 R0
-w1717725045
+Z11 w1718438938
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ALU.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ALU.sv
 !i122 6
@@ -104,7 +104,7 @@ R5
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ASR.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ASR.sv
 !i122 8
-Z11 L0 3 23
+Z12 L0 3 23
 R6
 r1
 !s85 0
@@ -146,7 +146,7 @@ R10
 n@bitwise@not
 vBooth
 R1
-Z12 !s110 1717819232
+Z13 !s110 1718487190
 !i10b 1
 !s100 KNjUe76_D[;H??7C]h?zh2
 R3
@@ -163,7 +163,7 @@ R6
 r1
 !s85 0
 31
-R7
+Z14 !s108 1718487190.000000
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/BoothMul.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/BoothMul.sv|
 !i113 1
@@ -173,7 +173,7 @@ R10
 n@booth
 vComparator
 R1
-R12
+R13
 !i10b 1
 !s100 :XVi?8:>;n?2fn02c=b0l3
 R3
@@ -190,7 +190,7 @@ R6
 r1
 !s85 0
 31
-Z13 !s108 1717819232.000000
+R14
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Comparator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Comparator.sv|
 !i113 1
@@ -208,7 +208,7 @@ IDm`Kl`=HEbl0=Yj_1lgFW1
 R4
 S1
 R0
-w1717801232
+R11
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Control_Unit.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Control_Unit.sv
 !i122 5
@@ -217,7 +217,7 @@ R6
 r1
 !s85 0
 31
-R7
+Z15 !s108 1718487188.000000
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Control_Unit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Control_Unit.sv|
 !i113 1
@@ -227,7 +227,7 @@ R10
 n@control_@unit
 vEORS
 R1
-R12
+R13
 !i10b 1
 !s100 F0c^oL^lgO^:?P=Z`;Vbd3
 R3
@@ -244,7 +244,7 @@ R6
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/EORS.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/EORS.sv|
 !i113 1
@@ -254,7 +254,7 @@ R10
 n@e@o@r@s
 vFullAdder
 R1
-Z14 !s110 1717819233
+Z16 !s110 1718487191
 !i10b 1
 !s100 fUC8ZmBCL>H_]<R>Cn0J<0
 R3
@@ -271,7 +271,7 @@ R6
 r1
 !s85 0
 31
-Z15 !s108 1717819233.000000
+Z17 !s108 1718487191.000000
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/FullAdder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/FullAdder.sv|
 !i113 1
@@ -281,7 +281,7 @@ R10
 n@full@adder
 vHalfAdder
 R1
-R14
+R16
 !i10b 1
 !s100 n7aX5gPlFOg9HSQ9l0Sm>0
 R3
@@ -298,7 +298,7 @@ R6
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/HalfAdder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/HalfAdder.sv|
 !i113 1
@@ -308,24 +308,24 @@ R10
 n@half@adder
 vInstructionMemory
 R1
-Z16 !s110 1717819230
+Z18 !s110 1718487188
 !i10b 1
-!s100 Pmid:5>o]^SWD^5GI2_b63
+!s100 _;SP0LXcT8HCjd?ZzLeD63
 R3
-IQ1Qndo]DhH?1k7<E=<jB>2
+IDL^KSa;GKaGG;<SiF@D3G3
 R4
 S1
 R0
-w1717818408
+Z19 w1718437229
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/instruction_memory.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/instruction_memory.sv
 !i122 1
-L0 1 61
+L0 1 63
 R6
 r1
 !s85 0
 31
-Z17 !s108 1717819230.000000
+R15
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/instruction_memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/instruction_memory.sv|
 !i113 1
@@ -335,7 +335,7 @@ R10
 n@instruction@memory
 vload_tb
 R1
-R14
+!s110 1718487192
 !i10b 1
 !s100 ;1g97=HzMga3eBbh2<Gi`1
 R3
@@ -343,7 +343,7 @@ I_gIf`NHc>BTeAj@2hCFkd3
 R4
 S1
 R0
-w1717813935
+R19
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv
 !i122 22
@@ -352,7 +352,7 @@ R6
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/load_tb.sv|
 !i113 1
@@ -361,7 +361,7 @@ R9
 R10
 vLSLS
 R1
-R12
+R13
 !i10b 1
 !s100 CmHb5>oZQ:W3e1SJYM`A`2
 R3
@@ -378,7 +378,7 @@ R6
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSLS.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSLS.sv|
 !i113 1
@@ -388,7 +388,7 @@ R10
 n@l@s@l@s
 vLSRS
 R1
-R12
+R16
 !i10b 1
 !s100 FzM98;@[zMX4U4ON=oGXJ1
 R3
@@ -400,12 +400,12 @@ R5
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSRS.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSRS.sv
 !i122 16
-R11
+R12
 R6
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSRS.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/LSRS.sv|
 !i113 1
@@ -415,24 +415,24 @@ R10
 n@l@s@r@s
 vMemory
 R1
-R16
+R18
 !i10b 1
-!s100 LgP=Yg8<384FV=4L3Y2mB3
+!s100 k;o>FN6ZhGK@[NehzD_:T3
 R3
-I36[:>WXg?kCB;SYoSn[Vc0
+IQzKSFRFcW^eck5OITFFni3
 R4
 S1
 R0
-w1717818344
+R11
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Memory.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Memory.sv
 !i122 4
-L0 1 105
+L0 1 103
 R6
 r1
 !s85 0
 31
-R17
+R15
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Memory.sv|
 !i113 1
@@ -442,7 +442,7 @@ R10
 n@memory
 vMicroprocessor
 R1
-R16
+R18
 !i10b 1
 !s100 MfUAI6OW@mhMM33WVj>ej3
 R3
@@ -450,7 +450,7 @@ IQ^`YJ9X_L]8[^H1cS5kSR2
 R4
 S1
 R0
-w1717813849
+R11
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Microprocessor.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Microprocessor.sv
 !i122 2
@@ -459,7 +459,7 @@ R6
 r1
 !s85 0
 31
-R17
+R15
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Microprocessor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Microprocessor.sv|
 !i113 1
@@ -469,7 +469,7 @@ R10
 n@microprocessor
 vORRS
 R1
-R14
+R16
 !i10b 1
 !s100 X`ohIzOL_jLQZX=F6jG`?3
 R3
@@ -486,7 +486,7 @@ R6
 r1
 !s85 0
 31
-R13
+R17
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ORRS.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ORRS.sv|
 !i113 1
@@ -496,7 +496,7 @@ R10
 n@o@r@r@s
 vProgramCounter
 R1
-R16
+R18
 !i10b 1
 !s100 aQF7[ZV8k<ifFIXAReN9f1
 R3
@@ -504,7 +504,7 @@ I[e:IHDQmYGhP@hNmA[8]S1
 R4
 S1
 R0
-w1717554628
+R11
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ProgramCounter.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ProgramCounter.sv
 !i122 3
@@ -513,7 +513,7 @@ R6
 r1
 !s85 0
 31
-R17
+R15
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ProgramCounter.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ProgramCounter.sv|
 !i113 1
@@ -523,7 +523,7 @@ R10
 n@program@counter
 vregister_file
 R1
-R16
+R18
 !i10b 1
 !s100 LdWz;MG[S4Cd?@KMVGKEe3
 R3
@@ -531,7 +531,7 @@ I9enD86NN?1ao[7@2]VoWd2
 R4
 S1
 R0
-w1717806411
+R11
 8C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/register_file.sv
 FC:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/register_file.sv
 !i122 0
@@ -540,7 +540,7 @@ R6
 r1
 !s85 0
 31
-R17
+!s108 1718487187.000000
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/register_file.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/register_file.sv|
 !i113 1
@@ -549,7 +549,7 @@ R9
 R10
 vROR
 R1
-R14
+R16
 !i10b 1
 !s100 CV_b8A]UcB7<Wz5Zzo?Xi0
 R3
@@ -566,7 +566,7 @@ R6
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ROR.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/ROR.sv|
 !i113 1
@@ -576,7 +576,7 @@ R10
 n@r@o@r
 vSubtractor
 R1
-R14
+R16
 !i10b 1
 !s100 G]UbHzGH60cdX^OlFB7WI1
 R3
@@ -593,7 +593,7 @@ R6
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Subtractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/Subtractor.sv|
 !i113 1
@@ -603,7 +603,7 @@ R10
 n@subtractor
 vUXTB
 R1
-R12
+R13
 !i10b 1
 !s100 86TI[WhZ5FF8Uj_TG53@V2
 R3
@@ -620,7 +620,7 @@ R6
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/EXT.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor|C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Microprocessor/EXT.sv|
 !i113 1
